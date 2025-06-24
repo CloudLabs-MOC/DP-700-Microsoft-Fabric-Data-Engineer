@@ -4,90 +4,57 @@ Welcome to your DP-700: Microsoft-Fabric-Data-Engineer Workshop! We've prepared 
 
 ### Overall Estimated timing: 210 minutes
 
-In this hands-on lab, you will build an end-to-end real-time data streaming solution. You will start by creating an eventhouse and an eventstream to manage and process incoming data. You will then add a data source and configure a destination to route the processed data appropriately. After setting up the streaming infrastructure, you will create a real-time dashboard to visualize the data, including building a base query, adding parameters for dynamic insights, and customizing the dashboard with additional pages. Finally, you will configure auto-refresh settings to keep the data current and learn how to save and share the dashboard for collaboration.
+In this hands-on labs, you'll explore Real-Time Intelligence capabilities in Microsoft Fabric. Starting with live stock market data, you'll learn to ingest, process, and visualize streaming data for instant insights. You'll work with Eventstream to handle real-time city bike-share data, then create and query an eventhouse using KQL and SQL. Finally, you'll build a dynamic real-time dashboard to visualize streaming data, enabling interactive and up-to-date analytics. These labs provide a practical foundation for implementing real-time analytics solutions in Microsoft Fabric.
+
 
 ## Objectives
 
-By the end of this lab series, you will be able to create and manage a Microsoft Fabric eventhouse, configure eventstreams with real-time data sources and destinations, and build interactive real-time dashboards using base queries, parameters, and auto-refresh features to visualize and share live data insights effectively.
+By the end of this lab series, you will be able to leverage Microsoft Fabric's Real-Time Intelligence features to ingest and process live streaming data using Eventstream, manage and query real-time event data within an eventhouse, and build interactive dashboards with Kusto Query Language (KQL). 
 
-1. **Create an eventhouse**: You will learn how to create an eventhouse in Microsoft Fabric, which provides a centralized and scalable foundation for capturing and storing streaming data. This task will guide you through creating a workspace, setting up the eventhouse, and understanding how real-time event data is organized and persisted for downstream analytics.
+1. **Get started with Real-Time Intelligence in Microsoft Fabric**: You will explore the core components of Real-Time Intelligence in Microsoft Fabric by working with live stock market data. You’ll learn how to ingest streaming data, analyze it in real time, and visualize insights through dynamic dashboards and alerts.
 
-1. **Create an eventstream**: You will learn how to add a data source to your eventstream in Microsoft Fabric to enable real-time data ingestion. This task will guide you through connecting an external system—such as an Event Hub, IoT Hub, or other streaming service—as a source, allowing your eventstream to begin capturing and processing live event data.
+1. **Ingest real-time data with Eventstream in Microsoft Fabric**: You will explore how Microsoft Fabric’s Eventstream feature enables real-time data ingestion and processing. Using data from a city bike-share system, you’ll configure sources and destinations, apply transformations, and analyze the data to support real-time decision-making.
 
-1. **Add a source**: You will learn how to add a destination to your eventstream in Microsoft Fabric, enabling it to route processed data to storage or analytics platforms such as a lakehouse or KQL database for real-time insights and further processing.
+1. **Work with data in a Microsoft Fabric eventhouse**: You will learn how to create and work with an eventhouse in Microsoft Fabric using real-time taxi ride data. You'll configure an eventstream to ingest data and then explore the captured events using both Kusto Query Language (KQL) and SQL, helping you gain practical skills in querying and analyzing structured streaming data.
 
-1. **Add a destination**: You will learn how to add a destination to your eventstream in Microsoft Fabric, enabling processed streaming data to be routed to storage or analytics tools such as a lakehouse or KQL database for further use.
-
-1. **Create a real-time dashboard**: You will learn how to create a real-time dashboard in Microsoft Fabric to visualize and monitor live data from your eventstream, enabling instant insights and responsive decision-making.
-
-1. **Create a base query**: You will learn how to create a base query in Microsoft Fabric to streamline your dashboard visuals by centralizing common data logic, improving efficiency and maintainability.
-
-1. **Add a parameter**: You will learn how to add a parameter to your Microsoft Fabric dashboard, allowing you to filter and display data based on specific criteria, such as selecting a neighborhood to focus on for more targeted insights.
-
-1. **Add a page**: You will learn how to add multiple pages to your Microsoft Fabric dashboard, enabling you to organize and display different sets of data across different views for a more comprehensive and interactive experience.
-
-1. **Configure auto refresh**: You will learn how to configure auto-refresh for your Microsoft Fabric dashboard, enabling automatic data updates at specified intervals to keep your visualizations up-to-date with the latest information without requiring manual intervention.
-
-1. **Save and share the dashboard**: You will learn how to save and share your Microsoft Fabric dashboard, enabling you to store your work and grant access to other users for collaborative analysis and decision-making based on real-time data insights.
-
+1. **Get started with Real-Time Dashboards in Microsoft Fabric**: You will learn to build a complete real-time streaming solution by creating an interactive dashboard in Microsoft Fabric. Using data from bicycle-related event streams, you'll visualize live data using Kusto Query Language (KQL), configure dashboard settings, and enable collaborative features for sharing insights. 
 
 ## Pre-requisites
 
-- Basic knowledge of Microsoft Fabric, including creating and managing workspaces and resources.
-- Understanding of how to create and configure dashboards for data visualization.
-- Familiarity with querying and data manipulation using base queries for real-time data processing.
-- Basic knowledge of configuring automatic updates and refreshing visualizations in dashboards.
+- Basic knowledge of Microsoft Fabric, including creating and managing workspaces and resources
+- Familiarity with real-time data concepts and event-driven architecture
+- Understanding of how to create and configure Eventstream pipelines, including setting up sources and destinations
+- Experience with querying data using Kusto Query Language (KQL) and SQL
+- Ability to create and customize dashboards for data visualization, including adding parameters and configuring auto-refresh settings
 
 
 ## Architecture
 
 In this hands-on lab, the architecture flow includes several essential components.
 
-1. **Get started with Real-Time Intelligence in Microsoft Fabric**: You will learn how to use Real-Time Intelligence features in Microsoft Fabric to ingest, analyze, and visualize streaming data. This task focuses on building a real-time analytics solution using a live stream of stock market data.
+1. **Get started with Real-Time Intelligence in Microsoft Fabric**:  Exploring how to build a real-time analytics solution using Microsoft Fabric’s Real-Time Intelligence features. This includes ingesting live stock market data through an eventstream, analyzing it using Kusto Query Language (KQL), and visualizing insights with a real-time dashboard and alerts to support immediate decision-making.
 
-1. **Ingest real-time data with Eventstream in Microsoft Fabric**: You will learn how to use Eventstream in Microsoft Fabric to capture, transform, and route real-time event data. This task involves ingesting live data from a bike-share system and configuring the stream to send processed events to various destinations.
+1. **Ingest real-time data with Eventstream in Microsoft Fabric**: Learn how to use Eventstream in Microsoft Fabric to capture, transform, and route real-time event data. This includes connecting to a live bike-share data source, applying transformations within the stream, and directing the processed data to multiple destinations such as an eventhouse or Lakehouse for further analysis.
 
-1. **Work with data in a Microsoft Fabric eventhouse**: You will learn how to create and use an eventhouse in Microsoft Fabric to store and query real-time event data. This task involves populating the eventhouse with sample taxi ride data and using KQL and SQL to analyze the information.
-
-1. **Create an Eventhouse in Microsoft Fabric**: Learning how to create an eventhouse in Microsoft Fabric to establish a centralized and scalable foundation for capturing and storing streaming data. This involves setting up a workspace, creating the eventhouse, and understanding how real-time events are persisted and organized for downstream analytics.
-
-1. **Create an Eventstream in Microsoft Fabric**: Setting up an eventstream in Microsoft Fabric to enable real-time data ingestion from external systems. This includes connecting sources such as Azure Event Hub, IoT Hub, or other streaming services to start capturing and processing live event data.
-
-1. **Add a Source to an Eventstream in Microsoft Fabric**: Learning how to integrate a streaming data source with your eventstream to begin ingesting real-time data from services like Event Hub or IoT Hub. This enables your eventstream to continuously capture event data for processing and analysis.
-
-1. **Add a Destination to an Eventstream in Microsoft Fabric**: Understanding how to configure a destination for your eventstream to route processed streaming data to storage or analytics tools such as a lakehouse or KQL database, enabling real-time insights and integration with downstream systems.
+1. **Work with data in a Microsoft Fabric eventhouse**: Learn how to create and use an eventhouse in Microsoft Fabric to store and query real-time event data. This task involves populating the eventhouse with sample taxi ride data and using KQL and SQL to analyze the information.
 
 1. **Create a Real-Time Dashboard in Microsoft Fabric**: Developing a real-time dashboard to visualize and monitor live data from an eventstream. This task helps in creating responsive dashboards for instant insights and better decision-making based on streaming data.
 
-1. **Create a Base Query in Microsoft Fabric**: Learning how to design a base query for your dashboard to centralize common logic and streamline visualizations. This approach enhances efficiency, consistency, and maintainability of your data-driven reports.
-
-1. **Add a Parameter to a Microsoft Fabric Dashboard**: Adding interactive parameters to your dashboard to allow filtering and customizing the displayed data. This enables users to explore specific segments, such as filtering by region or time range, for more focused insights.
-
-1. **Add a Page to a Microsoft Fabric Dashboard**: Expanding your dashboard by adding multiple pages to organize and present different data views. This allows for better structure and improved navigation across diverse insights within a single dashboard experience.
-
-1. **Configure Auto Refresh in Microsoft Fabric Dashboards**: Enabling auto-refresh in your dashboards to keep visualizations current with the latest data. This ensures that users are always viewing up-to-date information without manual updates.
-
-1. **Save and Share a Microsoft Fabric Dashboard**: Learning how to save your dashboard and share it with stakeholders for collaborative analysis. This includes managing permissions and ensuring real-time insights are accessible to relevant users and teams.
 
 ## Architecture Diagram
 
- ![](../Images/dparc3.png)
+ ![](../Images/dp700arc1.png)
 
 ## Explanation of Components
 
-1. **Eventhouse**: A centralized storage layer in Microsoft Fabric designed to capture and persist real-time event data at scale for downstream analytics.
+1. **Real-time Intelligence**: It is an end-to-end solution for event-driven scenarios, streaming data, and data logs.
 
 1. **Eventstream**: A data pipeline in Microsoft Fabric that ingests, processes, and routes streaming data from sources like Event Hub or IoT Hub.
 
+1. **Eventhouse**: An eventhouse is a workspace of databases, which might be shared across a certain project.
+
 1. **Real-Time Dashboard**: A dynamic visualization tool that displays live data from eventstreams, enabling instant monitoring and insights.
 
-1. **Base Query**: A reusable query that centralizes logic for dashboard visuals, improving consistency and simplifying maintenance.
-
-1. **Real-time Intelligence**: It is an end-to-end solution for event-driven scenarios, streaming data, and data logs.
-
-1. **Eventstreams**: The eventstreams feature in Microsoft Fabric gives you a centralized place in the Fabric platform to capture, transform, and route real-time events to various destinations with a no-code experience.
-
-1. **Eventhouse**: An eventhouse is a workspace of databases, which might be shared across a certain project.
 
 # Getting Started with lab
  
@@ -95,9 +62,9 @@ Welcome to your DP-700: Microsoft Fabric Data Engineer Workshop! We've prepared 
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and **lab guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../Images/dpg17.png)
+![Access Your VM and Lab Guide](../Images/dg1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -107,25 +74,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../Images/dpg1.png)
+![Explore Lab Resources](../Images/dg2.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
 To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
-![](../Images/dpg2.png)
+![](../Images/gd4.png)
 
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../Images/dpg3.png)
+![Use the Split Window Feature](../Images/dg3.png)
 
 ## Managing Your Virtual Machine
  
 Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../Images/dpg4.png)
+![Manage Your Virtual Machine](../Images/gd5.png)
 
 ## Support Contact
  
