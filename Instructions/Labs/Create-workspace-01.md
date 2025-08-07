@@ -1,6 +1,6 @@
-# Lab: pre-requiste: Create a Fabric workspace
+# Lab: prerequisite: Create a Fabric workspace
 
-### Estimated Duration: 15 minutes
+#### Estimated Duration: 15 minutes
 
 In this exercise, you will go through the process of signing up for the Microsoft Fabric Trial and setting up a workspace. This foundational step initiates your experience with Microsoft Fabric by granting access to its suite of integrated data services. By creating a workspace, you will establish a centralized environment to manage and organize resources such as lakehouses, notebooks, dataflows, and pipelines. This setup is essential for exploring end-to-end data solutions and enables effective collaboration across projects and teams within the Fabric ecosystem.
 
@@ -8,12 +8,12 @@ In this exercise, you will go through the process of signing up for the Microsof
 
 In this lab, you will be able to complete the following tasks:
 
-- Task 1: Sign up for Microsoft Fabric Trial
+- Task 1: Sign up for the Microsoft Fabric Trial
 - Task 2: Create a workspace
 
 ## Task 1: Sign up for Microsoft Fabric Trial
 
-In this task, you will initiate your 60-day free trial of Microsoft Fabric by signing up through the Fabric app, providing access to its comprehensive suite of data integration, analytics, and visualization tools
+In this task, you will initiate your 60-day free trial of Microsoft Fabric by signing up through the Fabric app, providing access to its comprehensive suite of data integration, analytics, and visualization tools.
 
 1. Open the **Microsoft Edge** browser in the LabVM, navigate to the following URL  
 
@@ -27,7 +27,7 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
     
      ![Enter Your Username](./Images/11.png)
  
-1. Next, provide below password and click on **Sign in (2)**
+1. Next, provide the password below and click on **Sign in (2)**
  
    - **Password:** <inject key="AzureAdUserPassword"></inject> (1)
  
@@ -57,7 +57,7 @@ In this task, you will create a Fabric workspace. The workspace contains all the
 
 1. From the left menu bar, select **Workspaces (1)** and click on **+ New workspace (2)**.
 
-    ![New Workspace](./Images/md6.png)
+   ![New Workspace](./Images/md6.png)
 
 1. On **Create a workspace** window, enter the below name and expand the **Advanced (2)** setttings
 
@@ -71,7 +71,7 @@ In this task, you will create a Fabric workspace. The workspace contains all the
 
 ## Summary
 
-In this exercise, you have signed up for Microsoft Fabric Trial and created a workspace.
+In this exercise, you have signed up for the Microsoft Fabric Trial and created a workspace.
 
 ## Review 
 
