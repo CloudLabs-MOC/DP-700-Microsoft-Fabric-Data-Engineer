@@ -1,6 +1,6 @@
 # Lab 2: Use Delta Tables in Apache Spark
 
-## Estimated Duration: 75 minutes
+#### Estimated Duration: 75 minutes
 
 In this lab, you will learn how to use Delta Tables in Microsoft Fabric Lakehouse for managing batch and streaming data. You’ll work with Apache Spark to create and query Delta Tables using SQL. The lab highlights key Delta Lake features like schema enforcement and ACID transactions. By the end, you’ll understand how to use Delta Tables for reliable, scalable data processing in a lakehouse environment.
 
