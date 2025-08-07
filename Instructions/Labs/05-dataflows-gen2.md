@@ -31,9 +31,9 @@ In this task, you will create a Dataflow (Gen2) in Microsoft Fabric to ingest da
 1. After a few seconds, the Power Query editor for your new dataflow opens as shown here. Select **Import from a Text/CSV file**.  
 
    ![New dataflow.](./Images/md45.png)
-   
-1. Create a new data source with the following settings and then click on **Next (6)**:
-   -
+
+1. Create a new data source with the following settings and then click on **Next (6):**
+
    - **Link to file**: *Selected* (1)
    - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv` (2)
    - **Connection**: Create new connection (3)
@@ -136,9 +136,9 @@ In this task, you will add your Dataflow (Gen2) as an activity within a pipeline
 
 1. In the menu bar on the left edge, select your lakehouse.
 
-1. In the **...** menu for **Tables**, select **refresh**. Then expand **Tables** and select the **orders** table, which has been created by your dataflow.
+1. In the **... (1)** menu for **Tables**, select **Refresh (2)**. Then expand **Tables** and select the **orders (3)** table, which has been created by your dataflow.
 
-   ![Table loaded by a dataflow.](./Images/md60.png)
+   ![Table loaded by a dataflow.](./Images/66.png)
 
 > **Tip**: In Power BI Desktop, you can connect directly to the data transformations done with your dataflow by using the *Power BI dataflows (Legacy)* connector.
 > **Note**: You can also make additional transformations, publish as a new dataset, and distribute with intended audience for specialized datasets.
