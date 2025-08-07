@@ -1,6 +1,6 @@
 # Lab 1:  Create a Microsoft Fabric Lakehouse
 
-## Estimated Duration: 30 minutes
+#### Estimated Duration: 30 minutes
 
 In this lab, you will explore how to build and work with a lakehouse in Microsoft Fabric. You will begin by creating a Fabric lakehouse that leverages OneLake as its storage layer and supports Delta Lake tables for structured querying. You'll learn how to use Apache Spark to process and analyze data stored in the lakehouse, and how to implement a medallion architecture that organizes data into bronze, silver, and gold layers for improved clarity, performance, and insight.
 
