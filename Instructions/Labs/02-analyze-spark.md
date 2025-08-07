@@ -2,7 +2,8 @@
 
 ### Estimated Duration: 45 minutes
 
-In this lab you will ingest data into the Fabric lakehouse and use PySpark to read and analyze the data. Apache Spark is an open-source engine for distributed data processing and is widely used to explore, process, and analyze huge volumes of data in data lake storage. Spark is available as a processing option in many data platform products, including Azure HDInsight, Azure Databricks, Azure Synapse Analytics, and Microsoft Fabric. One of the benefits of Spark is support for a wide range of programming languages, including Java, Scala, Python, and SQL; making Spark a very flexible solution for data processing workloads including data cleansing and manipulation, statistical analysis and machine learning, and data analytics and visualization.
+In this lab, you will ingest data into a Microsoft Fabric lakehouse and analyze it using Apache Spark with PySpark in a Fabric notebook. Spark is a powerful engine for distributed data processing, widely used for handling large-scale data in data lakes.
+You’ll learn how to work with dataframes, apply transformations, run SQL queries, and visualize data using built-in tools and Python libraries like matplotlib and seaborn. This lab provides a practical introduction to data exploration and analytics using Spark in Microsoft Fabric.
 
 ## Lab Objectives
 
@@ -21,11 +22,13 @@ In this lab, you will be able to complete the following tasks:
 
 In this task, you will create a lakehouse to organize and analyze your data files. After setting up your workspace, you'll switch to the *Data Engineering* experience in the portal to initiate the creation of the data lakehouse
 
-1. Return to your workspace and click the **+ New item (1)** icon.  
+1. Return to your workspace and click the **+ New item** icon.  
 
-1. On the **All items** page, scroll down to the **Store data** section and select **Lakehouse (2)**.  
+   ![Screenshot of uploaded files in a lakehouse.](./Images/20.png)
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/md10.png)  
+1. On the **New item** page, scroll down to the **Store data** section and select **Lakehouse**.  
+
+   ![Screenshot of uploaded files in a lakehouse.](./Images/21.png)  
 
 1. Provide the following details to create a **Lakehouse** and then click on **Create (2)** to proceed.
 
@@ -77,7 +80,7 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 
 1. On the menu to change the name to **Notebook<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![Enter Your Username](./Images/dpp10.png)
+   ![Enter Your Username](./Images/22.png)
 
 1. Select the first cell (which is currently a code cell), and then in the top-right tool bar, use the **M↓** button to convert it to a markdown cell. The text contained in the cell will then be displayed as formatted text.
 
@@ -94,7 +97,7 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
    Use this notebook to explore sales order data
     ```
 
-    ![Screen picture of a Fabric notebook with a markdown cell.](Images/md16.png)
+    ![Screen picture of a Fabric notebook with a markdown cell.](Images/23.png)
 
 1. When you have finished, click anywhere in the notebook outside of the cell to stop editing it and see the rendered markdown.
 
@@ -111,11 +114,11 @@ In this task, you will create a DataFrame using PySpark to begin working with yo
 
 1. You will see a list of items contained in the workspace including your lakehouse and notebook.
 
-   ![Enter Your Username](./Images/md17.png)
+   ![Enter Your Username](./Images/24.png)
 
 1. Select the lakehouse to display the Explorer pane.
 
-   ![Enter Your Username](./Images/dpp11.png)
+   ![Enter Your Username](./Images/25.png)
 
 1. Including the **orders (1)** folder. From the top menu, select **Open notebook (2)**, **Existing notebook (3)**, and then open the notebook you created earlier. The notebook should now be open next to the Explorer pane. Expand Lakehouses, expand the Files list, and select the orders folder. The CSV files that you uploaded are listed next to the notebook editor, like this:
 
@@ -125,9 +128,9 @@ In this task, you will create a DataFrame using PySpark to begin working with yo
 
    ![Enter Your Username](./Images/dpp12.png)
 
-1. From the **… (1)** menu for 2019.csv, select **Load data (2)** > **Spark (3)**. The following code is automatically generated in a new code cell:
+1. Expand the **Files (1)** section from the left-hand pane, and then **orders (2)** folder. In the right pane, click the **ellipsis … (1)** menu for 2019.csv, select **Load data (2)** > **Spark (3)**. The following code is automatically generated in a new code cell:
 
-   ![Enter Your Username](./Images/md19.png)
+   ![Enter Your Username](./Images/26.png)
 
     ```python
     df = spark.read.format("csv").option("header","true").load("Files/orders/2019.csv")
@@ -137,13 +140,15 @@ In this task, you will create a DataFrame using PySpark to begin working with yo
 
      >**Note**: You can hide the Lakehouse explorer panes on the left by using the « icons. This gives more space for the notebook.
 
-1. Select ▷ **Run cell (1)** to the left of the cell to run the code.
+1. Select ▷ **Run cell** to the left of the cell to run the code.
+
+   ![Enter Your Username](./Images/27.png)
 
    >**Note**: The first time you run Spark code, a Spark session is started. This can take a few seconds or longer. Subsequent runs within the same session will be quicker.
 
-1. When the cell code has completed, review the **output (2)** below the cell, which should look like this:
+1. When the cell code has completed, review the **output** below the cell, which should look like this:
  
-    ![Screen picture showing auto generated code and data.](Images/md20.png)
+    ![Screen picture showing auto generated code and data.](Images/28.png)
 
 1. The output shows data from the 2019.csv file displayed in columns and rows.  Notice that the column headers contain the first line of the data. To correct this, you need to modify the first line of the code as follows:
 
@@ -176,7 +181,8 @@ In this task, you will create a DataFrame using PySpark to begin working with yo
 
     display(df)
     ```
-    
+    ![Screen picture showing auto generated code and data.](Images/29.png)
+
 1. Run the cell and review the output:
 
     ![Screen picture of code with schema defined and data.](./Images/md21.png)
@@ -229,6 +235,8 @@ The DataFrame object provides additional functionality such as the ability to fi
 
     display(customers.distinct())
     ```
+    ![Screen picture of code with schema defined and data.](./Images/30.png)
+
 1. Run the code, and examine the output:
 
     * The code creates a new DataFrame called **customers** which contains a subset of columns from the original **df** DataFrame. When performing a DataFrame transformation you do not modify the original DataFrame, but return a new one.
@@ -239,7 +247,7 @@ The DataFrame object provides additional functionality such as the ability to fi
       ```
     * The DataFrame functions *count* and *distinct* are used to provide totals for the number of customers and unique customers.
 
-1. Modify the first line of the code (1) by using *select* with a *where* function as follows:
+1. Modify the first line of the **code** by using *select* with a *where* function as follows:
 
     ```python
     customers = df.select("CustomerName", "Email").where(df['Item']=='Road-250 Red, 52')
@@ -248,10 +256,11 @@ The DataFrame object provides additional functionality such as the ability to fi
 
     display(customers.distinct())
     ```
+    ![Screen picture showing auto generated code and data.](Images/31.png)
 
-1. **Run (2)** the modified code to select only the customers who have purchased the Road-250 Red, 52 product. Note that you can “chain” multiple functions together so that the **output (3)** of one function becomes the input for the next. In this case, the DataFrame created by the *select* method is the source DataFrame for the **where** method that is used to apply filtering criteria.
+1. **Run (1)** the modified code to select only the customers who have purchased the Road-250 Red, 52 product. Note that you can “chain” multiple functions together so that the **output (2)** of one function becomes the input for the next. In this case, the DataFrame created by the *select* method is the source DataFrame for the **where** method that is used to apply filtering criteria.
 
-    ![Screen picture showing auto generated code and data.](Images/md22.png)
+    ![Screen picture showing auto generated code and data.](Images/32.png)
 
 ## Task 5: Aggregate and group data in a DataFrame
 
@@ -285,7 +294,7 @@ In this task, you will learn how to aggregate and group data in a DataFrame usin
     * The *groupBy* method groups the data by the derived Year column.
     * The count of rows in each group is calculated before the *orderBy* method is used to sort the resulting DataFrame.
 
-    ![Screen picture showing the results of aggregating and grouping data in a DataFrame.](./Images/md23.png)
+    ![Screen picture showing the results of aggregating and grouping data in a DataFrame.](./Images/33.png)
 
 ## Task 6: Use Spark to transform data files
 
@@ -318,7 +327,7 @@ A common task for data engineers and data scientists is to transform data for fu
     - Year and Month columns added, based on the OrderDate column.
     - FirstName and LastName columns added, based on the CustomerName column.
     - The columns are filtered and reordered, and the CustomerName column removed.
-
+   
 3. Review the output and verify that the transformations have been made to the data.
 
    ![Enter Your Username](./Images/md24.png)
@@ -440,9 +449,9 @@ While it’s useful to be able to embed SQL statements into a cell containing Py
     ORDER BY OrderYear;
     ```
 
-1. Run the cell and review the results. Observe that:
+1. **Run (1)** the cell and review the **results (2)**. Observe that:
 
-    ![Screen picture showing that the salesorders table has been created.](./Images/dpp20.png)
+    ![Screen picture showing that the salesorders table has been created.](./Images/34.png)
 
     * The **%%sql** command at the beginning of the cell (called a magic) changes the language to Spark SQL instead of PySpark.
     * The SQL code references the *salesorders* table that you created previously.
@@ -483,7 +492,7 @@ In this task, you will visualize data from a DataFrame to identify patterns and 
     - Stacked: Unselected
     - Your chart should look similar to this **(4)**:
 
-      ![Screen picture showing auto generated code and data.](./Images/dpp24.png)
+      ![Screen picture showing auto generated code and data.](./Images/36.png)
 
 ### Get started with matplotlib
 
@@ -502,7 +511,7 @@ In this task, you will visualize data from a DataFrame to identify patterns and 
 
 2. Run the code. It returns a Spark DataFrame containing the yearly revenue and number of orders. To visualize the data as a chart, we’ll first use the matplotlib Python library. This library is the core plotting library on which many others are based and provides a great deal of flexibility in creating charts.
 
-    ![Screen picture showing that the salesorders table has been created.](./Images/dpp25.png)
+    ![Screen picture showing that the salesorders table has been created.](./Images/35.png)
 
 3. Add a new code cell, and add the following code:
 
@@ -653,23 +662,23 @@ While *matplotlib* enables you to create different chart types, it can require s
 
 5.	Modify the code again as follows:
 
-   ```python
-   import seaborn as sns
+    ```python
+    import seaborn as sns
 
-   # Clear the plot area
-   plt.clf()
+    # Clear the plot area
+    plt.clf()
 
-   # Create a line chart
-   ax = sns.lineplot(x="OrderYear", y="GrossRevenue", data=df_sales)
+    # Create a line chart
+    ax = sns.lineplot(x="OrderYear", y="GrossRevenue", data=df_sales)
 
-   plt.show()
-   ```
+    plt.show()
+    ```
 
 6.	Run the modified code to view the yearly revenue as a line chart.
 
   >**Note**: To learn more about plotting with seaborn, see the [seaborn](https://seaborn.pydata.org/index.html) documentation.
 
-### Review
+## Review
 
 In this lab, you worked through the end-to-end process of analyzing data with Apache Spark in Microsoft Fabric. You created a lakehouse, built a notebook, and used PySpark to load, explore, transform, and visualize data. You also practiced using both DataFrame methods and SQL for flexible data analysis.
 
@@ -684,4 +693,6 @@ In this lab, you have completed the following tasks:
 - Worked with tables and SQL
 - Visualized data with Spark
 
-## Now, click on Next from the lower right corner to move on to the next lab.
+## You have successfully completed the lab. Click on Next >> to procced with next Lab.
+
+   ![](./Images/6.png)
