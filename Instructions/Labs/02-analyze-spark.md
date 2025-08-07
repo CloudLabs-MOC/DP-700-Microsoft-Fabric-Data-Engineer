@@ -678,7 +678,7 @@ While *matplotlib* enables you to create different chart types, it can require s
 
   >**Note**: To learn more about plotting with seaborn, see the [seaborn](https://seaborn.pydata.org/index.html) documentation.
 
-### Review
+## Review
 
 In this lab, you worked through the end-to-end process of analyzing data with Apache Spark in Microsoft Fabric. You created a lakehouse, built a notebook, and used PySpark to load, explore, transform, and visualize data. You also practiced using both DataFrame methods and SQL for flexible data analysis.
 
@@ -693,6 +693,6 @@ In this lab, you have completed the following tasks:
 - Worked with tables and SQL
 - Visualized data with Spark
 
-## Now, click on Next from the lower right corner to move on to the next lab.
+## You have successfully completed the lab. Click on Next >> to procced with next Lab.
 
    ![](./Images/6.png)

@@ -3,9 +3,8 @@
 
 ## Estimated duration: 45 minutes
 
-In this lab, you will learn how to ingest data into a Microsoft Fabric lakehouse using pipelines—an essential skill for building cloud-scale analytics solutions. A data lakehouse is a common analytical data store, and one of the core responsibilities of a data engineer is to manage the ingestion of data from multiple operational sources into this environment. You will implement *extract, transform, and load* (ETL) or *extract, load, and transform* (ELT) solutions by creating pipelines in Fabric.
-
-Microsoft Fabric also supports Apache Spark, enabling scalable data processing. By combining pipeline and Spark capabilities, you will design a workflow that copies data from external sources into OneLake storage and uses Spark code to transform the data before loading it into tables for analysis.
+In this lab, you’ll learn how to ingest and transform data using Microsoft Fabric. You’ll create a pipeline to copy sales data from an external HTTP source into a lakehouse, then use a PySpark notebook to process and load the data into a table.
+The lab demonstrates how to build an automated ETL workflow by combining pipeline activities with Spark-based data transformation. This end-to-end solution helps you understand how to manage data ingestion, transformation, and storage in a modern cloud-scale analytics environment.
 
 ## Lab Objectives
 
@@ -17,7 +16,7 @@ In this lab, you will be able to complete the following tasks:
 - Task 4: Modify the pipeline
 
 
-### Task 1: Create a Subfolder in lakehouse
+## Task 1: Create a Subfolder in lakehouse
 
 In this task, you will create subfolder in the existing lakehouse.
 
@@ -31,13 +30,13 @@ In this task, you will create subfolder in the existing lakehouse.
 
    ![Screen picture showing auto generated code and data.](./Images/md32.png)
 
-### Task 2: Create a pipeline
+## Task 2: Create a pipeline
 
 In this task, you will create a pipeline in Microsoft Fabric to ingest data into your lakehouse. You will use the Copy Data activity to extract data from a source and copy it into a subfolder within the lakehouse, forming the foundation for an ETL or ELT process.
 
 1. On the **Home** page for your lakehouse, select **Get data (1)** and then select **New data pipeline (2)**.
 
-    ![Screen picture showing auto generated code and data.](./Images/md33.png)
+    ![Screen picture showing auto generated code and data.](./Images/40.png)
 
     - Create a new data pipeline named **Ingest Sales Data (3)** and then **Create (4)**.
 
@@ -67,6 +66,8 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
     - **Binary copy**: <u>Un</u>selected
     - **Request timeout**: *Leave blank*
     - **Max concurrent connections**: *Leave blank*
+
+      ![Screenshot of the Choose data source page.](./Images/41.png)
 
 1. Wait for the data to be sampled and then ensure that the following settings are selected:
 
@@ -119,7 +120,7 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/md37.png)
 
-### Task 3: Create a notebook
+## Task 3: Create a notebook
 
 In this task, you will create a notebook in Microsoft Fabric to begin processing your ingested data using PySpark. You’ll write code to load sales data, apply transformations, and save the results as a table in the lakehouse—enabling further analysis or reporting through SQL or visualization tools.
 
@@ -178,15 +179,15 @@ In this task, you will create a notebook in Microsoft Fabric to begin processing
 
 8. Then set the **Name** of the notebook to **Load Sales (1)** and close the settings pane **(2)**.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/dpp40.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/42.png)
 
 9. In the hub menu bar on the left, select your lakehouse.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/dpp41.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/43.png)
 
 10. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
 
-### Task 4: Modify the pipeline
+## Task 4: Modify the pipeline
 
 In this task, you will modify your existing pipeline to include the notebook you created for data transformation. By integrating the notebook into the pipeline, you’ll build a reusable and automated ETL process that extracts data, runs Spark-based transformations, and loads the results into a lakehouse table.
 
@@ -245,11 +246,11 @@ In this task, you will modify your existing pipeline to include the notebook you
 
             ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/dpp48.png)            
 
-    The **table_name** parameter will be passed to the notebook and override the default value assigned to the **table_name** variable in the parameters cell.
+        The **table_name** parameter will be passed to the notebook and override the default value assigned to the **table_name** variable in the parameters cell.
 
-1. On the **Home** tab, use the **&#128427;** (*Save*) icon to save the pipeline. Then use the **&#9655; Run** button to run the pipeline.
+1. On the **Home** tab, use the **&#128427;** **(*Save*) (1)** icon to save the pipeline. Then use the **&#9655; Run (2)** button to run the pipeline.
 
-    ![Screenshot of a pipeline with a Dataflow activity.](./Images/dpp50.png)
+    ![Screenshot of a pipeline with a Dataflow activity.](./Images/44.png)
 
 1. Click on **Refresh (1)**, untill all of the activities are succeeded **(2)**.  
 
@@ -263,7 +264,7 @@ In this task, you will modify your existing pipeline to include the notebook you
 
     ![Screenshot of a pipeline with a Dataflow activity.](./Images/md43nn.png)
 
-### Review    
+## Review    
 
 In this lab, you implemented a data ingestion solution that uses a pipeline to copy data to your lakehouse from an external source, and then uses a Spark notebook to transform the data and load it into a table.
 
@@ -274,4 +275,6 @@ In this lab, you have completed the following tasks:
 - Created a notebook
 - Modified the pipeline
 
-## Now, click on Next from the lower right corner to move on to the next lab.
+## You have successfully completed the lab. Click on Next >> to procced with next Lab.
+
+   ![](./Images/6.png)
