@@ -1,6 +1,6 @@
 # Lab 1:  Create a Microsoft Fabric Lakehouse
 
-## Estimated Duration: 30 minutes
+#### Estimated Duration: 30 minutes
 
 In this lab, you will explore how to build and work with a lakehouse in Microsoft Fabric. You will begin by creating a Fabric lakehouse that leverages OneLake as its storage layer and supports Delta Lake tables for structured querying. You'll learn how to use Apache Spark to process and analyze data stored in the lakehouse, and how to implement a medallion architecture that organizes data into bronze, silver, and gold layers for improved clarity, performance, and insight.
 
@@ -36,7 +36,7 @@ In this task, you will create a lakehouse in your Microsoft Fabric workspace.
 
     - The **Tables** folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source *Delta Lake* file format, commonly used in Apache Spark.
 
-    - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create *shortcuts* in this folder to reference data that is stored externally.
+    - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create *shortcuts*         in this folder to reference data that is stored externally.
 
       ![Screenshot of uploaded files in a lakehouse.](./Images/mod2-1.png)
 
@@ -178,7 +178,7 @@ In this task, you’ll build a simple Power BI report directly within Microsoft 
 
 1. In the toolbar, select **Model layouts (1)**. The data model schema for the semantic model is shown. Select the **Sales** table **(2)**.
 
-    ![Screenshot of model layouts](./Images/md2-20.png)
+   ![Screenshot of model layouts](./Images/md2-20.png)
 
     > **Note 1**: In this exercise, the semantic model consists of a single table. In a real-world scenario, you would likely create multiple tables in your lakehouse, each of which would be included in the model. You could then define relationships between these tables in the model.
     
@@ -186,7 +186,7 @@ In this task, you’ll build a simple Power BI report directly within Microsoft 
 
 2. In the menu ribbon, select the **Reporting (1)** tab. Then select **New report**. Your current page will change to a report designer view. Click on **Continue (2)**.
 
-    ![Screenshot of the report designer.](./Images/md2-21.png)
+   ![Screenshot of the report designer.](./Images/md2-21.png)
 
 3. In the **Data** pane on the right, expand the **sales (1)** table. Then select the following fields:
     - **Item (2)**
@@ -196,17 +196,17 @@ In this task, you’ll build a simple Power BI report directly within Microsoft 
 
     ![Screenshot of a report containing a table.](./Images/md2-22.png)
 
-4. Hide the **Data** and **Filters** panes to create more space. Then ensure the table visualization is selected and in the **Visualizations** pane, change the visualization to a **Clustered bar chart (4)** and resize it as shown here.
+4. Hide the **Data** and **Filters** panes to create more space. Then ensure the table visualization is selected and in the **Visualizations** pane, change the                visualization to a **Clustered bar chart (4)** and resize it as shown here.
 
-    ![Screenshot of a report containing a clustered bar chart.](./Images/dpp64.png)
+   ![Screenshot of a report containing a clustered bar chart.](./Images/dpp64.png)
 
 5. On the **File (1)** menu, select **Save (2)**.
 
-    ![Screenshot of a report containing a clustered bar chart.](./Images/dpp65.png)
+   ![Screenshot of a report containing a clustered bar chart.](./Images/dpp65.png)
 
 6. Then save the report as `Item Sales Report` **(1)** in the workspace you created previously and then click on **Save (2)**.
 
-    ![Screenshot of a Choose columns dialog box.](./Images/md2-24.png)
+   ![Screenshot of a Choose columns dialog box.](./Images/md2-24.png)
 
 7. Now, in the hub menu bar on the left, select your workspace.
 
@@ -216,7 +216,7 @@ In this task, you’ll build a simple Power BI report directly within Microsoft 
     - A default semantic model for the tables in your lakehouse.
     - The **Item Sales Report** report.
 
-    ![Screenshot of a Choose columns dialog box.](./Images/md2-25.png)
+      ![Screenshot of a Choose columns dialog box.](./Images/md2-25.png)
 
 
 ## Review

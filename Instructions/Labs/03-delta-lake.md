@@ -1,6 +1,6 @@
 # Lab 2: Use Delta Tables in Apache Spark
 
-## Estimated Duration: 75 minutes
+#### Estimated Duration: 75 minutes
 
 In this lab, you will learn how to use Delta Tables in Microsoft Fabric Lakehouse for managing batch and streaming data. You’ll work with Apache Spark to create and query Delta Tables using SQL. The lab highlights key Delta Lake features like schema enforcement and ACID transactions. By the end, you’ll understand how to use Delta Tables for reliable, scalable data processing in a lakehouse environment.
 
@@ -16,7 +16,7 @@ In this lab, you will be able to complete the following tasks:
 - Task 6: Compare managed and external tables
 - Task 7: Use SQL to create a Delta table
 - Task 8: Explore table versioning
-- Task 9: Analyze Delta table data with SQL queries
+- Task 9: Analyze the Delta table data with SQL queries
 - Task 10: Use Delta tables for streaming data
 
 
@@ -24,31 +24,31 @@ In this lab, you will be able to complete the following tasks:
 
 In this task, you will create a new lakehouse within your Microsoft Fabric workspace and upload sample data files into it. 
 
-1. Return to the web browser tab containing your lakehouse, and in the Explorer pane, next to the **Files** folder, select the **… (1)** menu, click on **New subfolder (2)**. 
+1. Return to the web browser tab containing your lakehouse, and in the Explorer pane, next to the **Files** folder, select the **… (1)** menu, click on **New subfolder        (2)**. 
 
-    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-2.png)
+   ![Screenshot of uploaded files in a lakehouse.](./Images/md2-2.png)
 
 1. Create a new subfolder named **products (1)** and then click on **Create (2)**.    
 
-    ![Screen picture of products.csv uploaded to the lakehouse.](Images/md2-26.png)
+   ![Screen picture of products.csv uploaded to the lakehouse.](Images/md2-26.png)
 
 1. In the **(...)(1)** menu for the **products** folder, click on **Upload (2)** and then **Upload files (2)**.
 
-    ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp66.png)
+   ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp66.png)
 
 1. Click on folder icon **(1)**, navigate to `C:\LabFiles\Files` **(2)** then select **products.csv (3)** and then **Open (4)**.
 
-    ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp67.png)
+   ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp67.png)
 
 1. If prompted, click on **Upload**.
 
 1. Click on **Upload**.
 
-    ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp68.png)
+   ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp68.png)
 
 1. After the file has been uploaded, select the **products** folder to verify that the file has been uploaded.
 
-    ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp69.png)
+   ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp69.png)
   
 ### Task 2: Explore data in a DataFrame
 
@@ -56,13 +56,13 @@ In this task, you'll begin working with a notebook in Microsoft Fabric to explor
 
 1. Create a **New notebook**. Click on **Open notebook (1)** and then **New Notebook (2)**.
 
-    ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp70.png)
+   ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp70.png)
 
     After a few seconds, a new notebook containing a single cell will open. Notebooks are made up of one or more cells that can contain code or markdown (formatted text).
 
-2. Select the first cell (which is currently a code cell), and then in the top-right tool bar, use the **M↓** button to convert it to a markdown cell. The text contained in the cell will then be displayed as formatted text. Use markdown cells to provide explanatory information about your code.
+2. Select the first cell (which is currently a code cell), and then in the top-right tool bar, use the **M↓** button to convert it to a markdown cell. The text contained      in the cell will then be displayed as formatted text. Use markdown cells to provide explanatory information about your code.
 
-    ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp71.png)
+   ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp71.png)
 
 3. Use the 🖉 (Edit) button to switch the cell to editing mode, then modify the markdown as follows:
 
@@ -98,7 +98,7 @@ In this task, you'll begin working with a notebook in Microsoft Fabric to explor
 
 7. When the cell code has completed, review the output below the cell, which should look similar to this **(3)**:
 
-    ![Screen picture of products.csv data.](Images/md2-28.png)
+   ![Screen picture of products.csv data.](Images/md2-28.png)
  
 ### Task 3: Create Delta tables
 
@@ -118,7 +118,7 @@ The data files are created in the **Tables** folder.
 
    >**Tip**: To see the + Code icon, move the mouse to just below and to the left of the output from the current cell. Alternatively, in the menu bar, on the Edit tab, select **+ Add code cell**.
 
-2. To create a managed Delta table, add a new cell, enter the following code and then run the cell:
+2. To create a managed Delta table, add a new cell, enter the following code, and then run the cell:
 
     ```python
     df.write.format("delta").saveAsTable("managed_products")
@@ -126,17 +126,17 @@ The data files are created in the **Tables** folder.
 
 3. In the Lakehouse explorer pane, **Refresh** the Tables folder and expand the Tables node to verify that the **managed_products** table has been created.
 
-    ![Screen picture of products.csv data.](Images/dpp72.png)
+   ![Screen picture of products.csv data.](Images/dpp72.png)
 
      >**Note**: The triangle icon next to the file name indicates a Delta table.
 
-The files for managed tables are stored in the **Tables** folder in the lakehouse. A folder named **managed_products** has been created which stores the Parquet files and delta_log folder for the table.
+The files for managed tables are stored in the **Tables** folder in the lakehouse. A folder named **managed_products** has been created, which stores the Parquet files and the delta_log folder for the table.
 
 ### Task 5: Create an external table
 
 In this task, you'll create an external Delta table, where the data files are stored in a specified location (such as a folder in your lakehouse), while the table schema is maintained by Microsoft Fabric.
 
-1. In the Lakehouse explorer pane, in the **… (1)** menu for the **Files** folder, select **Copy ABFS path (2)**. The ABFS path is the fully qualified path to the lakehouse Files folder.
+1. In the Lakehouse explorer pane, in the **… (1)** menu for the **Files** folder, select **Copy ABFS path (2)**. The ABFS path is the fully qualified path to the             lakehouse Files folder.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-29.png)
 
@@ -154,7 +154,7 @@ In this task, you'll create an external Delta table, where the data files are st
 
 4. **Run (2)** the cell to save the DataFrame as an external table in the Files/external_products folder.
 
-5. In the Lakehouse explorer pane, **Refresh** the Tables folder and expand the Tables node and verify that the **external_products (3)** table has been created containing the schema metadata.
+5. In the Lakehouse explorer pane, **Refresh** the Tables folder and expand the Tables node and verify that the **external_products (3)** table has been created containing    the schema metadata.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-30.png)
 
@@ -171,7 +171,7 @@ In this task, you will use the %%sql magic command to query both managed and ext
     DESCRIBE FORMATTED managed_products;
     ```
 
-2. In the results, view the Location property for the table. Click on the **Location (1)** value in the Data type column to see the full path. Notice that the OneLake storage location ends with **/Tables/managed_products (2)**.
+2. In the results, view the Location property for the table. Click on the **Location (1)** value in the Data type column to see the full path. Notice that the OneLake         storage location ends with **/Tables/managed_products (2)**.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/dpp73.png)
 
@@ -182,7 +182,7 @@ In this task, you will use the %%sql magic command to query both managed and ext
     DESCRIBE FORMATTED external_products;
     ```
 
-4. Run the cell and in the results, view the **Location (1)** property for the table. Widen the Data type column to see the full path and notice that the OneLake storage locations ends with **/Files/external_products (2)**.
+4. Run the cell and in the results, view the **Location (1)** property for the table. Widen the Data type column to see the full path and notice that the OneLake storage      locations end with **/Files/external_products (2)**.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/dpp74.png)
 
@@ -198,7 +198,7 @@ In this task, you will use the %%sql magic command to query both managed and ext
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/dpp75.png)
 
-7. In the Lakehouse explorer pane, **Refresh** the **Files (1)** folder and verify that the **external_products (2)** file has *not* been deleted. Select this folder to view the Parquet data files and _delta_log folder. 
+7. In the Lakehouse explorer pane, **Refresh** the **Files (1)** folder and verify that the **external_products (2)** file has *not* been deleted. Select this folder to       view the Parquet data files and the _delta_log folder. 
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/dpp76.png)
 
@@ -269,7 +269,7 @@ Two result sets are returned - one containing the data after the price reduction
 
 In this task, you will analyze the data stored in your Delta table by writing SQL queries using the %%sql magic command in your notebook. This allows you to interact with the Delta table using familiar SQL syntax, making it easy to perform data exploration and analysis. You will create a temporary view from the managed_products table and run queries to filter, aggregate, and sort data, helping you uncover meaningful insights from the dataset.
 
-Using the SQL magic command you can use SQL syntax instead of Pyspark. Here you will create a temporary view from the products table using a `SELECT` statement.
+Using the SQL magic command, you can use SQL syntax instead of PySpark. Here, you will create a temporary view from the products table using a `SELECT` statement.
 
 1. Add a new code cell, and run the following code to create and display the temporary view:
 
@@ -316,7 +316,7 @@ Alternatively, you can run a SQL query using PySpark.
 
 In this task, you'll explore how Delta tables can be used to handle streaming data using Spark's Structured Streaming API.
 
-Delta Lake supports streaming data. Delta tables can be a sink or a source for data streams created using the Spark Structured Streaming API. In this example, you’ll use a Delta table as a sink for some streaming data in a simulated internet of things (IoT) scenario.
+Delta Lake supports streaming data. Delta tables can be a sink or a source for data streams created using the Spark Structured Streaming API. In this example, you’ll use a Delta table as a sink for some streaming data in a simulated Internet of Things (IoT) scenario.
 
 1. Add a new code cell and add the following code and run it:
 
@@ -373,7 +373,7 @@ This code writes the streaming device data in Delta format to a folder named iot
     SELECT * FROM IotDeviceData;
     ```
 
-This code queries the IotDeviceData table, which contains the device data from the streaming source.
+This code queries the IoTDeviceData table, which contains the device data from the streaming source.
 
 4. In a new code cell, add and run the following code:
 
@@ -399,7 +399,7 @@ This code writes more hypothetical device data to the streaming source.
     SELECT * FROM IotDeviceData;
     ```
 
-This code queries the IotDeviceData table again, which should now include the additional data that was added to the streaming source.
+This code queries the IoTDeviceData table again, which should now include the additional data that was added to the streaming source.
 
 6. In a new code cell, add code to stop the stream and run the cell:
 
@@ -423,7 +423,7 @@ In this lab, you have completed the following tasks:
 - Task 6: Compare managed and external tables
 - Task 7: Use SQL to create a Delta table
 - Task 8: Explore table versioning
-- Task 9: Analyze Delta table data with SQL queries
+- Task 9: Analyze the Delta table data with SQL queries
 - Task 10: Use Delta tables for streaming data
 
 ## Now, click on Next from the lower right corner to move on to the next lab.
