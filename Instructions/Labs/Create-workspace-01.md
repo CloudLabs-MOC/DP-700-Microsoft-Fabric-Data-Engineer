@@ -41,7 +41,7 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 
 1. In the Fabric portal, click on **Account Manager (1)** and then select **Free trial (2)**.
 
-    ![Account-manager-start](./Images/13.png)  
+   ![Account-manager-start](./Images/13.png)  
 
 2. In the prompt that appears, click **Activate** to start your **60-day free Fabric trial**.  
 
@@ -63,17 +63,18 @@ In this task, you will create a Fabric workspace. The workspace contains all the
 
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>** (1)
 
-    ![New Workspace](./Images/dpp1.png)
+     ![New Workspace](./Images/dpp1.png)
 
 1. Under **License mode**, select the **Trial (1)** and click on **Apply (2)**
 
-    ![New Workspace](./Images/16.png)
+   ![New Workspace](./Images/16.png)
 
 ## Summary
 
 In this exercise, you have signed up for Microsoft Fabric Trial and created a workspace.
 
 ## Review 
+
 In this lab, you have completed:
 
  + Signed up for Microsoft Fabric Trial
@@ -81,4 +82,4 @@ In this lab, you have completed:
 
 ## You have successfully completed the lab. Click on Next >> to procced with next Lab.
 
-   ![](./Images/6.png)
+![](./Images/6.png)
