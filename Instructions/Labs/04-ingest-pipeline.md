@@ -126,7 +126,7 @@ In this task, you will create a notebook in Microsoft Fabric to begin processing
 
 1. On the **Home** page for your lakehouse, in the **Open notebook (1)** menu, select **New notebook (2)**.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/dpp36.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/100.png)
 
      >**Note**: After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
@@ -197,7 +197,7 @@ In this task, you will modify your existing pipeline to include the notebook you
 
 1. On the **Activities (1)** tab, click on the elipses **(...) (2)** list, select **Delete data (3)**. 
 
-    ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/md39.png)
+    ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/101.png)
 
 1. Then position the new **Delete data**  activity to the left of the **Copy data** activity and connect its **On completion** output to the **Copy data** activity, as shown here:    
 
