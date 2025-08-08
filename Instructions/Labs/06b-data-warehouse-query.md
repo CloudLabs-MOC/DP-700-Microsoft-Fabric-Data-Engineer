@@ -193,14 +193,10 @@ Let's create a view based on the query we used earlier, and add a filter to it.
 
 In this lab, you have:
 
-- Created a sample data warehouse in Microsoft Fabric.
-
-- Queried the data warehouse using T-SQL to extract meaningful insights.
-
-- Verified data consistency and corrected inaccurate records.
-
-- Created a filtered view to simplify data access for reporting.
-
-- Strengthened your understanding of querying, validating, and managing warehouse data using Microsoft Fabric.
+- Created a sample data warehouse  
+- Queried the data warehouse  
+- Verified data consistency  
+- Saved a query as a view
 
 ## Now, click on Next from the lower right corner to move on to the next lab.
+
