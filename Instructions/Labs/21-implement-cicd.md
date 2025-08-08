@@ -10,15 +10,15 @@ In this hands-on lab, you will implement deployment pipelines in Microsoft Fabri
 
 In this lab, you will complete the following tasks:
 
-- **Task 1**: Create a data warehouse
+- **Task 1**: Create workspaces
 
-- **Task 2**: Create a lakehouse
+- **Task 2**: Create a deployment pipeline
 
-- **Task 3**: Apply workspace access controls
+- **Task 3**: Assign workspaces to stages of a deployment pipeline
 
-- **Task 4**: Apply item access control
+- **Task 4**: Create content
 
-- **Task 5**: Apply OneLake data access roles in a Lakehouse
+- **Task 5**: Deploy content between stages
 
 ### Task 1: Create workspaces
 
@@ -144,14 +144,14 @@ Deploy the lakehouse from the **Development** stage to the **Test** and **Produc
 
 In this lab, you learned how to:
 
-- Create and manage a data warehouse in Microsoft Fabric.
+- Created workspaces
 
-- Create and manage a lakehouse in Microsoft Fabric.
+- Created a deployment pipeline
 
-- Apply workspace access controls to manage user permissions.
+- Assigned workspaces to stages of a deployment pipeline
 
-- Apply item-level access controls for finer security management.
+- Created content
 
-- Apply OneLake data access roles to secure data within a lakehouse.
+- Deployed content between stages
 
 ## You have successfully completed the lab
