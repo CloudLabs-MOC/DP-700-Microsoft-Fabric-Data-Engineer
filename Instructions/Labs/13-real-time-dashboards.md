@@ -262,11 +262,11 @@ In this task, you will save your dashboard and configure sharing settings to col
 
 In this lab, you learned how to:
 
-- Create a real-time dashboard to visualize streaming data.
-- Build a base query to retrieve and structure dashboard data.
-- Add parameters to make dashboard queries dynamic and interactive.
-- Add additional pages to the dashboard for better organization.
-- Configure auto-refresh to keep dashboard visualizations updated in real time.
-- Save and share the dashboard to collaborate and provide real-time insights to others.
+- Created a real-time dashboard
+- Created a base query
+- Added a parameter
+- Added a page
+- Configured auto refresh
+- Saved and shared the dashboard
 
 ## You have successfully completed the lab
