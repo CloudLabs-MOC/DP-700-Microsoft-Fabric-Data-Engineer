@@ -27,25 +27,26 @@ In this task, you will create a lakehouse in your Microsoft Fabric workspace.
 
 1. Return to your workspace and click the **+ New item (1)** icon.  
 
-2. On the **All items** page, scroll down to the **Store data** section and select **Lakehouse (2)**.  
+1. On the **All items** page, scroll down to the **Store data** section and select **Lakehouse (2)**.  
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/md10.png)  
+1. Provide the following details to create a **Lakehouse**:  
 
-3. Provide the following details to create a **Lakehouse**:  
+   - **Name:** Enter **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**  
 
-   - **Name:** Enter **lakehouse<inject key="DeploymentID" enableCopy="false"/>**  
+    - Click **Create (2)** to proceed.
 
-4. Click **Create** to proceed.  
+      ![Screenshot of uploaded files in a lakehouse.](./Images/dpm6.png)  
 
-5. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
+1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
 
     - The **Tables** folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source *Delta Lake* file format, commonly used in Apache Spark.
 
     - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create *shortcuts* in this folder to reference data that is stored externally.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/mod2-1.png)
+      ![Screenshot of uploaded files in a lakehouse.](./Images/mod2-1.png)
 
-   >**Note**: Currently, there are no tables or files in the lakehouse.
+      >**Note**: Currently, there are no tables or files in the lakehouse.
 
 ### Task 2: Create and monitor a Dataflow
 
@@ -55,29 +56,35 @@ In this task, you will create a Dataflow Gen2 to ingest data from a CSV file int
 
 1. On the **Home** page for your lakehouse, in the **Get data in your lakehouse** menu, select **New Dataflow Gen2**.
 
-1. Enter **Get Product Data** (1) in the **Name** field, and **uncheck** (2) the below checkbox then click **Create** (2).
+   ![](./Images/dpm7.png)
+
+1. Enter **Get Product Data** **(1)** in the **Name** field, and **uncheck** **(2)** the below checkbox then click **Create** **(2)**.
 
     ![Screenshot of a new dataflow.](./Images/dataflow2.png)
 
-1. In the dataflow designer, select **Import from a Text/CSV file**. Then complete the Get Data wizard to create a data connection by linking to `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv (1)` using anonymous authentication. 
+1. In the dataflow designer, select **Import from a Text/CSV file**.
+
+   ![](./Images/dpm8.png)
+
+1. Then complete the Get Data wizard to create a data connection by linking to `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv` **(1)** using anonymous authentication and then click **Next (2)**.
 
     ![Screenshot of a new dataflow.](./Images/lab5u2.png)
-
-1. Click on **Next (2)**
 
 1. When you have completed the wizard, a preview of the data will be shown in the dataflow designer like below and click on **Create**
 
     ![Screenshot of a new dataflow.](./Images/lab5u3.png)
 
-1. **Publish** the dataflow.
+1. Select **Publish** the dataflow.
 
-    ![Screenshot of a new dataflow.](./Images/md72.png)
+    ![](./Images/dpm9.png)
 
 1. In the navigation bar on the left, select **Monitor** to view the monitoring hub and observe that your dataflow is in-progress (if not, refresh the view until you see it).
 
     ![Screenshot of the monitoring hub with a dataflow in-progress.](./Images/lab5u5.png)
 
-1. Wait for a few seconds, and then refresh the page until the status of the dataflow is **Succeeded**.
+1. Wait for a few seconds, and then **refresh** the page until the status of the dataflow is **Succeeded**.
+
+    ![](./Images/dpm10.png)
 
 1. In the navigation pane, select your **lakehouse**. Then expand the **Tables** folder to verify that a table named **products** has been created and loaded by the dataflow (you may need to refresh the **Tables** folder).
 
@@ -97,13 +104,13 @@ In this task, you will use a Spark notebook to query the ingested data from the 
 
    ![](./Images/lab5u07.png)
 
-1. In the notebook editor, in the **Explorer** pane, select **lakehouse<inject key="DeploymentID" enableCopy="false"/>**
+1. In the notebook editor, in the **Explorer** pane, expand the **lakehouse<inject key="DeploymentID" enableCopy="false"/>**
 
-1. In the **...** menu for the **Products** table, select **Load data** > **Spark**. This adds a new code cell to the notebook as shown here:
+1. In the **... (1)** menu for the **Products** table, select **Load data (2)** > **Spark (3)**. This adds a new code cell to the notebook as shown here:
 
     ![Screenshot of a notebook with code to query a table.](./Images/lab5u8.png)
 
-1. Use the **&#9655; Run all** button to run all cells in the notebook. It will take a moment or so to start the Spark session, and then the results of the query will be shown under the code cell.
+1. Use the **&#9655; Run all (1)** button to run all cells in the notebook. It will take a moment or so to start the Spark session, and then the results of the query will be shown under the code cell **(2)**.
 
     ![Screenshot of a notebook with query results.](./Images/lab5u9.png)
 
@@ -119,9 +126,9 @@ Some items in a workspace might be run multiple times. You can use the monitorin
 
 In this task, you will rerun the dataflow and view the historical run history in the monitoring hub. You will also explore detailed run information for each execution instance.
 
-1. In the navigation bar, return to the page for your workspace. Then use the **&#8635;** (*Refresh now*) button for your **Get Product Data** dataflow to re-run it.
+1. In the navigation bar, return to the page for your workspace **(1)**. Then use the **&#8635; (2)** (*Refresh now*) button for your **Get Product Data** dataflow to re-run it.
 
-    ![Screenshot of the monitoring hub with a notebook activity.](./Images/lab5u11.png)
+    ![Screenshot of the monitoring hub with a notebook activity.](./Images/dpm14.png)
 
 1. In the navigation pane, select the **Monitor** page to view the monitoring hub and verify that the dataflow is in-progress.
 
@@ -135,15 +142,20 @@ In this task, you will rerun the dataflow and view the historical run history in
 
 In this task, you will learn how to apply filters and adjust columns to customize your monitoring hub view, making it easier to locate and analyze specific activities in environments with a large number of events.
 
-1. In the monitoring hub, use the **Filter** button to apply the following filter:
-    - **Status**: Succeeeded
-    - **Item type**: Dataflow Gen2
+1. In the monitoring hub, use the **Filter (1)** button to apply the following filter:
+
+    - **Status**: **Succeeeded (2)**
+    - **Item type**: **Dataflow Gen2 (3)**
+
+      ![](./Images/dpm13.png)
+      ![](./Images/dpm15.png)
 
     With the filter applied, only successful runs of dataflows are listed.
 
-    ![Screenshot of the monitoring hub with a filter applied.](./Images/monitor-filter1.png)
+    ![](./Images/monitor-filter1.png)
 
-1. Use the **Column Options** button to include the following columns in the view (use the **Apply** button to apply the changes):
+1. Use the **Column Options (1)** button to include the following columns **(2)** in the view (use the **Apply (3)** button to apply the changes):
+
     - Activity name
     - Status
     - Item type
@@ -153,8 +165,8 @@ In this task, you will learn how to apply filters and adjust columns to customiz
     - End time
     - Duration
     - Refresh type
-  
-   ![](./Images/monitor-filter01.png)
+    
+      ![](./Images/monitor-filter01.png)
 
     **You may need to scroll horizontally to see all of the columns**
 
