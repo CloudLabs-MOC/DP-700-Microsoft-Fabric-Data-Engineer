@@ -1,4 +1,4 @@
-# Lab 1:  Analyze data in a data warehouse
+# Lab 01:  Analyze data in a data warehouse
 
 ## Estimated duration: 45 minutes
 

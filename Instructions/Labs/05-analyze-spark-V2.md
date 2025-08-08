@@ -1,4 +1,4 @@
-#  Exercise 6: Analyze data with Apache Spark
+#  Exercise 06: Analyze data with Apache Spark
 
 ### Estimated Duration: 75 minutes
 

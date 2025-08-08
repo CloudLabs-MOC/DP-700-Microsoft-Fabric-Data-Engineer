@@ -1,4 +1,4 @@
-# Lab 1: Monitor Fabric activity in the monitoring hub
+# Lab 01: Monitor Fabric activity in the monitoring hub
 
 ## Estimated Duration : 45 minutes
 

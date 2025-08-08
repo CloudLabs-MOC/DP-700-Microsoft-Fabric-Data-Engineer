@@ -1,4 +1,4 @@
-# Lab 3: Create and use Dataflows (Gen2) in Microsoft Fabric
+# Lab 03: Create and use Dataflows (Gen2) in Microsoft Fabric
 
 ### Estimated Duration: 30 minutes
 

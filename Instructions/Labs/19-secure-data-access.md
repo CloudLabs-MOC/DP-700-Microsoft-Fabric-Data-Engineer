@@ -1,4 +1,4 @@
-# Lab 2: Secure data access in Microsoft Fabric
+# Lab 02: Secure data access in Microsoft Fabric
 
 ## Estimated Duration : 45 minutes
 

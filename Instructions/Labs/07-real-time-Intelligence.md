@@ -1,4 +1,4 @@
-# Lab 1: Get started with Real-Time Intelligence in Microsoft Fabric
+# Lab 01: Get started with Real-Time Intelligence in Microsoft Fabric
 
 #### Estimated Duration: 30 minutes
 

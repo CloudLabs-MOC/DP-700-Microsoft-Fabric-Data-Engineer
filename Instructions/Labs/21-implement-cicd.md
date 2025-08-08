@@ -1,4 +1,4 @@
-# Lab 3: Implement deployment pipelines in Microsoft Fabric
+# Lab 03: Implement deployment pipelines in Microsoft Fabric
 
 ## Estimated Duration : 45 minutes
 

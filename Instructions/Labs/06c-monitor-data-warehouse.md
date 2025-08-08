@@ -1,4 +1,4 @@
-# Lab 4: Monitor a data warehouse in Microsoft Fabric
+# Lab 04: Monitor a data warehouse in Microsoft Fabric
 
 ## Estimated duration: 30 minutes
 

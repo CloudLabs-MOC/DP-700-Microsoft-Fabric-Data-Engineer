@@ -1,4 +1,4 @@
-# Lab 4: Get started with Real-Time Dashboards in Microsoft Fabric
+# Lab 04: Get started with Real-Time Dashboards in Microsoft Fabric
 
 #### Estimated Duration: 30 minutes
 
