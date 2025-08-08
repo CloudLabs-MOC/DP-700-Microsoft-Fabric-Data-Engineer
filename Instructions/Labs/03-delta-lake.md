@@ -1,4 +1,4 @@
-# Lab 2: Use Delta Tables in Apache Spark
+# Lab 02: Use Delta Tables in Apache Spark
 
 #### Estimated Duration: 75 minutes
 
