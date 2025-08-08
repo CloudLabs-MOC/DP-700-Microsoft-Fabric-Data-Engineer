@@ -74,7 +74,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../Images/module302.png)
+![Explore Lab Resources](../Images/dpm3.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -90,9 +90,9 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 ## Managing Your Virtual Machine
  
-Feel free to **start, stop, or restart (3)** your virtual machine as needed from the **Resources (2)** tab. Your experience is in your hands!
+Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../Images/module305.png)
+![Manage Your Virtual Machine](../Images/dpm5.png)
 
 ## Support Contact
  
