@@ -4,7 +4,7 @@ Welcome to your DP-700: Microsoft-Fabric-Data-Engineer Workshop! We've prepared 
 
 ### Overall Estimated timing: 210 minutes
 
-In this hands-on labs, you'll explore Real-Time Intelligence capabilities in Microsoft Fabric. Starting with live stock market data, you'll learn to ingest, process, and visualize streaming data for instant insights. You'll work with Eventstream to handle real-time city bike-share data, then create and query an eventhouse using KQL and SQL. Finally, you'll build a dynamic real-time dashboard to visualize streaming data, enabling interactive and up-to-date analytics. These labs provide a practical foundation for implementing real-time analytics solutions in Microsoft Fabric.
+In these hands-on labs, you'll explore Real-Time Intelligence capabilities in Microsoft Fabric. Starting with live stock market data, you'll learn to ingest, process, and visualize streaming data for instant insights. You'll work with Eventstream to handle real-time city bike-share data, then create and query an eventhouse using KQL and SQL. Finally, you'll build a dynamic real-time dashboard to visualize streaming data, enabling interactive and up-to-date analytics. These labs provide a practical foundation for implementing real-time analytics solutions in Microsoft Fabric.
 
 
 ## Objectives
@@ -86,7 +86,7 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../Images/module304.png)
+![Use the Split Window Feature](../Images/module307.png)
 
 ## Managing Your Virtual Machine
  

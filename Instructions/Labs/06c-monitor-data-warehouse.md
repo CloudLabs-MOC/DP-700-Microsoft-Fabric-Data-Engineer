@@ -1,6 +1,6 @@
 # Lab 04: Monitor a data warehouse in Microsoft Fabric
 
-## Estimated duration: 30 minutes
+#### Estimated duration: 30 minutes
 
 In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Data warehouses in Microsoft Fabric include dynamic management views that you can use to monitor activity and queries.
 
@@ -74,7 +74,7 @@ In this task, you will query dynamic management views such as `sys.dm_exec_conne
 
     ![Screenshot of uploaded files in a lakehouse.](./Images/dpp123.png)     
 
-1. Leave the query running, and return to the tab containing the code to query the DMVs **(1)** and re-run it **(2)**. This time, the results should include the second query that is running in the other tab **(3)**. Note the elapsed time for that query.
+1. Leave the query running, and return to the tab containing the code to query the DMVs **(1)** and re-run it **(2)**. This time, the results should include the second        query that is running in the other tab **(3)**. Note the elapsed time for that query.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/dpp124.png) 
 
@@ -115,7 +115,7 @@ In this task, you will explore the `queryinsights` schema views such as `exec_re
 
 1. Run the modified query and view the results, which show details of all queries and their durations.
 
-> **Further Information**: See [Query insights in Fabric data warehousing](https://learn.microsoft.com/fabric/data-warehouse/query-insights) in the Microsoft Fabric documentation for more information about using query insights.
+   > **Further Information**: See [Query insights in Fabric data warehousing](https://learn.microsoft.com/fabric/data-warehouse/query-insights) in the Microsoft Fabric documentation for more information about using query insights.
 
 ## Review
 

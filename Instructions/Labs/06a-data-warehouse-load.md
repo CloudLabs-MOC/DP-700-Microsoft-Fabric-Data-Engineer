@@ -1,8 +1,8 @@
 # Lab 02: Load data into a warehouse using T-SQL
 
-## Estimated duration: 45 minutes
+#### Estimated duration: 45 minutes
 
-In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Unlike the default read-only SQL endpoint for tables defined in a lakehouse, a data warehouse provides full SQL semantics; including the ability to insert, update, and delete data in the tables.
+In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Unlike the default read-only SQL endpoint for tables defined in a lakehouse, a data warehouse provides full SQL semantics, including the ability to insert, update, and delete data in the tables.
 
 In this hands-on lab, you will learn how to load data into a Microsoft Fabric data warehouse using T-SQL. You will first create a lakehouse, upload files, and create tables in the lakehouse. Then, you will create a data warehouse, define fact and dimension tables, and load data into the warehouse using T-SQL stored procedures. Finally, you will perform analytical queries to validate the data.
 
@@ -14,8 +14,8 @@ In this lab, you will complete the following tasks:
 - Task 2: Upload a file
 - Task 3: Create a table in the lakehouse
 - Task 4: Create a warehouse
-- Task 5: Create fact table, dimensions and view
-- Task 6: Load data to the warehouse
+- Task 5: Create fact table, dimensions, and view
+- Task 6: Load data into the warehouse
 - Task 7: Run analytical queries
 
 ### Task 1: Create a lakehouse
@@ -36,23 +36,23 @@ In this task, you will create a data lakehouse in Microsoft Fabric for storing a
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
 
-    - The **Tables** folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source *Delta Lake* file format, commonly used in Apache Spark.
+    - The **Tables** folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open-source *Delta Lake* file         format, commonly used in Apache Spark.
 
-    - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create *shortcuts* in this folder to reference data that is stored externally.
+    - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create *shortcuts*         in this folder to reference data that is stored externally.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/mod2-1.png)
+      ![Screenshot of uploaded files in a lakehouse.](./Images/mod2-1.png)
 
    >**Note**: Currently, there are no tables or files in the lakehouse.
 
 ### Task 2: Upload a file
 
-Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer.
+Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However, one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer.
 
 In this task, you will upload a CSV file to the lakehouse for use in the warehouse.
 
-1. Return to the web browser tab containing your lakehouse, and in the **... (1)** menu for the **Files** folder in the **Lakehouse explorer** pane, select **New subfolder (2)**
+1. Return to the web browser tab containing your lakehouse, and in the **... (1)** menu for the **Files** folder in the **Lakehouse explorer** pane, select **New subfolder    (2)**
 
-    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-2.png)
+   ![Screenshot of uploaded files in a lakehouse.](./Images/md2-2.png)
 
     - Create a subfolder named **data (3)** and then **Create (4)**.   
 
@@ -298,7 +298,7 @@ In this task, you will run analytical queries to validate the data loaded into t
     ORDER BY TotalSales DESC;
     ```
 
-    > **Note:** The results of this query show the top customer for each of the categories: Bike, Helmet, and Gloves, based on their total sales. For example, **Joan Coleman** is the top customer for the **Gloves** category.
+    > **Note:** The results of this query show the top customer for each of the categories: Bike, Helmet, and Gloves, based on their total sales. For example, **Joan             Coleman** is the top customer for the **Gloves** category.
     >
     > The category information was extracted from the `ItemName` column using string manipulation, as there is no separate category column in the dimension table. This approach assumes that the item names follow a consistent naming convention. If the item names do not follow a consistent naming convention, the results may not accurately reflect the true category of each item.
 
@@ -321,3 +321,4 @@ In this lab, you learned how to:
 - Ran analytical queries to verify the sales data and gain insights.
 
 ## Now, click on Next from the lower right corner to move on to the next lab.
+
