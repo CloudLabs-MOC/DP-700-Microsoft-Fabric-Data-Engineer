@@ -1,4 +1,4 @@
-# Lab 1 : Analyze data with Apache Spark in Fabric
+# Lab 01 : Analyze data with Apache Spark in Fabric
 
 ### Estimated Duration: 45 minutes
 
