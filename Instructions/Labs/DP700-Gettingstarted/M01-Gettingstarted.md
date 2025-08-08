@@ -2,7 +2,7 @@
 
 Welcome to your DP-700: Microsoft-Fabric-Data-Engineer Workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-### Overall Estimated Duration: 150 minutes
+### Overall Estimated timing: 150 minutes
 
 In this hands-on lab, you'll gain practical experience working with Microsoft Fabric to analyze, process, and visualize data across various services. You will learn how to create a Fabric workspace, ingest and transform data using pipelines and Dataflows Gen2, and analyze it with Apache Spark. You'll also explore real-time data processing by creating Eventstreams and interacting with eventhouse for real-time insights. By the end of this lab, you'll be equipped with the skills to build end-to-end data workflows and real-time analytics solutions in Microsoft Fabric.
 
@@ -52,7 +52,7 @@ Welcome to your DP-700: Microsoft Fabric Data Engineer Workshop! We've prepared 
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../Images/1.png)
+![Access Your VM and Lab Guide](../Images/dg4.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -62,25 +62,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../Images/2.png)
+![Explore Lab Resources](../Images/dg2.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
 To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
-![](../Images/3.png)
+![](../Images/gd4.png)
 
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../Images/4.png)
+![Use the Split Window Feature](../Images/dg3.png)
 
 ## Managing Your Virtual Machine
  
 Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../Images/5.png)
+![Manage Your Virtual Machine](../Images/gd5.png)
 
 ## Support Contact
  
@@ -91,9 +91,9 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Click on **Next >>** from the lower right corner to move on to the next page.
+Click on **Next** from the lower right corner to move on to the next page.
 
-   ![Start Your Azure Journey](../Images/6.png)
+   ![Start Your Azure Journey](../Images/dpg16.png)
 
 ## Happy Learning !!
 
