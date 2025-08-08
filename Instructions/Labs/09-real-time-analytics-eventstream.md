@@ -1,6 +1,6 @@
 # Lab 2: Ingest real-time data with Eventstream in Microsoft Fabric
 
-## Estimated Duration: 45 Minutes 
+#### Estimated Duration: 45 Minutes 
 
 In this lab, you will use Microsoft Fabric's Eventstream feature to ingest and process real-time data related to a city bike-share system. You'll connect to a sample streaming data source that emits events about bicycle collection points, apply transformations, and route the processed data to various destinations. This lab demonstrates how Eventstream enables real-time analytics by capturing and handling live event data efficiently within Microsoft Fabric.
 
@@ -22,11 +22,11 @@ In this task, you will create an eventhouse in your Fabric workspace to store re
 
 1. In the workspace, select **+ New item (1)**. In the *New item* pane, select **Eventhouse (2)**.
 
-    ![Screenshot of alert settings.](./Images/md83.png)
+   ![Screenshot of alert settings.](./Images/md83.png)
 
 1. Enter **BicycleEventhouse (1)** in the name field and select **Create (2)**
 
-    ![Screenshot of alert settings.](./Images/md84.png)
+   ![Screenshot of alert settings.](./Images/md84.png)
 
 1. Close any tips or prompts that are displayed until you see your new empty eventhouse.
 
@@ -34,9 +34,9 @@ In this task, you will create an eventhouse in your Fabric workspace to store re
 
 1. Select the KQL database to view it.
 
-    ![Screenshot of alert settings.](./Images/md85.png)
+   ![Screenshot of alert settings.](./Images/md85.png)
 
-    >**Note**: Currently there are no tables in the database. In the rest of this exercise you'll use an eventstream to load data from a real-time source into a table.
+    >**Note**: Currently, there are no tables in the database. In the rest of this exercise, you'll use an eventstream to load data from a real-time source into a table.
 
 ### Task 2: Create an Eventstream
 
@@ -46,7 +46,7 @@ In this task, you will create a new Eventstream in Microsoft Fabric to start cap
 
 2. For the data source, select **Eventstream (3)** > **New eventstream (4)**. Name the Eventstream `Bicycle-data` (5) and click on **Create (6)**.
 
-   >**Note**: The creation of your new event stream in the workspace will be completed in just a few moments. Once established, you will be automatically redirected to the primary editor, ready to begin integrating sources into your event stream.
+   >**Note**: The creation of your new event stream in the workspace will be completed in just a few moments. Once established, you will be automatically redirected to the     primary editor, ready to begin integrating sources into your event stream.
 
     ![Screenshot of alert settings.](./Images/md86.png)
 
@@ -62,11 +62,11 @@ In this task, you will add a real-time data source to your Eventstream. You'll u
 
 2. Name the source `Bicycles` (1), and select the **Bicycles (2)** sample data and select **Add (3)**
 
-    ![Screenshot of a new eventstream.](./Images/md89.png)
+   ![Screenshot of a new eventstream.](./Images/md89.png)
 
    >**Note**: Your stream will be mapped and you will be automatically displayed on the **eventstream canvas**.
 
-   ![Review the eventstream canvas](./Images/md90.png)
+    ![Review the eventstream canvas](./Images/md90.png)
 
 ### Task 4: Add a destination
 
@@ -86,11 +86,11 @@ In this task, you'll route the incoming bicycle stream data to an Eventhouse so 
    - **Destination table:** Create a new table named `bikes` 
    - **Input data format:** JSON (9)
 
-   ![Eventstream destination settings.](./Images/md93.png)
+     ![Eventstream destination settings.](./Images/md93.png)
 
-   ![Eventstream destination settings.](./Images/md94.png)
+     ![Eventstream destination settings.](./Images/md94.png)
 
-   ![Eventstream destination settings.](./Images/md92.png)
+     ![Eventstream destination settings.](./Images/md92.png)
 
 1. In the **Eventhouse** pane, select **Save (10)**
 
@@ -98,7 +98,7 @@ In this task, you'll route the incoming bicycle stream data to an Eventhouse so 
 
    ![Eventstream destination settings.](./Images/md95.png)
 
-1. Wait a minute or so for the data destination to become active. Then select the **bikes-table** node in the design canvas and view the **Data preview** pane underneath to see the latest data that has been ingested:
+1. Wait a minute or so for the data destination to become active. Then select the **bikes-table** node in the design canvas and view the **Data preview** pane underneath      to see the latest data that has been ingested:
 
    ![Eventstream destination settings.](./Images/md96.png)
 
@@ -112,7 +112,7 @@ In this task, you will query the data stored in the eventhouse to analyze real-t
 
 1. In the menu bar on the left, select your **BicycleEventhouse (1)** KQL database.
 
-1. On the **database** tab, in the toolbar for your KQL database, use the **Refresh** button to refresh the view until you see the **bikes** table (2) under the database. Then select the **bikes** table.
+1. On the **database** tab, in the toolbar for your KQL database, use the **Refresh** button to refresh the view until you see the **bikes** table (2) under the database.     Then select the **bikes** table.
 
    ![A table in a KQL database.](./Images/md97.png)
 
@@ -128,7 +128,7 @@ In this task, you will query the data stored in the eventhouse to analyze real-t
 
 1. Select the query code and run it to see 100 rows of data from the table.
 
-    ![Screenshot of a KQL query.](./Images/md98.png)
+   ![Screenshot of a KQL query.](./Images/md98.png)
 
 ### Task 6: Transform event data
 
@@ -140,13 +140,13 @@ In this task, you will apply a transformation to the incoming event data within 
 
 1. In the **Transform events (1)** menu, select **Group by (2)** to add a new **Group by** node to the eventstream.
 
-    ![Screenshot of a KQL query.](./Images/md99.png)
+   ![Screenshot of a KQL query.](./Images/md99.png)
 
 1. Drag a connection from the output of the **Bicycle-data** node to the input of the new **Group by** node Then use the *pencil* icon in the **Group by** node to edit it.
 
    ![Add group by to the transformation event.](./Images/md100.png)
 
-1. Configure out the properties of the **Group by** settings section:
+1. Configure the properties of the **Group by** settings section:
     - **Operation name:** GroupByStreet (1)
     - **Aggregate type:** *Select* Sum (2)
     - **Field:** *select* No_Bikes (3). *Then select **Add** to create the function* SUM of No_Bikes (4)
@@ -157,9 +157,9 @@ In this task, you will apply a transformation to the incoming event data within 
 
     > **Note**: This configuration will cause the eventstream to calculate the total number of bicycles in each street every 5 seconds.
 
-   ![Add group by to the transformation event.](./Images/md101.png)
+      ![Add group by to the transformation event.](./Images/md101.png)
 
-   ![Add group by to the transformation event.](./Images/md102.png)
+      ![Add group by to the transformation event.](./Images/md102.png)
       
 1. **Save** the configuration and return to the eventstream canvas, where an error is indicated (because you need to store the output from the transformation somewhere!).
 
@@ -175,16 +175,16 @@ In this task, you will apply a transformation to the incoming event data within 
    - **Destination table:** Create a new table named `bikes-by-street` (6)
    - **Input data format:** JSON (7)
 
-    ![Screenshot of a table for grouped data.](./Images/md103.png)
+     ![Screenshot of a table for grouped data.](./Images/md103.png)
 
 1. In the **Eventhouse** pane, select **Save (8)**. 
 1. On the toolbar, select **Publish**.
 1. Wait a minute or so for the changes to become active.
 1. In the design canvas, select the **bikes-by-street-table** node, and view the **data preview** pane beneath the canvas.
 
-    ![Screenshot of a table for grouped data.](./Images/md104.png)
+   ![Screenshot of a table for grouped data.](./Images/md104.png)
 
-    **Note**: The trasformed data includes the grouping field you specified (**Street**), the aggregation you specified (**SUM_no_Bikes**), and a timestamp field indicating the end of the 5 second tumbling window in which the event occurred (**Window_End_Time**).
+    **Note**: The transformed data includes the grouping field you specified (**Street**), the aggregation you specified (**SUM_no_Bikes**), and a timestamp field              indicating the end of the 5-second tumbling window in which the event occurred (**Window_End_Time**).
 
 ### Task 7: Query the transformed data
 
@@ -195,7 +195,7 @@ In this task, you'll query the transformed bicycle data that has been ingested i
 
 1. In the **... (1)** menu for the **bikes-by-street** table, select **Query with code (2)** > **Show any 100 records (3)**.
 
-    ![Screenshot of a table for grouped data.](./Images/md105.png)
+   ![Screenshot of a table for grouped data.](./Images/md105.png)
 
 1. In the query pane, note that the following query is generated and run:
 
@@ -214,7 +214,7 @@ In this task, you'll query the transformed bicycle data that has been ingested i
 
 1. Select the modified query and run it.
 
-    The results show the number of bikes observed in each street within each 5 second time period.
+    The results show the number of bikes observed in each street within each 5-second time period.
 
     ![Screenshot of a query returning grouped data.](./Images/md106.png)
 
