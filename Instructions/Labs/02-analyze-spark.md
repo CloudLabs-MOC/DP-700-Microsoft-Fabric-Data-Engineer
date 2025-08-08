@@ -19,13 +19,13 @@ In this lab, you will be able to complete the following tasks:
 
 ## Task 1: Create a lakehouse and upload files
 
-In this task, you will create a lakehouse to organize and analyze your data files. After setting up your workspace, you'll switch to the *Data Engineering* experience in the portal to initiate the creation of the data lakehouse
+In this task, you will create a lakehouse to organize and analyze your data files. After setting up your workspace, you'll switch to the *Data Engineering* experience in the portal to initiate the creation of the data lakehouse.
 
-1. Return to your workspace and click the **+ New item (1)** icon.  
+1. Return to your workspace. 
 
-1. On the **All items** page, scroll down to the **Store data** section and select **Lakehouse (2)**.  
+1. Click the **+ New item (1)** icon. On the **New item** page, scroll down to the **Store data** section and select **Lakehouse (2)**.  
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/md10.png)  
+   ![Screenshot of uploaded files in a lakehouse.](./Images2/t1-2.png)  
 
 1. Provide the following details to create a **Lakehouse** and then click on **Create (2)** to proceed.
 
@@ -94,7 +94,7 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
    Use this notebook to explore sales order data
     ```
 
-    ![Screen picture of a Fabric notebook with a markdown cell.](Images/md16.png)
+    ![Screen picture of a Fabric notebook with a markdown cell.](Images2/t2-8.png)
 
 1. When you have finished, click anywhere in the notebook outside of the cell to stop editing it and see the rendered markdown.
 
@@ -111,7 +111,7 @@ In this task, you will create a DataFrame using PySpark to begin working with yo
 
 1. You will see a list of items contained in the workspace including your lakehouse and notebook.
 
-   ![Enter Your Username](./Images/md17.png)
+   ![Enter Your Username](./Images2/t3-2.png)
 
 1. Select the lakehouse to display the Explorer pane.
 
@@ -125,9 +125,9 @@ In this task, you will create a DataFrame using PySpark to begin working with yo
 
    ![Enter Your Username](./Images/dpp12.png)
 
-1. From the **… (1)** menu for 2019.csv, select **Load data (2)** > **Spark (3)**. The following code is automatically generated in a new code cell:
+1. To load the dataset, first expand your **Lakehouse (1)**, then expand the **Files (2)** section and navigate to the **Orders (3)** folder. Locate the 2019.csv file, click the ellipsis **(⋯) (4)** next to it, and select **Load data (5)** > **Spark (6)** from the menu. This action will automatically open a new notebook with a pre-generated Spark code cell to load the data.
 
-   ![Enter Your Username](./Images/md19.png)
+   ![Enter Your Username](./Images2/t3-6.png)
 
     ```python
     df = spark.read.format("csv").option("header","true").load("Files/orders/2019.csv")
@@ -143,7 +143,7 @@ In this task, you will create a DataFrame using PySpark to begin working with yo
 
 1. When the cell code has completed, review the **output (2)** below the cell, which should look like this:
  
-    ![Screen picture showing auto generated code and data.](Images/md20.png)
+    ![Screen picture showing auto generated code and data.](Images2/t3-8.png)
 
 1. The output shows data from the 2019.csv file displayed in columns and rows.  Notice that the column headers contain the first line of the data. To correct this, you need to modify the first line of the code as follows:
 
@@ -153,7 +153,7 @@ In this task, you will create a DataFrame using PySpark to begin working with yo
 
 1. Run the code again, so that the DataFrame correctly identifies the first row as data. Notice that the column names have now changed to `_c0, _c1`, etc.
 
-    ![Screen picture showing auto generated code and data.](Images/dpp13.png)
+    ![Screen picture showing auto generated code and data.](Images2/t3-10.png)
 
 1. Descriptive column names help you make sense of data. To create meaningful column names, you need to define the schema and data types. You also need to import a standard set of Spark SQL types to define the data types. Replace the existing code with the following:
 
@@ -239,7 +239,7 @@ The DataFrame object provides additional functionality such as the ability to fi
       ```
     * The DataFrame functions *count* and *distinct* are used to provide totals for the number of customers and unique customers.
 
-1. Modify the first line of the code (1) by using *select* with a *where* function as follows:
+1. Modify the first line of the **code (1)** by using *select* with a *where* function as follows:
 
     ```python
     customers = df.select("CustomerName", "Email").where(df['Item']=='Road-250 Red, 52')
@@ -249,9 +249,9 @@ The DataFrame object provides additional functionality such as the ability to fi
     display(customers.distinct())
     ```
 
-1. **Run (2)** the modified code to select only the customers who have purchased the Road-250 Red, 52 product. Note that you can “chain” multiple functions together so that the **output (3)** of one function becomes the input for the next. In this case, the DataFrame created by the *select* method is the source DataFrame for the **where** method that is used to apply filtering criteria.
+1. Then **Run (2)** the modified code to select only the customers who have purchased the Road-250 Red, 52 product. Note that you can “chain” multiple functions together so that the **output (3)** of one function becomes the input for the next. In this case, the DataFrame created by the *select* method is the source DataFrame for the **where** method that is used to apply filtering criteria.
 
-    ![Screen picture showing auto generated code and data.](Images/md22.png)
+    ![Screen picture showing auto generated code and data.](Images2/t4-5.png)
 
 ## Task 5: Aggregate and group data in a DataFrame
 
@@ -285,7 +285,7 @@ In this task, you will learn how to aggregate and group data in a DataFrame usin
     * The *groupBy* method groups the data by the derived Year column.
     * The count of rows in each group is calculated before the *orderBy* method is used to sort the resulting DataFrame.
 
-    ![Screen picture showing the results of aggregating and grouping data in a DataFrame.](./Images/md23.png)
+    ![Screen picture showing the results of aggregating and grouping data in a DataFrame.](./Images2/t5-4.png)
 
 ## Task 6: Use Spark to transform data files
 
@@ -383,6 +383,8 @@ When dealing with large volumes of data, partitioning can significantly improve 
 
 1. Run the cell and verify that the results show the order data for sales in 2021. Notice that the partitioning columns specified in the path (Year and Month) are not included in the DataFrame.
 
+    ![Screen picture showing auto generated code and data.](./Images2/t6-4.png)
+
 ## Task 7: Work with tables and SQL
 
 In this task, you will learn how to create and query tables using SQL in Spark. While PySpark DataFrame methods are powerful, using SQL syntax can be more intuitive for those with a background in relational databases. You will register DataFrames as temporary views and use Spark’s metastore to define and interact with tables using standard SQL queries.
@@ -470,7 +472,7 @@ In this task, you will visualize data from a DataFrame to identify patterns and 
 
 1. Click on the **Build my own** button at the bottom-right of the results section.
 
-    ![Screen picture showing that the salesorders table has been created.](./Images/dpp22.png)
+    ![Screen picture showing that the salesorders table has been created.](./Images2/t8-3.png)
 
 1. Set the chart settings as mentioned below:
 
@@ -483,7 +485,7 @@ In this task, you will visualize data from a DataFrame to identify patterns and 
     - Stacked: Unselected
     - Your chart should look similar to this **(4)**:
 
-      ![Screen picture showing auto generated code and data.](./Images/dpp24.png)
+      ![Screen picture showing auto generated code and data.](./Images2/t8-4.png)
 
 ### Get started with matplotlib
 
@@ -502,7 +504,7 @@ In this task, you will visualize data from a DataFrame to identify patterns and 
 
 2. Run the code. It returns a Spark DataFrame containing the yearly revenue and number of orders. To visualize the data as a chart, we’ll first use the matplotlib Python library. This library is the core plotting library on which many others are based and provides a great deal of flexibility in creating charts.
 
-    ![Screen picture showing that the salesorders table has been created.](./Images/dpp25.png)
+    ![Screen picture showing that the salesorders table has been created.](./Images2/t8-2a.png)
 
 3. Add a new code cell, and add the following code:
 
@@ -551,7 +553,7 @@ In this task, you will visualize data from a DataFrame to identify patterns and 
 
 6. Re-run the code cell and view the results. The chart is now easier to understand.
 
-    ![Screen picture showing that the salesorders table has been created.](./Images/dpp27.png) 
+    ![Screen picture showing that the salesorders table has been created.](./Images2/t8-6a.png) 
 
 7. A plot is contained with a Figure. In the previous examples, the figure was created implicitly but it can be created explicitly. Modify the code to plot the chart as follows:
 
@@ -608,7 +610,7 @@ In this task, you will visualize data from a DataFrame to identify patterns and 
 
 10. Re-run the code cell and view the results. 
 
-    ![Screen picture showing that the salesorders table has been created.](./Images/dpp28.png) 
+    ![Screen picture showing that the salesorders table has been created.](./Images2/t8-10a.png) 
 
      >**Note**: To learn more about plotting with matplotlib, see the [matplotlib](https://matplotlib.org/) documentation.
 
@@ -632,6 +634,8 @@ While *matplotlib* enables you to create different chart types, it can require s
 
 2. Run the code to display a bar chart created using the seaborn library.
 
+    ![Screen picture showing that the salesorders table has been created.](./Images2/t8-1b.png) 
+
 3. Modify the code as follows:
 
     ```python
@@ -651,21 +655,23 @@ While *matplotlib* enables you to create different chart types, it can require s
 
 4.	Run the modified code and note that seaborn enables you to set a color theme for your plots.
 
+    ![Screen picture showing that the salesorders table has been created.](./Images2/t8-3b.png) 
+
 5.	Modify the code again as follows:
 
-   ```python
-   import seaborn as sns
+    ```python
+    import seaborn as sns
 
-   # Clear the plot area
-   plt.clf()
+    # Clear the plot area
+    plt.clf()
 
-   # Create a line chart
-   ax = sns.lineplot(x="OrderYear", y="GrossRevenue", data=df_sales)
+    # Create a line chart
+    ax = sns.lineplot(x="OrderYear", y="GrossRevenue", data=df_sales)
 
-   plt.show()
-   ```
+    plt.show()
+    ```
 
-6.	Run the modified code to view the yearly revenue as a line chart.
+6. Run the modified code to view the yearly revenue as a line chart.
 
   >**Note**: To learn more about plotting with seaborn, see the [seaborn](https://seaborn.pydata.org/index.html) documentation.
 
@@ -684,4 +690,6 @@ In this lab, you have completed the following tasks:
 - Worked with tables and SQL
 - Visualized data with Spark
 
-## Now, click on Next from the lower right corner to move on to the next lab.
+## Now, click on **Next >>** from the lower right corner to move on to the next lab.
+
+   ![](./Images2/next-page.png) 
