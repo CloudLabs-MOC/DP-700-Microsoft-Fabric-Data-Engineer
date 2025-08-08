@@ -1,4 +1,4 @@
-# Lab 1:  Create a Microsoft Fabric Lakehouse
+# Lab 01:  Create a Microsoft Fabric Lakehouse
 
 #### Estimated Duration: 30 minutes
 
