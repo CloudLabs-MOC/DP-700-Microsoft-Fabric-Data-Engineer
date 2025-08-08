@@ -121,8 +121,8 @@ In this task, you will explore the `queryinsights` schema views such as `exec_re
 
 In this lab, you learned:
 
-- Exploring dynamic management views.
-- Exploring query insights.
+- Explored dynamic management views.
+- Explored query insights.
 
 ## Now, click on Next from the lower right corner to move on to the next lab.
 
