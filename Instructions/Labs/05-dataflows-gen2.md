@@ -1,10 +1,8 @@
 # Lab 3: Create and use Dataflows (Gen2) in Microsoft Fabric
 
-## Estimated Duration: 30 minutes
+### Estimated Duration: 30 minutes
 
-In this lab, you will learn how to create and use Dataflows (Gen2) in Microsoft Fabric to connect to various data sources and perform data transformations using Power Query Online. You will also see how Dataflows (Gen2) can be used in Data Pipelines to ingest data into a lakehouse or define datasets for Power BI reports. 
-
-This lab is designed to introduce the different elements of Dataflows (Gen2), and not create a complex solution that may exist in an enterprise.
+In this lab, you’ll learn how to use Dataflows (Gen2) in Microsoft Fabric to connect to external data sources, transform data with Power Query Online, and load it into a lakehouse. You’ll also see how Dataflows can be integrated into Data Pipelines and used to define datasets for Power BI. This lab introduces the key features of Dataflows (Gen2) in a simplified, hands-on scenario.
 
 ## Lab Objectives
 
@@ -14,7 +12,7 @@ In this lab, you will be able to complete the following tasks:
 - Task 2: Add data destination for Dataflow
 - Task 3: Add a dataflow to a pipeline
 
-### Task 1: Create a Dataflow (Gen2) to ingest data
+## Task 1: Create a Dataflow (Gen2) to ingest data
 
 In this task, you will create a Dataflow (Gen2) in Microsoft Fabric to ingest data into your lakehouse. You'll define an extract, transform, and load (ETL) process using Power Query Online, enabling you to connect to a source dataset, apply data transformations, and load the clean data into your analytical storage for further use.
 
@@ -22,11 +20,11 @@ In this task, you will create a Dataflow (Gen2) in Microsoft Fabric to ingest da
 
 1. Select **New item (1)** > **Dataflow Gen2 (2)**.
 
-   ![New dataflow.](./Images/md44.png)
+   ![New dataflow.](./Images2/5t1-2.png)
 
 1. Verify the **Data Flow Name (1)** and ensure to **uncheck the box (2)** before creating the Data Flow. Then click on **Create (3)**.
 
-   ![New dataflow.](./Images/M1L3T1S3.png)
+   ![New dataflow.](./Images2/5t1-3.png)
 
 1. After a few seconds, the Power Query editor for your new dataflow opens as shown here. Select **Import from a Text/CSV file**.  
 
@@ -40,7 +38,7 @@ In this task, you will create a Dataflow (Gen2) in Microsoft Fabric to ingest da
    - **data gateway**: (none) (4)
    - **Authentication kind**: Anonymous (5)
    
-     ![New dataflow.](./Images/md46.png)    
+     ![New dataflow.](./Images2/5t1-5.png)    
 
    - Preview the file data, and then **Create (7)** the data source. The Power Query editor shows the data source and an initial set of query steps to format the data, as shown here:
 
@@ -50,7 +48,7 @@ In this task, you will create a Dataflow (Gen2) in Microsoft Fabric to ingest da
 
    - Set the *New column name* to  `MonthNo` (3) , set the *Data type* to **Whole Number (4)** and then add the following formula: `Date.Month([OrderDate])` (5) - as shown here and then click on **OK (6)** to create the column
 
-     ![Custom column in Power Query editor.](./Images/md48.png)
+     ![Custom column in Power Query editor.](./Images2/5t1-6.png)
 
 1. Notice how the step to add the custom column is added to the query. The resulting column is displayed in the data pane:
 
@@ -62,19 +60,19 @@ In this task, you will create a Dataflow (Gen2) in Microsoft Fabric to ingest da
 
 1. Check and confirm that the data type for the **OrderDate** column is set to **Date** and the data type for the  newly created column **MonthNo** is set to **Whole Number**.
 
-### Task 2: Add data destination for Dataflow
+## Task 2: Add data destination for Dataflow
 
 In this task, you will configure the destination for your Dataflow (Gen2) so the transformed data is loaded into your Microsoft Fabric lakehouse. You'll connect the dataflow to your lakehouse, define a new table named orders, and adjust destination settings to ensure the data is appended appropriately.
 
 1. On the toolbar ribbon, select the **Home (1)** tab. Then in the **Add data destination (2)** drop-down menu, select **Lakehouse (3)**.
 
-   ![New dataflow.](./Images/md50.png)
+   ![New dataflow.](./Images2/5t2-1.png)
 
    >**Note:** If this option is grayed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor. If a destination is already set, you can change it using the gear.
 
 2. In the **Connect to data destination** dialog box, edit the connection and sign in using your Power BI organizational account **(Only If it is not connected)** to set the identity that the dataflow uses to access the lakehouse, otherwise click on **Next**.
 
-   ![Data destination configuration page.](./Images/md51.png)
+   ![Data destination configuration page.](./Images2/5t2-2.png)
 
 3. In the list of available workspaces, find your workspace and select the **lakehouse (1)** you created in it at the start of this exercise. Then specify a new table named **orders (2)** and then select **Next (3)**.
 
@@ -84,7 +82,7 @@ In this task, you will configure the destination for your Dataflow (Gen2) so the
 
    >**Note:** We suggest using the *Power query* editor for updating data types, but you can also do so from this page, if you prefer.
 
-    ![Data destination settings page.](./Images/dpp54.png)
+    ![Data destination settings page.](./Images2/5t2-4.png)
 
 5. On the Menu bar, open **View (1)** and select **Diagram view (2)**.
 
@@ -96,7 +94,7 @@ In this task, you will configure the destination for your Dataflow (Gen2) so the
 
 7. Then wait for the **Dataflow 1** dataflow to be created in your workspace.
 
-### Task 3: Add a dataflow to a pipeline
+## Task 3: Add a dataflow to a pipeline
 
 In this task, you will add your Dataflow (Gen2) as an activity within a pipeline. This allows you to orchestrate the dataflow alongside other data operations in a unified and repeatable workflow using the Data Factory experience in Microsoft Fabric.
 
@@ -122,7 +120,7 @@ In this task, you will add your Dataflow (Gen2) as an activity within a pipeline
 
 1. With the new **Dataflow1** activity selected, on the **Settings (1)** tab, in the **Dataflow** drop-down list, select **Dataflow 1 (2)** (the data flow you created previously)
 
-   ![Pipeline with a dataflow activity.](./Images/md59.png)
+   ![Pipeline with a dataflow activity.](./Images2/5t3-6.png)
 
 1. On the **Home** tab, save the pipeline using the **&#128427;** (*Save*) icon.
 
@@ -132,13 +130,13 @@ In this task, you will add your Dataflow (Gen2) as an activity within a pipeline
 
 1. Wait for it to complete. It may take a few minutes.
    
-   ![Pipeline with a dataflow activity.](./Images/dpp57.png)   
+   ![Pipeline with a dataflow activity.](./Images2/5t3-9.png)   
 
 1. In the menu bar on the left edge, select your lakehouse.
 
 1. In the **...** menu for **Tables**, select **refresh**. Then expand **Tables** and select the **orders** table, which has been created by your dataflow.
 
-   ![Table loaded by a dataflow.](./Images/md60.png)
+   ![Table loaded by a dataflow.](./Images2/5t3-11.png)
 
 > **Tip**: In Power BI Desktop, you can connect directly to the data transformations done with your dataflow by using the *Power BI dataflows (Legacy)* connector.
 > **Note**: You can also make additional transformations, publish as a new dataset, and distribute with intended audience for specialized datasets.
