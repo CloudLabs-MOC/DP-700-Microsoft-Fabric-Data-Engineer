@@ -31,11 +31,11 @@ In this task, you will create a new sample data warehouse named sample-dw within
 
 1. After a minute or so, a new warehouse will be created and populated with sample data for a taxi ride analysis scenario.
 
-    ![Screenshot of a new warehouse.](./Images/sample-data-warehouse.png)
+   ![Screenshot of a new warehouse.](./Images/sample-data-warehouse.png)
 
 ### Task 2: Query the data warehouse
 
-The SQL query editor provides support for IntelliSense, code completion, syntax highlighting, client-side parsing, and validation. You can run Data Definition Language (DDL), Data Manipulation Language (DML) and Data Control Language (DCL) statements.
+The SQL query editor provides support for IntelliSense, code completion, syntax highlighting, client-side parsing, and validation. You can run Data Definition Language (DDL), Data Manipulation Language (DML), and Data Control Language (DCL) statements.
 
 In this task, you will write and run SQL queries to analyze trip trends based on month, day, and geography, gaining insights from the warehouse data.
 
@@ -187,7 +187,7 @@ Let's create a view based on the query we used earlier, and add a filter to it.
 
 1. Close all query tabs.
 
-> **Further Information**: See [Query using the SQL query editor](https://learn.microsoft.com/fabric/data-warehouse/sql-query-editor) in the Microsoft Fabric documentation for more information about querying a data warehouse.
+   > **Further Information**: See [Query using the SQL query editor](https://learn.microsoft.com/fabric/data-warehouse/sql-query-editor) in the Microsoft Fabric documentation for more information about querying a data warehouse.
 
 ## Review
 
@@ -204,3 +204,4 @@ In this lab, you have:
 - Strengthened your understanding of querying, validating, and managing warehouse data using Microsoft Fabric.
 
 ## Now, click on Next from the lower right corner to move on to the next lab.
+
