@@ -24,15 +24,21 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a sample data warehouse named sample-dw prepopulated with taxi ride analysis data
 
-1. On the menu bar on the left, select **Create**. In the *New* page, under the ***Data Warehouse*** section, select **Sample warehouse** and create a new data warehouse named **sample-dw**.
-
-    >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
-
-    After a minute or so, a new warehouse will be created and populated with sample data for a taxi ride analysis scenario.
+1. On the menu bar on the left, select **Create**.
 
     ![](./Images/sample-data-warehouse1.png)
-   
-    ![](./Images/sample-data-warehouse2.png)
+    
+     >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
+
+1. In the *New* page, under the ***Data Warehouse (1)*** section, select **Sample warehouse (2)**. 
+
+    ![](./Images/dpm16.png)
+
+1. Create a new data warehouse named **sample-dw (1)** and then **Create (2)**.
+
+    ![](./Images/dpm17.png)
+
+1. After a minute or so, a new warehouse will be created and populated with sample data for a taxi ride analysis scenario.    
    
     ![Screenshot of a new warehouse.](./Images/sample-data-warehouse.png)
 
@@ -40,19 +46,27 @@ In this task, you will create a sample data warehouse named sample-dw prepopulat
 
 In this task, you will create a new Lakehouse, populate it with sample data, and prepare it for access control exercises.
 
-1. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇).
+1. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇) you have created **(1)** and select the **+ New Item** button.
 
-1. Select the workspace you created.
+    ![](./Images/dpm18.png)
 
-1. In the workspace, select the **+ New Item** button and then select **Lakehouse**. Create a new Lakehouse with the name **lakehouse2**.
+1. Then select **Lakehouse** under **Store data**.
+
+1. Create a new Lakehouse with the name **lakehouse2 (1)** and then **Create (2)**.
+
+    ![](./Images/dpm19.png)
 
 1. After a minute or so, a new Lakehouse will be created.
 
-1. Select the **Start with sample data** tile, then on the **Use a Sample** page, choose the **Public holidays** tile to populate the workspace with sample data.
+1. Select the **Start with sample data** tile, then on the **Use a Sample** page. 
 
     ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u13.png)
+
+1. Choose the **Public holidays** tile to populate the workspace with sample data.    
    
     ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u14.png)
+
+    ![](./Images/dpm20.png)    
 
 ### Task 3: Apply workspace access controls
 
@@ -70,7 +84,9 @@ In this task, you add a user to a workspace role, apply permissions and, see wha
 
     >**Note**: You'll see the user you're logged, who is a a member of the **Workspace Admin** role because you created the workspace. No other users are assigned access to the workspace yet.
 
-1. Next, you'll see what a user without permissions on the workspace can view. In the Microsoft Edge browser, click the ellipsis (three dots) in the top-right corner and select **New InPrivate window**.
+1. Next, you'll see what a user without permissions on the workspace can view. In the Microsoft Edge browser, click the ellipsis (three dots) in the top-right corner **(1)** and select **New InPrivate window**.
+
+    ![](./Images/dpm21.png)
 
 1. Enter *https://app.fabric.microsoft.com/home?experience=fabric-developer* and sign-in as the second user with the below credentials, click on **try for free**:
 
@@ -78,16 +94,21 @@ In this task, you add a user to a workspace role, apply permissions and, see wha
 
     - Password : <inject key="test user Password" enableCopy="true"/>  
   
-1. On the bottom left corner of your screen, select **Microsoft Fabric**. Next select **Workspaces** (the icon looks similar to &#128455;).
+1. On the bottom left corner of your screen, select **Microsoft Fabric (1)**. Next select **Workspaces (2)** (the icon looks similar to &#128455;).
 
-   > **Note:** `The second user doesn't have access to the workspace, so it's not viewable.`
+    ![Screenshot of a new lakehouse in Fabric.](./Images/dpm22.png)
+
+     > **Note:** `The second user doesn't have access to the workspace, so it's not viewable.`
 
 1. Next, you assign the **Workspace Viewer** role to the second user and see that the role grants read access to the warehouse in the workspace.
   
-1. Return to the browser window where you're logged in as the Workspace Admin. Ensure you're still on the page that shows the workspace you created. It should have your new workspace items, and the sample warehouse and lakehouse, listed at the bottom of the page.
+1. **Return to the browser window where you're logged in as the Workspace Admin**. Ensure you're still on the page that shows the workspace you created. It should have your new workspace items, and the sample warehouse and lakehouse, listed at the bottom of the page.
+
 1. Select **Manage access** at the top right of the screen.
-1. Select **Add people or groups**. Enter the email of the second user - <inject key="testuser" enableCopy="true"/>.
- . Select **Add** to assign the user to the workspace **Viewer** role. 
+
+1. Select **Add people or groups**.
+
+1. Enter the email of the second user - <inject key="testuser" enableCopy="true"/>. **(1)**. Assign the user to the workspace **Viewer (2)** role and then select **Add (3)**.
 
     ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u17.png)
 
@@ -95,17 +116,19 @@ In this task, you add a user to a workspace role, apply permissions and, see wha
 
 1. Select the **Workspaces** icon on the left menu bar (the icon looks similar to &#128455;) and select on the workspace name you created as the Workspace Admin user. The second user can now see all of the items in the workspace because they were assigned the **Workspace Viewer** role.
 
-   ![](./Images/lab5u170.png)
+    ![](./Images/dpm23.png)
 
 1. Select the **warehouse** and open it.
 
-   ![](./Images/lab5u171.png)
+    ![](./Images/dpm24.png)
 
 1. Under the **sample-dw > Schema > dbo > Tables > Date** and Select the **Date** table and wait for the rows to be loaded. You can see the rows because as a member of the Workspace Viewer role, you have CONNECT and ReadData permission on tables in the warehouse. For more information on permissions granted to the Workspace Viewer role, see [Workspace roles](https://learn.microsoft.com/en-us/fabric/data-warehouse/workspace-roles).
 
-   ![](./Images/lab5u172.png)
+    ![](./Images/dpm25.png)
 
-1. Next, select the **fabric Workspaces** on the left menu bar, then select the *lakehouse2*.
+1. Next, select the **fabric Workspaces (1)** on the left menu bar, then select the **lakehouse2 (2)**.
+
+    ![](./Images/dpm26.png)
    
 1. When the lakehouse opens, click on the dropdown box at the top right corner of the screen that says **Lakehouse** and select **SQL analytics endpoint**.
 
@@ -113,7 +136,7 @@ In this task, you add a user to a workspace role, apply permissions and, see wha
    
 1. Select the **publicholidays** table and wait for the data to be displayed. Data in the lakehouse table is readable from the SQL analytics endpoint because the user is a member of the Workspace Viewer role that grants read permissions on the SQL analytics endpoint.
 
-   ![](./Images/lab5u174.png)
+    ![](./Images/dpm27.png)
 
 ### Task 4: Apply item access control
 
@@ -123,35 +146,49 @@ In this task, you will configure item-level permissions by granting access to sp
 
 1. Return to the browser window where you're logged in as the Workspace Admin. Select **Workspaces** from the left navigation pane.
    
-3. Select the workspace that you created to open it.
+1. Select the workspace that you created to open it.
    
-5. Select **Manage access** from the top of the screen.
+1. Select **Manage access** from the top of the screen.
    
-7. Select the word **Viewer** under the name of the second user. On the menu that appears, select **Remove**.
+1. Select the word **Viewer (1)** under the name of the second user. On the menu that appears, select **Remove (2)**.
 
-   ![](./Images/lab5u175.png)
+    ![](./Images/dpm28.png)
 
-9. Close the **Manage access** section.
+1. Close the **Manage access** section.
    
-10. In the workspace, hover over the name of your warehouse and an ellipse (**...**) will appear. Select the ellipse and select **Manage permissions**
+1. In the workspace, hover over the name of your warehouse and an ellipse (**...**) will appear. 
+
+    ![](./Images/dpm29.png)
+
+1. Select the ellipse and select **Manage permissions**
 
     ![](./Images/lab5u177.png)
 
-12. Select **Add user** and enter the email of the second user - <inject key="testuser" enableCopy="true"/>.
+1. Select **Add user**.
+
+    ![](./Images/dpm30.png)
+
+1. Enter the email of the second user - <inject key="testuser" enableCopy="true"/> **(1)**
  
-13. In the box that appears, under **Additional permissions** check **Read all data using SQL (ReadData)** and uncheck all other boxes.
+    - In the box that appears, under **Additional permissions** check **Read all data using SQL (ReadData) (2)** and uncheck all other boxes.
 
-    ![](./Images/lab5u178.png)
+    - Selecy **Grant (3)**
 
-15. Select **Grant**
+      ![](./Images/dpm31.png)
 
-16. Return to the browser window where you're logged in as the **second user**. Refresh the browser view.  
+1. Return to the browser window where you're logged in as the **second user**. Refresh the browser view.  
 
-17. The second user no longer has access to the workspace and instead has access to only the warehouse. You can no longer browse workspaces on the left navigation pane to find the warehouse. Select **OneLake catalog** on the left navigation menu to find the warehouse. 
+1. The second user no longer has access to the workspace and instead has access to only the warehouse. 
 
-18. Select the warehouse. On the screen that appears, select **Open** from the top menu bar.
+1. You can no longer browse workspaces on the left navigation pane to find the warehouse. Select **OneLake catalog (1)** on the left navigation menu to find the warehouse. 
 
-19. When the warehouse view appears, select the **Date** table to view table data. The rows are viewable because the user still has read access to the warehouse because ReadData permissions were applied by using item permissions on the warehouse.
+    - Select the warehouse **(2)**. On the screen that appears, select **Open (3)** from the top menu bar.
+
+      ![](./Images/dpm32.png)
+
+1. When the warehouse view appears, select the **Date** table to view table data. The rows are viewable because the user still has read access to the warehouse because ReadData permissions were applied by using item permissions on the warehouse.
+
+    ![](./Images/dpm33.png)
 
 ### Task 5: Apply OneLake data access roles in a Lakehouse
 
