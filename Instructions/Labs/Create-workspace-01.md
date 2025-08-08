@@ -1,8 +1,8 @@
 # Lab: prerequisite: Create a Fabric workspace
 
-#### Estimated Duration: 15 minutes
+### Estimated Duration: 15 minutes
 
-In this exercise, you will go through the process of signing up for the Microsoft Fabric Trial and setting up a workspace. This serves as the initial step in familiarizing yourself with the Microsoft Fabric platform. By creating a workspace, you will establish a dedicated environment where you can explore and interact with the wide range of tools and services Microsoft Fabric offers, including data integration, analytics, and visualization. This foundational setup is essential for understanding how to manage and organize resources within Fabric, as well as how to collaborate effectively across teams and projects within the platform.
+In this exercise, you will sign up for the Microsoft Fabric Trial and create a workspace, establishing the foundation for working within the Microsoft Fabric platform. This initial setup enables you to explore and utilize a wide range of integrated tools and services for data integration, analytics, and visualization. Creating a workspace provides a dedicated environment to organize and manage resources effectively, while also supporting collaboration across teams and projects. This foundational step is essential for understanding how to navigate and operate within Microsoft Fabric.
 
 ## Lab Objectives
 
@@ -11,7 +11,7 @@ In this lab, you will be able to complete the following tasks:
 - Task 1: Sign up for the Microsoft Fabric Trial
 - Task 2: Create a workspace
 
-### Task 1: Sign up for Microsoft Fabric Trial
+## Task 1: Sign up for Microsoft Fabric Trial
 
 In this task, you will initiate your 60-day free trial of Microsoft Fabric by signing up through the Fabric app, providing access to its comprehensive suite of data integration, analytics, and visualization tools.
 
@@ -25,7 +25,7 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject> (1)
     
-     ![Enter Your Username](./Images/fab34.png)
+     ![Enter Your Username](./Images2/email.png)
  
 1. Next, provide the password below and click on **Sign in (2)**
  
@@ -43,13 +43,13 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 
 2. In the prompt that appears, click **Activate** to start your **60-day free Fabric trial**.  
 
-   ![Account-manager-start](./Images/md4.png)  
+   ![Account-manager-start](./Images2/activate.png)  
 
 3. Once the trial is successfully activated, click **Got it** on the confirmation prompt.  
 
-   ![Account-manager-start](./Images/md5.png)  
+   ![Account-manager-start](./Images2/got-it.png)  
 
-### Task 2: Create a workspace
+## Task 2: Create a workspace
 
 In this task, you will create a Fabric workspace. The workspace contains all the items needed for this tutorial, which includes lakehouse, dataflows, Data Factory pipelines, notebooks, Power BI datasets, and reports.
 
@@ -65,16 +65,18 @@ In this task, you will create a Fabric workspace. The workspace contains all the
 
 1. Under **License mode**, select the **Trial (1)** and click on **Apply (2)**
 
-   ![New Workspace](./Images/md8.png)
+   ![New Workspace](./Images2/trial-apply.png)
 
-### Summary
+## Summary
 
 In this exercise, you have signed up for the Microsoft Fabric Trial and created a workspace.
 
-### Review 
+## Review 
 In this lab, you have completed:
 
  + Signed up for Microsoft Fabric Trial
  + Created a workspace
 
-### You have successfully completed the lab. Click on Next >> to proceed with next Lab.
+## You have successfully completed the lab. Click on Next >> to proceed with next Lab.
+
+   ![New Workspace](./Images2/next-page.png)
