@@ -174,15 +174,15 @@ In this task, you will learn how to apply filters and adjust columns to customiz
 
 In this lab, you learned how to:
 
-- Create and manage a lakehouse in Microsoft Fabric.
+- Created and manage a lakehouse in Microsoft Fabric.
 
-- Ingest data into a lakehouse using a Dataflow Gen2.
+- Ingested data into a lakehouse using a Dataflow Gen2.
 
-- Query lakehouse data using a Spark notebook.
+- Queried lakehouse data using a Spark notebook.
 
-- Monitor and track activity execution history through the monitoring hub.
+- Monitored and tracked activity execution history through the monitoring hub.
 
-- Apply filters and customize columns to optimize the monitoring experience.
+- Applied filters and customized columns to optimize the monitoring experience.
 
 ## You have successfully completed the lab. Click on Next >> to procced with next Lab.
 
