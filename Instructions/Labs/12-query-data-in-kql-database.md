@@ -1,8 +1,8 @@
 # Lab 3: Work with data in a Microsoft Fabric eventhouse
 
-## Estimated Duration: 30 minutes
+#### Estimated Duration: 30 minutes
 
-In this lab, you will create and populate an eventhouse in Microsoft Fabric using sample data related to taxi rides. You will configure an eventstream to ingest real-time data into your eventhouse and then explore the captured data using both Kusto Query Language (KQL) and SQL. This lab will help you understand how to manage and analyze real-time event data in a structured, queryable format.
+In this lab, you will create and populate an eventhouse in Microsoft Fabric using sample data related to bike rides. You will configure an eventstream to ingest real-time data into your eventhouse and then explore the captured data using both Kusto Query Language (KQL) and SQL. This lab will help you understand how to manage and analyze real-time event data in a structured, queryable format.
 
 ## Lab Objectives
 
@@ -22,7 +22,7 @@ In this task, you will create an eventhouse in your Fabric workspace. The eventh
 
    ![Screenshot of a table for grouped data.](./Images/md108.png)
 
-1. On the **Real-Time Intelligence** home page, select the **Explore Real-Time Intelligence Sample** tile and click on **Open** It will automatically create an eventhouse called **RTISample**:
+1. On the **Real-Time Intelligence** home page, select the **Explore Real-Time Intelligence Sample** tile and click on **Open** It will automatically create an eventhouse     called **RTISample**:
 
    ![Screenshot of a new eventhouse with sample data.](./Images/md109.png)
 
@@ -47,7 +47,7 @@ In this task, you will use Kusto Query Language (KQL) to explore and analyze dat
     ```
 
     > **NOTE:**
-    > The Pipe ( | ) character is used for two purposes in KQL including to separate query operators in a tabular expression statement. It is also used as a logical OR operator within square or round brackets to denote that you may specify one of the items separated by the pipe character.
+    > The Pipe ( | ) character is used for two purposes in KQL, including to separate query operators in a tabular expression statement. It is also used as a logical OR operator within square or round brackets to denote that you may specify one of the items separated by the pipe character.
 
 1. Select the query code and run it to return 100 rows from the table.
 
