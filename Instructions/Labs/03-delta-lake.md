@@ -415,15 +415,15 @@ In this lab, you learned how to work with Delta tables in Microsoft Fabric using
 In this lab, you have completed the following tasks:
 
 
-- Task 1: Upload data to the Lakehouse
-- Task 2: Explore data in a DataFrame
-- Task 3: Create Delta tables
-- Task 4: Create a managed table
-- Task 5: Create an external table
-- Task 6: Compare managed and external tables
-- Task 7: Use SQL to create a Delta table
-- Task 8: Explore table versioning
-- Task 9: Analyze the Delta table data with SQL queries
-- Task 10: Use Delta tables for streaming data
+- Task 1: Uploaded data to the Lakehouse
+- Task 2: Explored data in a DataFrame
+- Task 3: Created Delta tables
+- Task 4: Created a managed table
+- Task 5: Created an external table
+- Task 6: Compared managed and external tables
+- Task 7: Useed SQL to create a Delta table
+- Task 8: Explored table versioning
+- Task 9: Analyzed the Delta table data with SQL queries
+- Task 10: Used Delta tables for streaming data
 
 ## Now, click on Next from the lower right corner to move on to the next lab.
