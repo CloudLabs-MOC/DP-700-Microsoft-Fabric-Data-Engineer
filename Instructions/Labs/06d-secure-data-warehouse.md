@@ -333,10 +333,10 @@ In this task, you will apply granular SQL permissions on tables and stored proce
 
 In this lab, you learned how to:
 
-- Assign workspace Viewer roles to users.
-- Apply dynamic data masking (DDM) to protect sensitive columns.
-- Configure row-level security (RLS) to restrict data access.
-- Implement column-level security (CLS) for granular control.
-- Grant and manage SQL granular permissions using T-SQL.
+- Assigned workspace Viewer roles to users.
+- Applied dynamic data masking (DDM) to protect sensitive columns.
+- Configured row-level security (RLS) to restrict data access.
+- Implemented column-level security (CLS) for granular control.
+- Granted and managed SQL granular permissions using T-SQL.
 
 ## You have successfully completed the lab
