@@ -269,14 +269,14 @@ In this task, you assign an item permission and create a OneLake data access rol
 
 In this lab, you learned how to:
 
-- Create and manage a lakehouse in Microsoft Fabric.
+- Created a data warehouse
 
-- Ingest data into a lakehouse using a Dataflow Gen2.
+- Created a lakehouse
 
-- Query lakehouse data using a Spark notebook.
+- Applied workspace access controls
 
-- Monitor and track activity execution history through the monitoring hub.
+- Applied item access control
 
-- Apply filters and customize columns to optimize the monitoring experience.
+- Applied OneLake data access roles in a Lakehouse
 
 ## Now, click on Next from the lower right corner to move on to the next lab.
