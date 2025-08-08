@@ -1,6 +1,6 @@
 # Lab 4: Get started with Real-Time Dashboards in Microsoft Fabric
 
-## Estimated Duration: 30 minutes
+#### Estimated Duration: 30 minutes
 
 Real-time dashboards in Microsoft Fabric enable you to visualize and explore streaming data using the Kusto Query Language (KQL).   
                          
@@ -23,17 +23,17 @@ In this task, you will create a real-time dashboard to visualize and monitor the
 
 1. In the menu bar on the left, select **+ create** to create a new **Real-Time Dashboard** named `bikes-dashboard`.
 
-    ![A screenshot of a new dashboard.](./Images/md2-39.png)
+   ![A screenshot of a new dashboard.](./Images/md2-39.png)
 
-    ![A screenshot of a new dashboard.](./Images/md2-40.png)
+   ![A screenshot of a new dashboard.](./Images/md2-40.png)
 
    >**Note**: A new empty dashboard is created.
 
 1. In the toolbar, select **New data source (1)** and select **Eventhouse/KQL Database (2)** data source. Then select **BicycleEventhouse (3)** and click on **Connect (4)**
 
-    ![A screenshot of a new dashboard.](./Images/md2-41.png)
+   ![A screenshot of a new dashboard.](./Images/md2-41.png)
 
-    ![A screenshot of a new dashboard.](./Images/md2-42.png)
+   ![A screenshot of a new dashboard.](./Images/md2-42.png)
 
  1. Create a new data source with the following settings and click on **Add (4)**
 
@@ -41,7 +41,7 @@ In this task, you will create a real-time dashboard to visualize and monitor the
     - **Database**: *BicycleEventhose (2)*.
     - **Passthrough identity**: *Selected*
 
-    ![A screenshot of a new dashboard.](./Images/md2-43.png)
+      ![A screenshot of a new dashboard.](./Images/md2-43.png)
 
 1. Close the **Data sources** pane, and then on the dashboard design canvas, select **Add tile**.
 
@@ -72,13 +72,13 @@ In this task, you will create a real-time dashboard to visualize and monitor the
     - **Series columns**: infer
     - **Legend location**: Bottom
 
-    ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-46.png)
+      ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-46.png)
 
-    ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-47.png)
+      ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-47.png)
 
 1. Apply the changes and then resize the tile to take up the full height of the left side of the dashboard.
 
-    ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-48.png)
+   ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-48.png)
 
 1. In the toolbar, select **New tile**
 
@@ -211,7 +211,7 @@ Your dashboard currently consists of a single page. You can add more pages to pr
 
 In this task, you will add an additional page to your dashboard to organize different visualizations and enhance usability.
 
-1. On the left side of the dashboard, expand the **Pages** pane; and select **+ Add page**.
+1. On the left side of the dashboard, expand the **Pages** pane and select **+ Add page**.
 1. Name the new page **Page 2**. Then select it.
 1. On the new page, select **+ Add tile**
 1. In the query editor for the new tile, enter the following query:
@@ -222,7 +222,7 @@ In this task, you will add an additional page to your dashboard to organize diff
     | order by latest_observation desc
     ```
 
-1. Apply the changes. Then resize the tile to fill the height of the dashboard.
+1. Apply the changes. Then, resize the tile to fill the height of the dashboard.
 
    ![img](./Images/md2-52.png)
 
