@@ -58,7 +58,7 @@ In this task, you will create a Dataflow Gen2 to ingest data from a CSV file int
 
    ![](./Images/dpm7.png)
 
-1. Enter **Get Product Data** **(1)** in the **Name** field, and **uncheck** **(2)** the below checkbox then click **Create** **(2)**.
+1. Enter **Get Product Data** **(1)** in the **Name** field, and **uncheck** **(2)** the below checkbox then click **Create** **(3)**.
 
     ![Screenshot of a new dataflow.](./Images/dataflow2.png)
 
