@@ -1,6 +1,6 @@
 # Lab 5: Secure a Microsoft Fabric data warehouse
 
-## Estimated duration : 60 minutes
+#### Estimated duration: 60 minutes
 
 Microsoft Fabric permissions and granular SQL permissions work together to govern Warehouse access and user permissions. In this exercise, you'll secure data using granular permissions, column-level security, row-level security, and dynamic data masking.
 
@@ -46,7 +46,7 @@ In this task, you will add a user to the Viewer role within a Microsoft Fabric w
 
 ### Task 2: Apply dynamic data masking rules to columns in a table
 
-Dynamic data masking rules are applied on individual columns at the table level so all queries are affected by the masking. Users who do not have explicit permissions to view confidential data see masked values in query results while users with explicit permission to view the data see it unobscured. There are four types of masks: default, email, random and custom string. In this exercise, you will apply a default mask, an email mask, and a custom string mask.
+Dynamic data masking rules are applied on individual columns at the table level, so all queries are affected by the masking. Users who do not have explicit permissions to view confidential data see masked values in query results, while users with explicit permission to view the data see it unobscured. There are four types of masks: default, email, random, and custom string. In this exercise, you will apply a default mask, an email mask, and a custom string mask.
 
 In this task, you will configure dynamic data masking on specific table columns in your data warehouse. Dynamic data masking helps protect sensitive information by obscuring it at query time, ensuring that users can access necessary data without exposing confidential details such as email addresses or credit card numbers.
 
