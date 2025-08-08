@@ -26,29 +26,33 @@ In this task, you will create three workspaces in Microsoft Fabric — Developme
 
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
    
-1. Create a **new workspace** named **Development<inject key="DeploymentID" enableCopy="false"/>**, and under **License mode**, select the **Trial** and click on **Apply**.
+1. Create a **new workspace** named **Development<inject key="DeploymentID" enableCopy="false"/> (1)**, and under **License mode**, select the **Trial (2)** and click on **Apply (3)**.
+
+    ![](./Images/dpm41.png)
    
 1. Repeat **steps 1 & 2**, for creating **two** more workspaces named **Test<inject key="DeploymentID" enableCopy="false"/>**, and **Production<inject key="DeploymentID" enableCopy="false"/>**.
    
-1. Select the **Workspaces** icon on the menu bar on the left and confirm that there are three workspaces named:  Development<inject key="DeploymentID" enableCopy="false"/>, Test<inject key="DeploymentID" enableCopy="false"/>, and Production<inject key="DeploymentID" enableCopy="false"/>.
+1. Select the **Workspaces (1)** icon on the menu bar on the left and confirm that there are three workspaces named:  **Development<inject key="DeploymentID" enableCopy="false"/>**, **Test<inject key="DeploymentID" enableCopy="false"/>**, and **Production<inject key="DeploymentID" enableCopy="false"/>** **(2)**.
 
-   ![](./Images/lab5u180.png)
+    ![](./Images/dpm42.png)
 
 ### Task 2: Create a deployment pipeline
 
 In this task, you will create a new deployment pipeline that will manage the movement of content across the Development, Test, and Production stages.
 
-1. In the menu bar on the left, select **Workspaces**.
+1. In the menu bar on the left, select **Workspaces (1)**.
    
-3. Select **Deployment Pipelines**, then **New pipeline**.
+1. Select **Deployment Pipelines (2)**, then **New pipeline**.
+
+    ![](./Images/dpm43.png)
    
-5. In the **Add a new deployment pipeline** window, click on **New pipeline** from bottom and enter **pipeline<inject key="DeploymentID" enableCopy="false"/> (1)** as the pipeline name, then click **Next (2)** to continue.
+1. In the **Add a new deployment pipeline** window, click on **New pipeline** from bottom and enter **pipeline<inject key="DeploymentID" enableCopy="false"/> (1)** as the pipeline name, then click **Next (2)** to continue.
 
    ![Screenshot of pipeline stages.](./Images/lab5u18.png)
    
-7. Accept the defaults on the **Customize your stages** window.
+1. Accept the defaults on the **Customize your stages** window.
 
-8. Select **Create and Continue**.
+1. Select **Create and Continue**.
 
    ![Screenshot of pipeline stages.](./Images/lab5u19.png)
 
@@ -62,31 +66,39 @@ In this task, you will assign the previously created workspaces to their respect
 
    ![.](./Images/deployment-pipeline12.png)
 
+   ![.](./Images/dpm44.png)   
+
 ### Task 4: Create content
 
 In this task, you will create a lakehouse named LabLakehouse in the Development workspace and populate it with sample data.
 
 1. In the menu bar on the left, select **Workspaces**.
    
-3. Select the **Development<inject key="DeploymentID" enableCopy="false"/>** workspace.
+1. Select the **Development<inject key="DeploymentID" enableCopy="false"/>** workspace.
    
-5. Select **New Item**.
+1. Select **New Item**.
    
-7. In the window that appears, Under the **Store data** select **Lakehouse** and if prompt to **Upgrade to a free Microsoft Fabric trial** click on **Upgrade** and in the **New lakehouse window**, name the lakehouse as, **LabLakehouse<inject key="DeploymentID" enableCopy="false"/>**.
+1. In the window that appears, Under the **Store data** select **Lakehouse** and if prompt to **Upgrade to a free Microsoft Fabric trial** click on **Upgrade**.
+
+1. In the **New lakehouse window**, name the lakehouse as, **LabLakehouse<inject key="DeploymentID" enableCopy="false"/>**.
    
-9. Select **Create**.
+1. Select **Create**.
     
-11. Select the **Start with sample data** tile, then on the **Use a Sample** page, choose the **Public holidays** tile to populate the workspace with sample data.
+1. Select the **Start with sample data** tile.
+
+1. Then on the **Use a Sample** page, choose the **Public holidays** tile to populate the workspace with sample data.
 
     ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u14.png)
 
-12. In the menu bar on the left, select the **pipeline<inject key="DeploymentID" enableCopy="false"/>** you created, then **toggle off (1)** **New Deployment Pipelines** to disable the feature.
-    
-14. In the **Development** stage, select the **>** until you see **Lakehouses**. The lakehouse shows up as new content in the Development stage. Between the **Development** and **Test** stages, there's an orange **X** within a circle. The orange **X** indicates that the Development and Test stages aren't synchronized.
-    
-16. Select the downward arrow below the orange **X** to compare the content in the Development and Test environments. Select **Compare (2)**.The LabLakehouse only exists in the Development stage.  
+1. In the menu bar on the left, select the **pipeline<inject key="DeploymentID" enableCopy="false"/> (1)** you created, then **toggle off (1)** **New Deployment Pipelines** to disable the feature **(2)**.
 
-  ![Screenshot the deployment pipeline showing content mismatches between stages.](./Images/lab5u20.png)
+    ![Screenshot of a new lakehouse in Fabric.](./Images/dpm45.png)
+    
+1. In the **Development** stage, select the **>** until you see **Lakehouses**. The lakehouse shows up as new content in the Development stage. Between the **Development** and **Test** stages, there's an orange **X** within a circle. The orange **X** indicates that the Development and Test stages aren't synchronized.
+    
+1. Select the downward arrow below the orange **X** to compare the content in the Development **(1)** and Test environments. Select **Compare (2)**.The LabLakehouse only exists in the Development stage.  
+
+    ![](./Images/dpm46.png)
 
 ### Task 5: Deploy content between stages
 
@@ -94,31 +106,39 @@ In this task, you will use the deployment pipeline to move the lakehouse content
 
 Deploy the lakehouse from the **Development** stage to the **Test** and **Production** stages.
 
-1. Select the **Deploy (3)** button in the **Development** stage of the pipeline to copy the lakehouse in its current state to the text stage.
+1. Select the **Deploy** button in the **Development** stage of the pipeline to copy the lakehouse in its current state to the text stage.
 
-3. If a pop-up appears stating **"Workspace includes unsupported items"**, click **Continue** to proceed. In the **Deploy to next stage** window, select **Deploy** to initiate the deployment.
+    ![](./Images/dpm47.png)
+
+1. If a pop-up appears stating **"Workspace includes unsupported items"**, click **Continue** to proceed. 
 
    ![](./Images/lab5u201.png)
 
-   ![](./Images/lab5u202.png)
-   
-5. There is an **orange X** between the Test and Production stages. Select the **downward facing arrow** below the orange X. The lakehouse exists in the Development and Test stages but not yet in the Production stage.
-   
-7. In the **Test** stage, select **Deploy**.
-   
-9. In the **Deploy to next stage** window, select **Deploy**. The green check mark between the stages indicates that all stages in sync and contain the same content.
-    
-11. Using deployment pipelines to deploy between stages also updates the content in the workspaces corresponding to the deployment stage. Let's confirm.
-    
-13. In the menu bar on the left, select **Workspaces**.
-    
-15. Select the **Test<inject key="DeploymentID" enableCopy="false"/>** workspace. The lakehouse was copied there.
+1. In the **Deploy to next stage** window, select **Deploy** to initiate the deployment.   
 
-    ![](./Images/lab5u203.png)
-    
-17. Open the **Production<inject key="DeploymentID" enableCopy="false"/>** workspace from the **Workspaces** icon on the left menu. The lakehouse was copied to the Production workspace too.
+    ![](./Images/dpm48.png)
+   
+1. There is an **orange X** between the Test and Production stages. Select the **downward facing arrow (1)** below the orange X. The lakehouse exists in the Development and Test stages but not yet in the Production stage.
+   
+   - In the **Test** stage, select **Deploy (2)**.
 
-    ![](./Images/lab5u204.png)
+     ![](./Images/dpm49.png)   
+   
+1. In the **Deploy to next stage** window, select **Deploy**. The green check mark between the stages indicates that all stages in sync and contain the same content.
+
+    ![](./Images/dpm50.png)
+    
+1. Using deployment pipelines to deploy between stages also updates the content in the workspaces corresponding to the deployment stage. Let's confirm.
+    
+1. In the menu bar on the left, select **Workspaces**.
+    
+1. Select the **Test<inject key="DeploymentID" enableCopy="false"/> (1)** workspace. The lakehouse was copied there **(2)**.
+
+    ![](./Images/dpm51.png)
+    
+1. Open the **Production<inject key="DeploymentID" enableCopy="false"/> (1)** workspace from the **Workspaces** icon on the left menu. The lakehouse was copied to the Production workspace too **(2)**.
+
+    ![](./Images/dpm52.png)
 
 ## Review
 
