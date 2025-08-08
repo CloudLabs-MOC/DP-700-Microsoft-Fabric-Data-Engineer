@@ -307,11 +307,11 @@ In this task, you will build a Power BI report based on the data warehouse you c
 
 In this lab, you learned how to:
 
-- Create and configure a Microsoft Fabric data warehouse.
-- Define relational tables and load data using SQL.
-- Build a semantic model with relationships.
-- Query and aggregate data using SQL and visual interfaces.
-- Create views to encapsulate queries.
-- Visualize data and build reports for analytical insights.
+- Created and configure a Microsoft Fabric data warehouse.
+- Defined relational tables and load data using SQL.
+- Built a semantic model with relationships.
+- Queried and aggregated data using SQL and visual interfaces.
+- Created views to encapsulate queries.
+- Visualized data and build reports for analytical insights.
 
 ## Now, click on Next from the lower right corner to move on to the next lab.
