@@ -62,7 +62,7 @@ In this task, you will add a real-time data source to your Eventstream. You'll u
 
 2. Name the source `Bicycles` (1), and select the **Bicycles (2)** sample data and select **Add (3)**
 
-   ![Screenshot of a new eventstream.](./Images/md89.png)
+   ![Screenshot of a new eventstream.](./Images/dd2.png)
 
    >**Note**: Your stream will be mapped and you will be automatically displayed on the **eventstream canvas**.
 
@@ -74,7 +74,7 @@ In this task, you'll route the incoming bicycle stream data to an Eventhouse so 
 
 1. Select the **Transform events or add destination (1)** tile and search for **Eventhouse (2)**.
 
-   ![Review the eventstream canvas](./Images/md91.png)
+   ![Review the eventstream canvas](./Images/dd3.png)
 
 1. In the **Eventhouse** pane, configure the following setup options.
 
