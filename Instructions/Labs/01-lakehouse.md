@@ -225,7 +225,7 @@ In this lab, you explored the core features of Microsoft Fabric's Lakehouse arch
 
 In this lab, you have completed the following tasks:
 
-- Create a lakehouse
+- Created a lakehouse
 - Uploaded a file
 - Explored shortcuts
 - Loaded file data into a table
