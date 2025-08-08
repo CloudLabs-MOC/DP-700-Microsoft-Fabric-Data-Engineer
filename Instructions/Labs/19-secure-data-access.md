@@ -202,51 +202,64 @@ In this task, you assign an item permission and create a OneLake data access rol
    
 1. Return to the browser where you're logged in as the **Workspace Admin**.
    
-1. Select **Workspaces** on the left menu and select your workspace. Hover over the name of the lakehouse.
+1. Select **Workspaces** on the left menu and select your workspace. Hover over the name of the lakehouse **lakehouse2**.
    
-1. Select on the ellipse (**...**) to the right of the ellipse and select **Manage permissions**
+1. Select on the ellipse (**... (1)**) to the right of the ellipse and select **Manage permissions (2)**
 
-   ![](./Images/lab5u179.png)
+   ![](./Images/dpm34.png)
    
 1. On the screen that appears, select **Add user**.
     
-1. Assign the second user - <inject key="testuser" enableCopy="true"/> to the lakehouse and ensure none of the checkboxes on the **Grant People Access** window are checked.
+1. Assign the second user - <inject key="testuser" enableCopy="true"/> to the lakehouse **(1)**
+
+    - Ensure none of the checkboxes on the **Grant People Access** window are checked **(2)**
     
-1. Select **Grant**. The second user now has read permissions on the lakehouse. Read permission only allows the user to see metadata for the lakehouse but not the underlying data. Next we'll validate this.
+    - Select **Grant (3)**. The second user now has read permissions on the lakehouse. Read permission only allows the user to see metadata for the lakehouse but not the underlying data. Next we'll validate this.
+
+      ![](./Images/dpm35.png)    
     
 1. Return to the browser where you're logged in as the second user. Refresh the browser.
     
-1. Select **OneLake** in the left navigation pane.
+1. Select **OneLake (1)** in the left navigation pane.
     
-1. Select the **lakehouse** and open it.
+    - Select the **lakehouse (2)** and open it.
     
-1. Select **Open** on the top menu bar. You're unable to expand the tables or files even though read permission was granted. Next, you grant the second user access to a specific folder using OneLake data access permissions.
-    
+    - Select **Open (3)** on the top menu bar.
+
+      ![](./Images/dpm36.png)
+
+1. You're unable to expand the tables or files even though read permission was granted. Next, you grant the second user access to a specific folder using OneLake data access permissions.
+          
+   ![](./Images/dpm37.png)    
+
 1. Return to the browser where you're logged in as the workspace administrator.
     
-1. Select **Workspaces** from the left navigation bar.
-    
-1. Select your workspace name.
-    
-1. Select the **lakehouse**.
+1. Select your **Workspaces** from the left navigation bar **(1)** and then select the **lakehouse2 (2)**.
+
+   ![](./Images/dpm38.png) 
     
 1. When the lakehouse opens, select **Manage OneLake data access (preview)** on the top menu bar and enable the feature by clicking the **Continue** button.
+
+   ![](./Images/dpm39.png) 
+   ![](./Images/dpm40.png)    
     
 1. Select **+ New** on the **OneLake security** screen that appears.
 
     ![](./Images/onelake2.png)
 
-1. Enter **publicholidays (1)** for the Role name and click on **Selected data (2)** under **Add data to your role** section.
+1. Enter **publicholidays (1)** for the Role name and click on **Selected data (2)** under **Add data to your role** section. Select **Browse Lakehouse (3)**.
 
     ![](./Images/onelake4.png)
 
-1. Select **Browse Lakehouse (3)** and select **publicholidays (4)** table and click on **Add data (5)**
+    - Select **publicholidays (4)** table and click on **Add data (5)**
 
-    ![](./Images/onelake3.png)
+      ![](./Images/onelake3.png)
 
-1. Add the second user - <inject key="testuser" enableCopy="true"/> (6)in the **Add members to your role** section.
+    - Add the second user - <inject key="testuser" enableCopy="true"/> (6)in the **Add members to your role** section.
 
-1. Click on **Create role (7)**
+    - Click on **Create role (7)**
+
+      ![](./Images/onelake4.png)
         
 1. Return to the browser where you're logged in as the second user. Ensure you're still on the page where the lakehouse is open. Refresh the browser.
     
