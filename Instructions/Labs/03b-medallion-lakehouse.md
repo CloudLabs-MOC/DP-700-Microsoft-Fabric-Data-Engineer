@@ -1,4 +1,4 @@
-# Lab 3: Create a medallion architecture in a Microsoft Fabric lakehouse
+# Lab 03: Create a medallion architecture in a Microsoft Fabric lakehouse
 
 #### Estimated Duration: 60 minutes
 
