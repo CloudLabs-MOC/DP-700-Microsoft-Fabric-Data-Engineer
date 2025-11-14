@@ -61,7 +61,7 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
 In this task, you will create a notebook to work with data in Apache Spark. Notebooks provide an interactive environment where you can write and run code in multiple languages, while also allowing you to add notes for documentation.
 
-1. Select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left bar and then click **fabric-<inject key="DeploymentID" enableCopy="false"/>** again.
+1. Select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left bar and then click **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** again.
 
    ![Enter Your Username](./Images/pd2.png)
 
@@ -99,9 +99,10 @@ In this task, you will create a DataFrame using PySpark to begin working with yo
 >[!NOTE]
 > Fabric notebooks support multiple programming languages including Scala, R, and Spark SQL.
 
-1. Select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** from the left bar.
 
-   ![Enter Your Username](./Images/dpp7.png)
+1. Select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left bar and then click **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** again.
+
+   ![Enter Your Username](./Images/pd2.png)
 
 1. You will see a list of items contained in the workspace including your lakehouse and notebook.
 
