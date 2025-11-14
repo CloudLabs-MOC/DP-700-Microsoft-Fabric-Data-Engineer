@@ -16,7 +16,9 @@ In this lab, you will be able to complete the following tasks:
 
 In this task, you will create a Dataflow (Gen2) in Microsoft Fabric to ingest data into your lakehouse. You'll define an extract, transform, and load (ETL) process using Power Query Online, enabling you to connect to a source dataset, apply data transformations, and load the clean data into your analytical storage for further use.
 
-1. In the home page, navigate to your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** from the left pane.
+1. Select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left bar and then click **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** again.
+
+   ![Enter Your Username](./Images/pd2.png)
 
 1. Select **New item (1)** > **Dataflow Gen2 (2)**.
 
@@ -98,11 +100,13 @@ In this task, you will configure the destination for your Dataflow (Gen2) so the
 
 In this task, you will add your Dataflow (Gen2) as an activity within a pipeline. This allows you to orchestrate the dataflow alongside other data operations in a unified and repeatable workflow using the Data Factory experience in Microsoft Fabric.
 
-1. Navigate to your Fabric-enabled workspace from the left bar.
+1. Select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left bar and then click **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** again.
 
-1. Make sure you're still in the **Data Engineering** experience. Select **+ New item (1)** > **Data pipeline (2)**.
+   ![Enter Your Username](./Images/pd2.png)
 
-   ![Empty data pipeline.](./Images/md55.png)
+1. Select **+ New item (1)**, search for **Pipeline (2)** and then select **Pipeline (3)**.
+
+   ![Empty data pipeline.](./Images/pd11.png)
 
 1. Then when prompted, create a new pipeline named **Load data (1)** and then click on **Create (2)**. 
 
