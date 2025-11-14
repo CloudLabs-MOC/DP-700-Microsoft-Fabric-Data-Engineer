@@ -76,7 +76,7 @@ In this task, you will configure the destination for your Dataflow (Gen2) so the
 
    ![Data destination configuration page.](./Images2/5t2-2.png)
 
-3. In the list of available workspaces, find your workspace and select the **lakehouse (1)** you created in it at the start of this exercise. Then specify a new table named **orders (2)** and then select **Next (3)**.
+3. In the list of available workspaces, expand your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** and select the **lakehouse (1)** you created in it at the start of this exercise. Then specify a new table named **orders (2)** and then select **Next (3)**.
 
    ![Data destination configuration page.](./Images/dpp53.png)
 
