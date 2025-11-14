@@ -188,9 +188,9 @@ In this task, you will create a notebook in Microsoft Fabric to begin processing
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images2/4t3-8.png)
 
-1. In the hub menu bar on the top, select your lakehouse **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**.
+1. In the hub menu bar on the top, select your lakehouse **lakehouse<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
+1. In the **Explorer** pane, refresh the view. Then expand **Tables (1)**, and select the **sales (2)** table to see a preview of the data it contains **(3)**.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images2/4t3-10.png)
 
