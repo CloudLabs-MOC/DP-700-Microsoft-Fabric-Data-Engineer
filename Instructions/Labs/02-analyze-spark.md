@@ -653,11 +653,11 @@ While *matplotlib* enables you to create different chart types, it can require s
     plt.show()
     ```
 
-4.	Run the modified code and note that seaborn enables you to set a color theme for your plots.
+4. Run the modified code and note that seaborn enables you to set a color theme for your plots.
 
     ![Screen picture showing that the salesorders table has been created.](./Images2/t8-3b.png) 
 
-5.	Modify the code again as follows:
+5. Modify the code again as follows:
 
     ```python
     import seaborn as sns
