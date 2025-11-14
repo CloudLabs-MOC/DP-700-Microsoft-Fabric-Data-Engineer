@@ -31,7 +31,7 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
    - **Name:** Enter **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**  
 
-     ![Screenshot of uploaded files in a lakehouse.](./Images/dpp2.png)     
+     ![Screenshot of uploaded files in a lakehouse.](./Images/pd1.png)     
 
 1. Once inside the **Lakehouse**, navigate to the **Files** folder in the **Explorer** pane. Click the **ellipses (1)** menu, select **Upload (2)**, and then choose **Upload folder (3)**.  
 
@@ -61,23 +61,17 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
 In this task, you will create a notebook to work with data in Apache Spark. Notebooks provide an interactive environment where you can write and run code in multiple languages, while also allowing you to add notes for documentation.
 
-1. Select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** from the left bar.
+1. Select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left bar and then click **fabric-<inject key="DeploymentID" enableCopy="false"/>** again.
 
-   ![Enter Your Username](./Images/dpp7.png)
+   ![Enter Your Username](./Images/pd2.png)
 
 1. Then select **+ New item (1)**, search for **Notebook (2)** and **Notebook (3)**.
 
    ![Enter Your Username](./Images/dpp8.png)
 
-1. After a few seconds, a new notebook containing a single cell will open. Notebooks are made up of one or more cells that can contain code or markdown (formatted text).
+1. On the menu to change the name to **Notebook<inject key="DeploymentID" enableCopy="false"/> (1)** and then **Create (2)**.
 
-1. Fabric assigns a name to each notebook you create, such as Notebook 1, Notebook 2, etc. Click the name panel above the **Home** tab.
-
-   ![Enter Your Username](./Images/dpp9.png)
-
-1. On the menu to change the name to **Notebook<inject key="DeploymentID" enableCopy="false"/>**.
-
-   ![Enter Your Username](./Images/dpp10.png)
+   ![Enter Your Username](./Images/pd3.png)
 
 1. Select the first cell (which is currently a code cell), and then in the top-right tool bar, use the **M↓** button to convert it to a markdown cell. The text contained in the cell will then be displayed as formatted text.
 
