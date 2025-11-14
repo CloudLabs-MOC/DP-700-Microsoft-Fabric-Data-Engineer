@@ -23,7 +23,7 @@ In this task, you will create subfolder in the existing lakehouse.
 
 1. On the **Explorer** pane on the left, in the **... (1)** menu for the **Files** node, select **New subfolder (2)**.
 
-   ![Screen picture showing auto generated code and data.](./Images/md31.png)
+   ![Screen picture showing auto generated code and data.](./Images/pd4.png)
 
 1. Create a subfolder named **new_data (1)** and then click on **Create (2)**.
 
@@ -33,9 +33,9 @@ In this task, you will create subfolder in the existing lakehouse.
 
 In this task, you will create a pipeline in Microsoft Fabric to ingest data into your lakehouse. You will use the Copy Data activity to extract data from a source and copy it into a subfolder within the lakehouse, forming the foundation for an ETL or ELT process.
 
-1. On the **Home** page for your lakehouse, select **Get data (1)** and then select **New data pipeline (2)**.
+1. On the **Home** page for your lakehouse, select **Get data (1)** and then select **New pipeline (2)**.
 
-    ![Screen picture showing auto generated code and data.](./Images/md33.png)
+    ![Screen picture showing auto generated code and data.](./Images/pd5.png)
 
     - Create a new data pipeline named **Ingest Sales Data (3)** and then **Create (4)**.
 
@@ -74,7 +74,7 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
     - **Column delimiter**: Comma (,) **(2)**
     - **Row delimiter**: Line feed (\n) **(3)**
     - **First row as header**: Selected **(4)**
-    - **Compression type**: None **(5)**
+    - **Compression type**: No compression **(5)**
 
       ![Screenshot of the Choose data source page.](./Images/dpp32.png)    
 
@@ -99,7 +99,7 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
     - **Column delimiter**: Comma (,) **(2)**
     - **Row delimiter**: Line feed (\n) **(3)**
     - **Add header to file**: Selected **(4)**
-    - **Compression type**: None **(5)**
+    - **Compression type**: No compression **(5)**
 
       ![Screenshot of the Choose data source page.](./Images/dpp34.png) 
 
@@ -115,11 +115,13 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/dpp35.png)
 
-1. In the menu bar on the left, select your lakehouse.
+1. Select your lakehouse **lakehouse<inject key="DeploymentID" enableCopy="false"/>** from the top menu bar.
+
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/pd6.png)
 
 1. On the **Home** page, in the **Lakehouse explorer** pane, expand **Files** and select the **new_data (1)** folder to verify that the **sales.csv (2)** file has been copied.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/md37.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/pd7.png)
 
 ## Task 3: Create a notebook
 
@@ -131,17 +133,21 @@ In this task, you will create a notebook in Microsoft Fabric to begin processing
 
      >**Note**: After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-2. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
+1. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
 
     ```python
    table_name = "sales"
     ```
 
-3. In the **... (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
+1. In the **... (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/dpp37.png)
 
-4. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
+1. Run the cell.
+
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/pd8.png)
+
+1. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
 
     ```python
    from pyspark.sql.functions import *
@@ -164,29 +170,27 @@ In this task, you will create a notebook in Microsoft Fabric to begin processing
 
     This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a table - appending the data if the table already exists.
 
-5. Verify that your notebooks looks similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
+1. Verify that your notebooks looks similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
     ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/md38.png)
 
     > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take a minute or so to complete.
 
-6. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
+1. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/dpp38.png)
 
-7. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
+1. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/dpp39.png)
 
-8. Then set the **Name** of the notebook to **Load Sales (1)** and close the settings pane **(2)**.
+1. Then set the **Name** of the notebook to **Load Sales (1)** and close the settings pane **(2)**.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images2/4t3-8.png)
 
-9. In the hub menu bar on the left, select your lakehouse.
+1. In the hub menu bar on the top, select your lakehouse **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images2/fabric-lake.png)
-
-10. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
+1. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images2/4t3-10.png)
 
@@ -196,7 +200,7 @@ In this task, you will modify your existing pipeline to include the notebook you
 
 1. In the hub menu bar on the left select the **Ingest Sales Data** pipeline you created previously.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images2/fabric-lake.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/pd9.png)
 
 1. On the **Activities (1)** tab, click on the elipses **(...) (2)** list, select **Delete data (3)**. 
 
@@ -210,13 +214,14 @@ In this task, you will modify your existing pipeline to include the notebook you
     - **General**:
         - **Name**: Delete old files
     - **Source (1)**
-        - **Connection**: **lakehouse<inject key="DeploymentID" enableCopy="false"/> (2)**
-        - **File path type**: Wildcard file path **(3)**
-        - **Folder path**: Files / **new_data** **(4)**
-        - **Wildcard file name**: *.csv **(5)**       
-        - **Recursively**: *Selected* **(6)**
+        - **Connection**: **lakehouse odl_user_<inject key="DeploymentID" enableCopy="false"/> (2)**
+        - **Lakehouse:** **lakehouse<inject key="DeploymentID" enableCopy="false"/> (3)**
+        - **File path type**: Wildcard file path **(4)**
+        - **Folder path**: Files / **new_data** **(5)**
+        - **Wildcard file name**: *.csv **(6)**       
+        - **Recursively**: *Selected* **(7)**
 
-          ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/dpp43.png)
+          ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/pd10.png)
 
     - **Logging settings (1)**:
         - **Enable logging**: *<u>Un</u>selected* **(2)**
@@ -261,9 +266,9 @@ In this task, you will modify your existing pipeline to include the notebook you
 
      >**Note**: In case you receive the error message *Spark SQL queries are only possible in the context of a lakehouse. Please attach a lakehouse to proceed*: Open your notebook, select the lakehouse you created on the left pane, select **Remove all Lakehouses** and then add it again. Go back to the pipeline designer and select **&#9655; Run**.
 
-1. In the hub menu bar on the left edge of the portal, select your lakehouse.
+1. In the hub menu bar on the top, select your lakehouse **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**.
 
-1. Navigate to your **Lakehouse (1)**. Then in the **Explorer** pane, expand **Tables (2)** and select the **new_sales (3)** table to see a preview of the data it contains. This table was created by the notebook when it was run by the pipeline.
+1. Navigate to your **Lakehouse (1)**. Then in the **Explorer** pane, expand **Tables (2)** then **refresh** and select the **new_sales (3)** table to see a preview of the data it contains. This table was created by the notebook when it was run by the pipeline.
 
     ![Screenshot of a pipeline with a Dataflow activity.](./Images2/4t4-12.png)
 
