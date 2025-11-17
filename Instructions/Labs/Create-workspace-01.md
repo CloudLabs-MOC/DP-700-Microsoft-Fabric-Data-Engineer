@@ -23,15 +23,15 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 
 1. Enter below Email and click on **Submit (2)**:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject> (1)
+   - **Email/Username:** **<inject key="AzureAdUserEmail"></inject> (1)**
     
-     ![Enter Your Username](./Images/pd12.png)
+     ![Enter Your Username](./Images/signin-1811.png)
  
 1. Next, provide the password below and click on **Sign in (2)**
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject> (1)
+   - **Password:** **<inject key="AzureAdUserPassword"></inject> (1)**
  
-     ![Enter Your Username](./Images/md2.png)
+     ![Enter Your Username](./Images/pd12.png)
 
 1. On **Stay signed in?** pop-up window appears, click on **Yes**.
 
@@ -48,6 +48,8 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 3. Once the trial is successfully activated, click **Got it** on the confirmation prompt.  
 
    ![Account-manager-start](./Images2/got-it.png)  
+
+   >**Note:** If the **Invite teammates to try Fabric to extend your trial** window opens, please close it. 
 
 ## Task 2: Create a workspace
 
