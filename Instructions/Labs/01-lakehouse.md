@@ -26,11 +26,11 @@ In this task, you will create a lakehouse in your Microsoft Fabric workspace.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/md10.png)  
 
-1. Provide the following details to create a **Lakehouse** and then click on **Create (2)** to proceed.
+1. Provide the following details to create a **Lakehouse**, keep other values as default and then click on **Create (2)** to proceed.
 
    - **Name:** Enter **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**  
 
-     ![Screenshot of uploaded files in a lakehouse.](./Images/dpp2.png)   
+     ![Screenshot of uploaded files in a lakehouse.](./Images/L1T1S2-1811.png)   
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
 
@@ -38,7 +38,7 @@ In this task, you will create a lakehouse in your Microsoft Fabric workspace.
 
     - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create *shortcuts*         in this folder to reference data that is stored externally.
 
-      ![Screenshot of uploaded files in a lakehouse.](./Images/mod2-1.png)
+      ![Screenshot of uploaded files in a lakehouse.](./Images/L1T1S4-1811.png)
 
    >**Note**: Currently, there are no tables or files in the lakehouse.
 
