@@ -58,7 +58,7 @@ Welcome to your DP-700: Microsoft Fabric Data Engineer Workshop! We've prepared 
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../Images/dg4.png)
+![Access Your VM and Lab Guide](../Images/guidetab-mod2.png)
 
 ### Virtual Machine & Lab Guide
  

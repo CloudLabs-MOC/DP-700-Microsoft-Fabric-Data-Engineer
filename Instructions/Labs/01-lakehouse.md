@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 30 Minutes
 
-In this lab, you will explore how to build and work with a lakehouse in Microsoft Fabric. You will begin by creating a Fabric lakehouse that leverages OneLake as its storage layer and supports Delta Lake tables for structured querying. You'll learn how to use Apache Spark to process and analyze data stored in the lakehouse, and how to implement a medallion architecture that organizes data into bronze, silver, and gold layers for improved clarity, performance, and insight.
+In this lab, you will explore the end-to-end process of working with data in a Microsoft Fabric lakehouse. You’ll begin by creating a new lakehouse and uploading raw data files into OneLake storage. You’ll then learn how to work with both files and shortcuts, giving you flexibility to reference external data without duplication. After that, you’ll load file-based data into managed Delta Lake tables, making it easier to analyze and query using SQL. Finally, you will use both SQL queries and visual, no-code transformations to explore and prepare your data-providing a complete experience of ingesting, structuring, and analyzing data within Fabric.
 
 ## Lab Objectives
 
@@ -14,7 +14,6 @@ In this lab, you will be able to complete the following tasks:
 - Task 4: Load file data into a table
 - Task 5: Use SQL to query tables
 - Task 6: Create a visual query
-- Task 7: Create a report
 
 ## Task 1: Create a lakehouse
 
@@ -173,50 +172,6 @@ In this task, you’ll explore how to perform data transformation and analysis u
 1. When you're done, the results pane under the visual query shows the number of line items for each sales order.
 
     ![Screenshot of a Choose columns dialog box.](./Images/dpp63.png)
-
-## Task 7: Create a report
-
-In this task, you’ll build a simple Power BI report directly within Microsoft Fabric using the data from your lakehouse. When tables are created in a lakehouse, they’re automatically added to a semantic model that enables reporting and visualization without needing additional configuration.
-
-1. Click on **New semantic model**, from the top ribbon.
-
-    ![Screenshot of model layouts](./Images/semantic-p3.png)
-
-1. In the **New semantic model**, provide the name as **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** and select **sales (2)** and then click on **Confirm (3)**.
-
-    ![Screenshot of model layouts](./Images/semantic1-p3.png)
-
-1. Now from the left navigation menu, select your **workspace (1)** and then click on **lakehouse<inject key="DeploymentID" enableCopy="false"/> (2)** semantic model.
-
-    ![Screenshot of model layouts](./Images/semantic2-p3.png)
-
-1. Click on the **Open semantic model**.
-
-    ![Screenshot of model layouts](./Images/semantic3-p3.png)
-
-2. Select the **File (1)** tab. Then click on **Create new report (2)**.
-
-   ![Screenshot of the report designer.](./Images/report-p3.png)
-
-3. In the **Data** pane on the right, expand the **sales (1)** table. Then select the following fields:
-    - **Item (2)**
-    - **Quantity (3)**
-
-        >**Note**: A table visualization is added to the report:
-
-        ![Screenshot of a report containing a table.](./Images/report1-p3.png)
-
-4. Hide the **Data** and **Filters** panes to create more space. Then ensure the table visualization is selected and in the **Visualizations** pane, change the visualization to a **Clustered bar chart (1)** and resize it as shown here.
-
-   ![Screenshot of a report containing a clustered bar chart.](./Images/report2-p3.png)
-
-5. On the **File (1)** menu, select **Save (2)**.
-
-   ![Screenshot of a report containing a clustered bar chart.](./Images/report3-p3.png)
-
-6. Then save the report as `Item Sales Report` **(3)** in the workspace you created previously and then click on **Save (4)**.
-
-   ![Screenshot of a Choose columns dialog box.](./Images/report4-p3.png)
 
 ## Review
 
