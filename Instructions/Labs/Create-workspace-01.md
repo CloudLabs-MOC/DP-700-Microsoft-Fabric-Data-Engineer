@@ -1,6 +1,6 @@
 # Lab: prerequisite: Create a Fabric workspace
 
-### Estimated Duration: 15 minutes
+### Estimated Duration: 15 Minutes
 
 In this exercise, you will sign up for the Microsoft Fabric Trial and create a workspace, establishing the foundation for working within the Microsoft Fabric platform. This initial setup enables you to explore and utilize a wide range of integrated tools and services for data integration, analytics, and visualization. Creating a workspace provides a dedicated environment to organize and manage resources effectively, while also supporting collaboration across teams and projects. This foundational step is essential for understanding how to navigate and operate within Microsoft Fabric.
 

@@ -2,7 +2,7 @@
 
 Welcome to your DP-700: Microsoft-Fabric-Data-Engineer Workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-### Overall Estimated timing: 210 minutes
+### Overall Estimated Duration: 210 Minutes
 
 In these hands-on labs, you'll explore Real-Time Intelligence capabilities in Microsoft Fabric. Starting with live stock market data, you'll learn to ingest, process, and visualize streaming data for instant insights. You'll work with Eventstream to handle real-time city bike-share data, then create and query an eventhouse using KQL and SQL. Finally, you'll build a dynamic real-time dashboard to visualize streaming data, enabling interactive and up-to-date analytics. These labs provide a practical foundation for implementing real-time analytics solutions in Microsoft Fabric.
 
