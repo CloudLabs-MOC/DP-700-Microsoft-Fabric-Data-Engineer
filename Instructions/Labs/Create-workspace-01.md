@@ -31,25 +31,27 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
  
    - **Password:** **<inject key="AzureAdUserPassword"></inject> (1)**
  
-     ![Enter Your Username](./Images/pd12.png)
+      ![Enter Your Username](./Images/siginin-pr.png)
 
 1. On **Stay signed in?** pop-up window appears, click on **Yes**.
+
+   ![](./Images/siginin2-pr.png)
 
 ### Activate the Microsoft Fabric Free Trial  
 
 1. In the Fabric portal, click on **Account Manager (1)** and then select **Free trial (2)**.
 
-   ![Account-manager-start](./Images/md3.png)  
+   ![Account-manager-start](./Images/freetrial-pr.png)  
 
 2. In the prompt that appears, click **Activate** to start your **60-day free Fabric trial**.  
 
-   ![Account-manager-start](./Images2/activate.png)  
+   ![Account-manager-start](./Images/activate-pr.png)  
 
-3. Once the trial is successfully activated, click **Got it** on the confirmation prompt.  
+3. Once the trial is successfully activated, click **OK** on the **Successfully upgraded to Microsoft Fabric** dialog.  
 
-   ![Account-manager-start](./Images2/got-it.png)  
+   ![Account-manager-start](./Images/activate1-pr.png)  
 
-   >**Note:** If the **Invite teammates to try Fabric to extend your trial** window opens, please close it. 
+   >**Note:** If the **Invite teammates to try Fabric** window opens, please close it. 
 
 ## Task 2: Create a workspace
 
@@ -57,15 +59,15 @@ In this task, you will create a Fabric workspace. The workspace contains all the
 
 1. From the left menu bar, select **Workspaces (1)** and click on **+ New workspace (2)**.
 
-   ![New Workspace](./Images/md6.png)
+   ![New Workspace](./Images/workspace-pr.png)
 
-1. On **Create a workspace** window, enter the below name and expand the **Advanced (2)** setttings
+1. On **Create a workspace** window, enter the below name and expand the **Advanced (2)** setttings:
 
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>** (1)
 
      ![New Workspace](./Images/dpp1.png)
 
-1. Under **License mode**, select the **Trial (1)** and click on **Apply (2)**
+1. Under **License mode**, select the **Trial (1)** and click on **Apply (2)**.
 
    ![New Workspace](./Images2/trial-apply.png)
 
@@ -79,6 +81,6 @@ In this lab, you have completed:
  + Signed up for Microsoft Fabric Trial
  + Created a workspace
 
-## You have successfully completed the lab. Click on Next >> to proceed with next Lab.
+### You have successfully completed the lab. Click on Next >> to proceed with next Lab.
 
    ![New Workspace](./Images2/next-page.png)
