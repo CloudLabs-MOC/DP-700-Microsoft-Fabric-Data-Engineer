@@ -1,6 +1,6 @@
 # Lab 03: Query a data warehouse in Microsoft Fabric
 
-## Estimated duration: 45 minutes
+### Estimated Duration: 45 Minutes
 
 In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. The rich set of experiences built into Microsoft Fabric workspace enables customers to reduce their time to insights by having an easily consumable, always connected semantic model that is integrated with Power BI in DirectLake mode. 
 
@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 - Task 3: Verify data consistency  
 - Task 4: Save a query as a view
 
-### Task 1: Create a sample data warehouse
+## Task 1: Create a sample data warehouse
 
 In this task, you will create a new sample data warehouse named sample-dw within your Fabric workspace, which will be populated with sample taxi ride data.
 
@@ -33,7 +33,7 @@ In this task, you will create a new sample data warehouse named sample-dw within
 
    ![Screenshot of a new warehouse.](./Images/sample-data-warehouse.png)
 
-### Task 2: Query the data warehouse
+## Task 2: Query the data warehouse
 
 The SQL query editor provides support for IntelliSense, code completion, syntax highlighting, client-side parsing, and validation. You can run Data Definition Language (DDL), Data Manipulation Language (DML), and Data Control Language (DCL) statements.
 
@@ -101,7 +101,7 @@ In this task, you will write and run SQL queries to analyze trip trends based on
 
 1. Close all query tabs.
 
-### Task 3: Verify data consistency
+## Task 3: Verify data consistency
 
 Verifying data consistency is important to ensure that the data is accurate and reliable for analysis and decision-making. Inconsistent data can lead to incorrect analysis and misleading results. 
 
@@ -138,7 +138,7 @@ Let's query your data warehouse to check for consistency.
 
 1. Close all query tabs.
 
-### Task 4: Save as view
+## Task 4: Save as view
 
 In this task, you will create a view based on filtered trip data for January, making it easier for users to generate targeted reports without needing to recreate the query logic.
 
@@ -198,5 +198,7 @@ In this lab, you have:
 - Verified data consistency  
 - Saved a query as a view
 
-## Now, click on Next from the lower right corner to move on to the next lab.
+### Now, click on Next from the lower right corner to move on to the next lab.
+
+![Start Your Azure Journey](./Images/dpn2.png)
 

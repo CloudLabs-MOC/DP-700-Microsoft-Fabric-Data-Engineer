@@ -1,6 +1,6 @@
 # Lab 02: Load data into a warehouse using T-SQL
 
-#### Estimated duration: 45 minutes
+### Estimated Duration: 45 Minutes
 
 In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Unlike the default read-only SQL endpoint for tables defined in a lakehouse, a data warehouse provides full SQL semantics, including the ability to insert, update, and delete data in the tables.
 
@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 - Task 6: Load data into the warehouse
 - Task 7: Run analytical queries
 
-### Task 1: Create a lakehouse
+## Task 1: Create a lakehouse
 
 In this task, you will create a data lakehouse in Microsoft Fabric for storing and managing your data files.
 
@@ -32,7 +32,7 @@ In this task, you will create a data lakehouse in Microsoft Fabric for storing a
 
    - **Name:** Enter **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**  
 
-     ![Screenshot of uploaded files in a lakehouse.](./Images/dpp2.png)       
+     ![Screenshot of uploaded files in a lakehouse.](./Images/mod4-p4t1p1.png)       
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
 
@@ -42,29 +42,29 @@ In this task, you will create a data lakehouse in Microsoft Fabric for storing a
 
       ![Screenshot of uploaded files in a lakehouse.](./Images/mod2-1.png)
 
-   >**Note**: Currently, there are no tables or files in the lakehouse.
+        >**Note**: Currently, there are no tables or files in the lakehouse.
 
-### Task 2: Upload a file
+## Task 2: Upload a file
 
 Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However, one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer.
 
 In this task, you will upload a CSV file to the lakehouse for use in the warehouse.
 
-1. Return to the web browser tab containing your lakehouse, and in the **... (1)** menu for the **Files** folder in the **Lakehouse explorer** pane, select **New subfolder    (2)**
+1. Return to the web browser tab containing your lakehouse, and in the **ellipsis (...) (1)** menu for the **Files** folder in the **Lakehouse explorer** pane, select **New subfolder (2)**.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-2.png)
 
-    - Create a subfolder named **data (3)** and then **Create (4)**.   
+    - Create a subfolder named **data (3)** and then click **Create (4)**.   
 
       ![Screenshot of uploaded files in a lakehouse.](./Images/md2-3.png)
 
-1. In the **... (1)** menu for the new **data** folder, select **Upload (2)** and **Upload files (3)**.
+1. In the **ellipsis (...) (1)** menu for the new **data** folder, select **Upload (2)** and **Upload files (3)**.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-4.png) 
 
-1. Then upload the **sales.csv (3)** file from `C:\LabFiles\Files` and then click on **Upload (4)**
+1. Then upload the **sales.csv (1)** file from `C:\LabFiles\files` and then click on **Upload (2)**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/md2-5.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/mod4-p4t1p1(1).png) 
 
 1. After the file has been uploaded, select the **Files/data** folder and verify that the **sales.csv** file has been uploaded, as shown here:
 
@@ -75,13 +75,13 @@ In this task, you will upload a CSV file to the lakehouse for use in the warehou
     ![Screenshot of uploaded sales.csv file in a lakehouse.](./Images/md2-6.png)
 
 
-### Task 3: Create a table in the lakehouse
+## Task 3: Create a table in the lakehouse
 
 In this task, you will create a table in the lakehouse using the uploaded file.
 
-1. In the **...** menu for the **sales.csv** file in the **Explorer** pane, select **Load to tables (1)**, and then **New table (2)**.
+1. In the **ellipsis (...)** menu for the **sales.csv** file in the **Explorer** pane, select **Load to tables (1)**, and then **New table (2)**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp107.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/mod4-p4t3p1.png) 
 
 1. Provide the following information in the **Load file to new table** dialog.
 
@@ -93,15 +93,15 @@ In this task, you will create a table in the lakehouse using the uploaded file.
 
       ![Screenshot of uploaded sales.csv file in a lakehouse.](./Images/mod613.png)
 
-### Task 4: Create a warehouse
+## Task 4: Create a warehouse
 
 In this task, you will create a data warehouse where you will store the fact and dimension tables.
 
-1. In the left-hand menu, select **Create**. On the New page, under the Data Warehouse section, choose **Warehouse**. 
+1. In the left-hand menu, click on **ellipsis (...) (1)** select **Create (2)**. On the New page, under the Data Warehouse section, choose **Warehouse (3)**. 
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp108.png)
+   ![](./Images/mod4-p4t4p1.png)
 
-    >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.    
+   ![](./Images/mod4-p4t4p1(1).png)   
 
 1. Enter **Warehouse2 (1)** as the name, and then click **Create (2)**.
 
@@ -109,7 +109,7 @@ In this task, you will create a data warehouse where you will store the fact and
 
 1. After a minute or so, a new warehouse will be created:
 
-### Task 5: Create fact table, dimensions and view
+## Task 5: Create fact table, dimensions and view
 
 Let's create the fact tables and dimensions for the Sales data. You'll also create a view pointing to a lakehouse, this simplifies the code in the stored procedure we'll use to load.
 
@@ -117,7 +117,7 @@ In this task, you will define fact tables, dimension tables, and a view to strea
 
 1. In the warehouse toolbar, select **New SQL query**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp110.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/mod4-p4t5p1.png) 
 
 1. Then copy and run the following query.
 
@@ -177,7 +177,7 @@ In this task, you will define fact tables, dimension tables, and a view to strea
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/dpp112.png) 
 
-### Task 6: Load data to the warehouse
+## Task 6: Load data to the warehouse
 
 Now that the fact and dimensions tables are created, let's create a stored procedure to load the data from our lakehouse into the warehouse. Because of the automatic SQL endpoint created when we create the lakehouse, you can directly access the data in your lakehouse from the warehouse using T-SQL and cross-database queries.
 
@@ -229,7 +229,7 @@ For the sake of simplicity in this case study, you'll use the customer name and 
 
     > **Note:** In this case, we are only loading data from the year 2021. However, you have the option to modify it to load data from previous years.
 
-### Task 7: Run analytical queries
+## Task 7: Run analytical queries
 
 In this task, you will run analytical queries to validate the data loaded into the warehouse.
 
@@ -302,7 +302,7 @@ In this task, you will run analytical queries to validate the data loaded into t
     >
     > The category information was extracted from the `ItemName` column using string manipulation, as there is no separate category column in the dimension table. This approach assumes that the item names follow a consistent naming convention. If the item names do not follow a consistent naming convention, the results may not accurately reflect the true category of each item.
 
-### Review  
+## Review  
 
 In this exercise, you have created a lakehouse and a data warehouse with multiple tables. You have ingested data and used cross-database queries to load data from the lakehouse to the warehouse. Additionally, you have used the query tool to perform analytical queries.
 
@@ -320,5 +320,6 @@ In this lab, you learned how to:
 
 - Ran analytical queries to verify the sales data and gain insights.
 
-## Now, click on Next from the lower right corner to move on to the next lab.
+### Now, click on Next from the lower right corner to move on to the next lab.
 
+![Start Your Azure Journey](./Images/dpn2.png)

@@ -83,4 +83,3 @@ In this lab, you have completed:
 
 ### You have successfully completed the lab. Click on Next >> to proceed with next Lab.
 
-   ![New Workspace](./Images2/next-page.png)

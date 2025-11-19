@@ -1,6 +1,6 @@
 # Lab 04: Monitor a data warehouse in Microsoft Fabric
 
-#### Estimated duration: 30 minutes
+### Estimated Duration: 30 Minutes
 
 In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Data warehouses in Microsoft Fabric include dynamic management views that you can use to monitor activity and queries.
 
@@ -124,5 +124,6 @@ In this lab, you learned:
 - Explored dynamic management views.
 - Explored query insights.
 
-## Now, click on Next from the lower right corner to move on to the next lab.
+### Now, click on Next from the lower right corner to move on to the next lab.
 
+![Start Your Azure Journey](./Images/dpn2.png)

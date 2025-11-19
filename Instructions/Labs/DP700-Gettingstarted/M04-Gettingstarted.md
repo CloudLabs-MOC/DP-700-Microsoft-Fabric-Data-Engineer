@@ -2,7 +2,7 @@
 
 Welcome to your DP-700: Microsoft-Fabric-Data-Engineer Workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-### Overall Estimated timing: 4 hrs
+### Overall Estimated Duration: 4 Hours
 
 In this hands-on lab, you'll explore core and advanced concepts of data warehousing using Microsoft Fabric. You'll begin by creating and loading data into a Fabric data warehouse using T-SQL, and then query and analyze the data using built-in SQL tools. You'll also monitor performance using dynamic management views and query insights. Finally, you'll implement security measures like dynamic data masking, row-level, and column-level security to protect sensitive information and manage access effectively. By the end, you'll have practical experience building, managing, and securing a modern data warehouse in Microsoft Fabric.
 
