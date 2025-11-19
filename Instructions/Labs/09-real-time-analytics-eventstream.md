@@ -16,7 +16,7 @@ In this lab, you will be able to complete the following tasks:
 - Task 6: Transform event data
 - Task 7: Query the transformed data
 
-### Task 1: Create an eventhouse
+## Task 1: Create an eventhouse
 
 In this task, you will create an eventhouse in your Fabric workspace to store real-time event data.
 
@@ -38,7 +38,7 @@ In this task, you will create an eventhouse in your Fabric workspace to store re
 
     >**Note**: Currently, there are no tables in the database. In the rest of this exercise, you'll use an eventstream to load data from a real-time source into a table.
 
-### Task 2: Create an Eventstream
+## Task 2: Create an Eventstream
 
 In this task, you will create a new Eventstream in Microsoft Fabric to start capturing real-time data. The Eventstream acts as a pipeline that ingests and processes streaming data from various sources.
 
@@ -52,7 +52,7 @@ In this task, you will create a new Eventstream in Microsoft Fabric to start cap
 
     ![Screenshot of alert settings.](./Images/md87.png)
 
-### Task 3: Add a source
+## Task 3: Add a source
 
 In this task, you will add a real-time data source to your Eventstream. You'll use sample data related to bicycle collection points in a city’s bike-share system. This allows you to simulate a real-world streaming scenario without needing an external data feed. 
 
@@ -68,7 +68,7 @@ In this task, you will add a real-time data source to your Eventstream. You'll u
 
     ![Review the eventstream canvas](./Images/md90.png)
 
-### Task 4: Add a destination
+## Task 4: Add a destination
 
 In this task, you'll route the incoming bicycle stream data to an Eventhouse so that it can be stored for analysis.
 
@@ -136,7 +136,7 @@ In this task, you will query the data stored in the eventhouse to analyze real-t
 
    ![Screenshot of a KQL query.](./Images/md98.png)
 
-### Task 6: Transform event data
+## Task 6: Transform event data
 
 In this task, you will apply a transformation to the incoming event data within the eventstream before it reaches the destination. This allows you to clean, shape, or enrich the data in real time. 
 
@@ -202,7 +202,7 @@ In this task, you will apply a transformation to the incoming event data within 
 
 In this task, you'll query the transformed bicycle data that has been ingested into your eventhouse table through the eventstream. Using KQL (Kusto Query Language), you can explore the structured data to gain insights, verify your transformations, and begin your real-time analysis.
 
-1. From the top, select your **KQL database**.
+1. From the top, select **BicycleEventhouse**.
 
    ![](./Images/mod3-p4t7p1.png)
 
