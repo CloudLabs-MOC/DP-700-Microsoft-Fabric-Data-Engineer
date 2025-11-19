@@ -1,6 +1,6 @@
 # Lab 04: Get started with Real-Time Dashboards in Microsoft Fabric
 
-#### Estimated Duration: 30 minutes
+### Estimated Duration: 30 Minutes
 
 Real-time dashboards in Microsoft Fabric enable you to visualize and explore streaming data using the Kusto Query Language (KQL).   
                          
@@ -17,33 +17,39 @@ In this lab, you will complete the following tasks:
 - Task 5: Configure auto refresh
 - Task 6: Save and share the dashboard
 
-### Task 1: Create a real-time dashboard
+## Task 1: Create a real-time dashboard
 
 In this task, you will create a real-time dashboard to visualize and monitor the data flowing through your eventstream
 
-1. In the menu bar on the left, select **+ create** to create a new **Real-Time Dashboard** named `bikes-dashboard`.
+1. On the left navigation menu, click on **(...) (1)** and select **+ Create (2)**.
 
-   ![A screenshot of a new dashboard.](./Images/md2-39.png)
+    ![](.\Images\mod3-p6t1p1.png)
 
-   ![A screenshot of a new dashboard.](./Images/md2-40.png)
+1. Select **Real-Time Dashboard** and name is as **`bikes-dashboard` (1)** and then click **Create (2)**.
+
+   ![A screenshot of a new dashboard.](./Images/mod3-p6t1p1(1).png)
+
+   ![A screenshot of a new dashboard.](./Images/mod3-p6t1p1(2).png)
 
    >**Note**: A new empty dashboard is created.
 
-1. In the toolbar, select **New data source (1)** and select **Eventhouse/KQL Database (2)** data source. Then select **BicycleEventhouse (3)** and click on **Connect (4)**
+1. In the toolbar, select **New data source (1)** and select **KQL Database (2)** data source. Then select **BicycleEventhouse (3)** and click on **Connect (4)**.
 
-   ![A screenshot of a new dashboard.](./Images/md2-41.png)
+   ![A screenshot of a new dashboard.](./Images/mod3-p6t1p1(3).png)
 
-   ![A screenshot of a new dashboard.](./Images/md2-42.png)
+   ![A screenshot of a new dashboard.](./Images/mod3-p6t1p1(4).png)
 
- 1. Create a new data source with the following settings and click on **Add (4)**
+ 1. Create a new data source with the following settings and click on **Add (4)**.
 
-    - **Display name**: `Bike Rental Data` (1)
-    - **Database**: *BicycleEventhose (2)*.
-    - **Passthrough identity**: *Selected*
+    - **Display name**: `Bike Rental Data` **(1)**
+    - **Database**: BicycleEventhose **(2)**.
+    - **Passthrough identity**: *Selected* **(3)**
 
-      ![A screenshot of a new dashboard.](./Images/md2-43.png)
+      ![A screenshot of a new dashboard.](./Images/mod3-p6t1p1(5).png)
 
-1. Close the **Data sources** pane, and then on the dashboard design canvas, select **Add tile**.
+1. Close the **Data sources** pane, and then on the dashboard design canvas, select **+ Add tile**.
+
+    ![A screenshot of a new dashboard.](./Images/mod3-p6t1p1(6).png)
 
 1. In the query editor, ensure that the **Bike Rental Data (2)** source is selected and enter the following KQL code:
 
@@ -55,32 +61,35 @@ In this task, you will create a real-time dashboard to visualize and monitor the
         | order by Neighbourhood asc
     ```
 
-1. **Run (3)** the query, which shows the number of bikes and empty bike docks observed in each neighbourhood in the last 30 minutes.
+1. **Run (3)** the query, which shows the number of bikes and empty bike docks observed in each neighbourhood in the last 30 minutes under the **Results (4)** tab.
 
 1. **Apply changes (5)** to see the data shown in a table in the tile on the dashboard.
 
    ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-44.png)
 
-   ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-45.png)
+1. On the tile, select the **Edit** icon (which looks like a pencil). 
 
-1. On the tile, select the **Edit** icon (which looks like a pencil). Then in the **Visual Formatting** pane, set the following properties:
-    - **Tile name**: Bikes and Docks
-    - **Visual type**: Bar chart
-    - **Visual format**: Stacked bar chart
-    - **Y columns**: No_Bikes, No-Empty_Docks
-    - **X column**: Neighbourhood
-    - **Series columns**: infer
-    - **Legend location**: Bottom
+    ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-45.png)
+
+1. Then in the **Visual Formatting** pane, set the following properties:
+    - **Tile name**: Bikes and Docks **(1)**
+    - **Visual type**: Bar chart **(2)**
+    - **Visual format**: Stacked bar chart **(3)**
+    - **Y columns**: No_Bikes, No-Empty_Docks **(4)**
+    - **X column**: Neighbourhood **(5)**
+    - **Series columns**: infer **(6)**
+    - **Legend location**: Bottom **(7)**
+    - Click Apply Changes **(8)**.
 
       ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-46.png)
 
       ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-47.png)
 
-1. Apply the changes and then resize the tile to take up the full height of the left side of the dashboard.
+1. Resize the tile to take up the full height of the left side of the dashboard.
 
    ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-48.png)
 
-1. In the toolbar, select **New tile**
+1. In the toolbar, select **New tile**.
 
 1. In the query editor, ensure that the **Bike Rental Data** source is selected and enter the following KQL code:
 
@@ -110,7 +119,7 @@ In this task, you will create a real-time dashboard to visualize and monitor the
 
    ![A screenshot of a dashboard with a chart and a map.](./Images/md2-49.png)
 
-### Task 2: Create a base query
+## Task 2: Create a base query
 
 Your dashboard contains two visuals that are based on similar queries. To avoid duplication and make your dashboard more maintainable, you can consolidate the common data into a single *base query*.
 
@@ -151,7 +160,7 @@ In this task, you will design a base query to retrieve and structure the data th
 
 1. Apply the changes and verify that the map still displays data for all neighborhoods.
 
-### Task 3: Add a parameter
+## Task 3: Add a parameter
 
 Your dashboard currently shows the latest bike, dock, and location data for all neighborhoods. Now lets add a parameter so you can select a specific neighborhood.
 
@@ -205,7 +214,7 @@ In this task, you will add a parameter to your base query to enable dynamic filt
 
 1. Select **Reset** to remove the selected parameter filters.
 
-### Task 4: Add a page
+## Task 4: Add a page
 
 Your dashboard currently consists of a single page. You can add more pages to provide more data.
 
@@ -226,7 +235,7 @@ In this task, you will add an additional page to your dashboard to organize diff
 
    ![img](./Images/md2-52.png)
 
-### Task 5: Configure auto refresh
+## Task 5: Configure auto refresh
 
 Users can manually refresh the dashboard, but it may be useful to have it automatically refresh the data at a set interval.
 
@@ -242,7 +251,7 @@ In this task, you will configure the dashboard’s auto-refresh settings to ensu
 
 1. Apply the auto refresh settings.
 
-### Task 6: Save and share the dashboard
+## Task 6: Save and share the dashboard
 
 Now you have a useful dashboard, you can save it and share it with other users.
 
@@ -258,7 +267,7 @@ In this task, you will save your dashboard and configure sharing settings to col
 
 1. Explore the dashboard, using it to see the latest information about bikes and empty bike docks across the city.
 
-### Review    
+## Review    
 
 In this lab, you learned how to:
 
