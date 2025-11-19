@@ -25,7 +25,7 @@ In this task, you will create a real-time dashboard to visualize and monitor the
 
     ![](.\Images\mod3-p6t1p1.png)
 
-1. Select **Real-Time Dashboard** and name is as **`bikes-dashboard` (1)** and then click **Create (2)**.
+1. Select **Real-Time Dashboard** and name it as **`bikes-dashboard` (1)** and then click **Create (2)**.
 
    ![A screenshot of a new dashboard.](./Images/mod3-p6t1p1(1).png)
 
@@ -127,14 +127,16 @@ In this task, you will design a base query to retrieve and structure the data th
 
 1. On the dashboard toolbar, select **Base queries**. Then select **+Add**.
 
-1. In the base query editor, set the **Variable name** to `base_bike_data` (1) and ensure that the **Bike Rental Data (2)** source is selected. Then enter the following query (3):
+    ![](./Images/mod3-p6t2p1.png)
+
+1. In the base query editor, set the **Variable name** to **`base_bike_data` (1)** and ensure that the **Bike Rental Data (2)** source is selected. Then enter the following query **(3)**:
 
     ```kql
     bikes
         | where ingestion_time() between (ago(30min) .. now())
         | summarize latest_observation = arg_max(ingestion_time(), *) by Neighbourhood
     ```
-1. **Run (4)** the query and verify that it returns all of the columns needed for both visuals in the dashboard (and some others).
+1. **Run (4)** the query and verify that it returns **(5)** all of the columns needed for both visuals in the dashboard (and some others).
 
    ![A screenshot of a base query.](./Images/md2-50.png)
 
@@ -166,9 +168,14 @@ Your dashboard currently shows the latest bike, dock, and location data for all 
 
 In this task, you will add a parameter to your base query to enable dynamic filtering and interactivity within the dashboard.
 
-1. On the dashboard toolbar, on the **Manage** tab, select **Parameters**.
+1. On the dashboard toolbar, on the **Manage (1)** tab, select **Parameters (2)**.
+
+    ![](./Images/mod3-p3t3p1.png)
+
 1. Note any existing parameters that have been automatically created (for example a *Time range* parameter). Then **Delete** them.
+
 1. Select **+ Add**.
+
 1. Add a parameter with the following settings:
     - **Label**: `Neighbourhood`
     - **Parameter type**: Multiple selection
@@ -178,7 +185,7 @@ In this task, you will add a parameter to your base query to enable dynamic filt
     - **Show on pages**: Select all
     - **Source**: Query
     - **Data source**: Bike Rental Data
-    - **Edit query**: Add the below query and **Run** and select **Done**
+    - **Edit query**: Add the below query and **Run** and select **Add**
 
         ```kql
         bikes
@@ -197,7 +204,7 @@ In this task, you will add a parameter to your base query to enable dynamic filt
 
     Now that you've added a parameter, you need to modify the base query to filter the data based on the chosen neighborhoods.
 
-1. In the toolbar, select **Base queries**. Then select the **base_bike_data** query and edit it to add an **and** condition to the **where** clause to filter based on the selected parameter values, as shown in the following code:
+1. In the toolbar, select **Base queries**. Then select the **base_bike_data** query and **edit** it to add an **and** condition to the **where** clause to filter based on the selected parameter values, as shown in the following code:
 
     ```kql
     bikes
@@ -221,8 +228,13 @@ Your dashboard currently consists of a single page. You can add more pages to pr
 In this task, you will add an additional page to your dashboard to organize different visualizations and enhance usability.
 
 1. On the left side of the dashboard, expand the **Pages** pane and select **+ Add page**.
+
+    ![](./Images/mod3-p6t4p1.png)
+
 1. Name the new page **Page 2**. Then select it.
+
 1. On the new page, select **+ Add tile**
+
 1. In the query editor for the new tile, enter the following query:
 
     ```kql
@@ -241,15 +253,18 @@ Users can manually refresh the dashboard, but it may be useful to have it automa
 
 In this task, you will configure the dashboard’s auto-refresh settings to ensure that the data visualizations are updated in real time.
 
-1. On the dashboard toolbar, on the **Manage** tabe, select **Auto refresh**.
+1. On the dashboard toolbar, on the **Manage (1)** tabe, select **Auto refresh (2)**.
+
+    ![](./Images/mod3-p6t5p1.png)
 
 1. In the **Auto refresh** pane, configure the following settings:
 
     - **Enabled**: *Selected*
     - **Minimum time interval**: Allow all refresh intervals
     - **Default refresh rate**: 30 minutes
+    - Click **Apply (4)**.
 
-1. Apply the auto refresh settings.
+        ![](./Images/mod3-p6t5p2.png)
 
 ## Task 6: Save and share the dashboard
 
@@ -259,13 +274,27 @@ In this task, you will save your dashboard and configure sharing settings to col
 
 1. On the dashboard toolbar, select **Save**.
 
+    ![](./Images/mod3-p6t6p1.png)
+
 1. When the dashboard is saved, select **Share**.
+
+    ![](./Images/mod3-p6t6p1(1).png)
 
 1. On the **Share** dialog box, select **Copy link** and copy the link to the dashboard to the clipboard.
 
+    ![](./Images/mod3-p6t6p1(2).png)
+
+    ![](./Images/mod3-p6t6p1(3).png)
+
 1. Open a new browser tab and paste the copied link to navigate to the shared dashboard. Sign in again with your credentials if prompted.
 
+    >**Note:** Ignore the Errors applying link message and click **Close**.
+
+    ![](./Images/mod3-p6t6p1(4).png)
+
 1. Explore the dashboard, using it to see the latest information about bikes and empty bike docks across the city.
+
+
 
 ## Review    
 
@@ -278,4 +307,4 @@ In this lab, you learned how to:
 - Configured auto refresh
 - Saved and shared the dashboard
 
-## You have successfully completed the lab
+## You have successfully completed the lab.
