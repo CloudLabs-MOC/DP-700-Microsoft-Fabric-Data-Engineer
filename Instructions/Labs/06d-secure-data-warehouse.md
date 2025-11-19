@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 - Task 5: Configure SQL granular permissions using T-SQL
 
-### Task 1: Add a User to the Workspace Viewer Role in Fabric
+## Task 1: Add a User to the Workspace Viewer Role in Fabric
 
 In this task, you will add a user to the Viewer role within a Microsoft Fabric workspace. Assigning workspace roles ensures that users have appropriate permissions before you apply further database-level security. Viewers can explore data but cannot modify content, providing a foundation for later security configurations.
 
@@ -38,13 +38,13 @@ In this task, you will add a user to the Viewer role within a Microsoft Fabric w
 
     - In the role selection dropdown, choose **Viewer (2)**.
 
-    - Click **Add** to confirm the user assignment.
+    - Click **Add (3)** to confirm the user assignment.
 
       ![Screenshot of uploaded files in a lakehouse.](./Images/dpp127.png)     
 
 > **Note**: When you create a workspace, you automatically become a member of the Workspace Admin role. 
 
-### Task 2: Apply dynamic data masking rules to columns in a table
+## Task 2: Apply dynamic data masking rules to columns in a table
 
 Dynamic data masking rules are applied on individual columns at the table level, so all queries are affected by the masking. Users who do not have explicit permissions to view confidential data see masked values in query results, while users with explicit permission to view the data see it unobscured. There are four types of masks: default, email, random, and custom string. In this exercise, you will apply a default mask, an email mask, and a custom string mask.
 
@@ -62,7 +62,7 @@ In this task, you will configure dynamic data masking on specific table columns 
 
 1. In your warehouse, select the **T-SQL** tile.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp129.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/mod4-p7t2p1.png) 
 
 1. Use the following T-SQL statements to create a table and to insert and view data.  
 
@@ -96,15 +96,27 @@ In this task, you will configure dynamic data masking on specific table columns 
 
 1. Connect using the following credentials as a test user who is a member of the Viewer workspace role.
 
-1. Open a Private window, click on elipses **(...)(1)** from the top right, select **New Inprivate Window (2)**.
+1. Open a Private window, click on **elipses (...) (1)** from the top right, select **New Inprivate Window (2)**.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/dpp132.png) 
 
-1. Navigate to *https://www.microsoft.com/en-in/microsoft-fabric/getting-started* and sign-in as the test user with the below credentials:
+1. Navigate to `https://www.microsoft.com/en-in/microsoft-fabric/getting-started`and click on **Try for free**.
+
+   ![](./Images/mod4-p7t2p1(3).png)
+
+1. Sign-in as the test user with the below credentials:
 
    - Email : <inject key="testuser" enableCopy="true"/>
 
    - Password : <inject key="test user Password" enableCopy="true"/>
+
+1. On the **You've selected Microsoft Fabric free** page, in the **Create your account** and provide details about your Country or Region **(1)**, Job title **(2)** and Business phone number **(3)** and then click on Get Started **(4)**.
+
+   ![](./Images/mod4-p7t2p1(1).png)
+
+1. Then click on **Get Started**.
+
+   ![](./Images/mod4-p7t2p1(2).png)
 
 1. Navigate **Workspaces (1)** and then select **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** workspace .
 
@@ -114,7 +126,7 @@ In this task, you will configure dynamic data masking on specific table columns 
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/dpp134.png) 
 
-1. pen a **New SQL Query**
+1. Open a **New SQL Query**.
 
 1. Run the following statement
 
@@ -142,15 +154,15 @@ In this task, you will configure dynamic data masking on specific table columns 
 
     The data is returned unmasked because the test user has been granted the `UNMASK` permission.
 
-### Task 3: Apply row-level security
+## Task 3: Apply row-level security
 
 Row-level security (RLS) can be used to limit access to rows based on the identity, or role of the user executing a query. In this exercise, you restrict access to rows by creating a security policy and a security predicate defined as an inline table-valued function.
 
 In this task, you will define and enforce row-level security (RLS) policies within the data warehouse. Row-level security restricts access to specific records based on the user's identity or role, ensuring that users see only the data relevant to them, even when they query the same table.
 
-1. In the main browser window, navigate to **warehouse3**, click the **New SQL Query** dropdown, and then select **New SQL Query**.
+1. In the main browser window, navigate to **Warehouse3**, click the **New SQL Query** dropdown, and then select **New SQL Query**.
 
-2. Create a table and insert data into it. So that you can test row-level security in a later step, replace `username1@your_domain.com` with <inject key="testuser" enableCopy="true"/> and replace `username2@your_domain.com` with <inject key="AzureAdUserEmail"></inject>.
+2. Create a table and insert data into it. So that you can test row-level security in a later step, replace `username1@your_domain.com` with **<inject key="testuser" enableCopy="true"/>** and replace `username2@your_domain.com` with **<inject key="AzureAdUserEmail"></inject>**.
 
     ```T-SQL
    CREATE TABLE dbo.Sales  
@@ -212,9 +224,9 @@ In this task, you will define and enforce row-level security (RLS) policies with
 
 6. Use the **&#9655; Run** button to run the SQL script.
 
-7. Then, in the **Explorer** pane, expand **Schemas** > **rls** > **Functions**, and verify that the function has been created.
+7. Then, in the **Explorer** pane, expand **Schemas** > **rls** > **Functions > Table-valued Functions**, and verify that the function has been created.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp136.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/mod4-p7t3p7.png) 
 
 8. Navigate to the Private browser window, where you already logged in as the user you replaced `<username1>@<your_domain>.com` (testuser) with, in the Sales table `INSERT`statement. Confirm that you're logged in as that user by running the following T-SQL.
 
@@ -229,13 +241,13 @@ In this task, you will define and enforce row-level security (RLS) policies with
     ```
    ![Screenshot of uploaded files in a lakehouse.](./Images/modf571.png)  
 
-### Task 4: Implement column-level security
+## Task 4: Implement column-level security
 
 Column-level security allows you to designate which users can access specific columns in a table. It's implemented by issuing a `GRANT` or `DENY` statement on a table specifying a list of columns and the user or role that can or cannot read them. To streamline access management, assign permissions to roles in lieu of individual users. In this exercise, you will create a table, grant access to a subset of columns on the table, and test that restricted columns aren't viewable by a user other than yourself.
 
 In this task, you will implement column-level security (CLS) by controlling access to specific columns within a table. You will define permissions that allow or deny access at the column level, which is useful for protecting highly sensitive fields without restricting access to the entire dataset.
 
-1. In the main browser window, navigate to **warehouse3**, click the **New SQL Query** dropdown, and then select **New SQL Query**.
+1. In the main browser window, navigate to **Warehouse3**, click the **New SQL Query** dropdown, and then select **New SQL Query**.
 
 2. Create a table and insert data into the table.
 
@@ -276,13 +288,13 @@ In this task, you will implement column-level security (CLS) by controlling acce
     ```
    ![Screenshot of uploaded files in a lakehouse.](./Images/modf574.png) 
 
-### Task 5: Configure SQL granular permissions using T-SQL
+## Task 5: Configure SQL granular permissions using T-SQL
 
 Fabric has a permissions model that allows you to control access to data at the workspace level, and at the item level. When you need more granular control of what users can do with securables in a Fabric warehouse, you can use the standard SQL data control language (DCL) commands `GRANT`,`DENY` and, `REVOKE`. In this exercise, you will create objects, secure them using `GRANT`, and `DENY`, and then run queries to view the effect of applying granular permissions.
 
 In this task, you will apply granular SQL permissions on tables and stored procedures by using T-SQL commands such as GRANT and DENY. SQL granular permissions allow fine-tuned control over who can read, modify, or execute specific objects, adding another critical layer of security on top of workspace and database permissions.
 
-1. In the main browser window, navigate to **warehouse3**, click the **New SQL Query** dropdown, and then select **New SQL Query**.
+1. In the main browser window, navigate to **Warehouse3**, click the **New SQL Query** dropdown, and then select **New SQL Query**.
 
 2. Create a stored procedure and a table. Then execute the procedure and query the table.
 
@@ -318,6 +330,8 @@ In this task, you will apply granular SQL permissions on tables and stored proce
    GRANT EXECUTE on dbo.sp_PrintMessage to [<username>@<your_domain>.com];
      ```
 
+     ![](./Images/mod4-p7t5p1.png)
+
 4. Sign in to Fabric as the user you specified in the `DENY` and `GRANT` statements in place of `<username>@<your_domain>.com`. Then test the granular permissions you applied by executing the stored procedure and querying the table.  
 
      ```T-SQL
@@ -327,9 +341,9 @@ In this task, you will apply granular SQL permissions on tables and stored proce
    SELECT * FROM dbo.Parts;
      ```
 
-     ![Screenshot of uploaded files in a lakehouse.](./Images/dpp137.png) 
+     ![](./Images/mod4-p7t5p1(1).png)
 
-### Review
+## Review
 
 In this lab, you learned how to:
 
@@ -339,4 +353,4 @@ In this lab, you learned how to:
 - Implemented column-level security (CLS) for granular control.
 - Granted and managed SQL granular permissions using T-SQL.
 
-## You have successfully completed the lab
+### You have successfully completed the lab.
