@@ -208,4 +208,6 @@ In this lab, you have completed the following tasks:
 - Created a real-time dashboard
 - Created an alert
 
-## Now, click on Next from the lower right corner to move on to the next lab.
+### Now, click on Next from the lower right corner to move on to the next lab.
+
+![Start Your Azure Journey](./Images/nexrpage-mod3.png)
