@@ -71,7 +71,7 @@ In this task, you will create an eventhouse in Microsoft Fabric to store the ing
 
    ![Screenshot of a new eventhouse](./Images/mod3-p3t2p6.png)
 
-1. In the **Select or create a destination table** pane, create a new table named **`stock` (1)**. Then in the **Configure the data source** pane, select your **workspace (2)** and the **stock-data (3)** eventstream and name the connection `stock-table` (4) and then click on **Next (5)**.
+1. In the **Select or create a destination table** pane, create a new table named **`stock` (1)**. Then in the **Configure the data source** pane, select your **workspace (2)** and the **stock-data (3)** eventstream and name the connection `stock-table` **(4)** and then click on **Next (5)**.
 
    ![Screenshot of configuration for loading a table from an eventstream.](./Images/mod3-p3t2p7.png)
 
