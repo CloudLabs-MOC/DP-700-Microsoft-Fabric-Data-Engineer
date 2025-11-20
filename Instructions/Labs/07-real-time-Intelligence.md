@@ -29,13 +29,13 @@ In this task, you will create an eventstream in Microsoft Fabric using the Real-
 
 1. In the real-time hub, in the **Connect to** section, select **Data sources (1)**.
 
-1. Find the **Stock market** sample data source and select **Connect (2)**. Then in the **Connect** wizard, name the source **`stock` (3)** and edit the default eventstream name to change it to **`stock-data` (4)**. The default stream associated with this data will automatically be named **`stock-data-stream` (5)**:
+1. Find the **Stock market** sample data source and select **Connect (2)**. Then in the **Connect** wizard, name the source **`stock` (3)** and edit the default eventstream name to change it to **`stock-data` (4)**. The default stream associated with this data will automatically be named **`stock-data-stream` (5)** and click **Next (6)**.
 
     ![Screenshot of a new eventstream.](./Images/md62.png)
 
     ![Screenshot of a new eventstream.](./Images/md63.png)
 
-1. Select **Next (6)** and select **Connect (7)** and wait for the source and eventstream to be created, then select **Open eventstream (8)**. The eventstream will show the **stock** source and the **stock-data-stream** on the design canvas:
+1. Select **Connect (7)** and wait for the source and eventstream to be created, then select **Open eventstream (8)**. The eventstream will show the **stock** source and the **stock-data-stream** on the design canvas:
 
     ![Screenshot of a new eventstream.](./Images/md64.png)
 
@@ -67,11 +67,11 @@ In this task, you will create an eventhouse in Microsoft Fabric to store the ing
 
 1. In the main page of your KQL database, select **Get data (1)**.
 
-1. For the data source, select **Eventstream (2)** > **Existing eventstream (3)**.
+1. For the data source, select **Eventstream (2)** > **Existing Eventstream (3)**.
 
    ![Screenshot of a new eventhouse](./Images/mod3-p3t2p6.png)
 
-1. In the **Select or create a destination table** pane, create a new table named **   **. Then in the **Configure the data source** pane, select your **workspace (2)** and the **stock-data (3)** eventstream and name the connection `stock-table` (4) and then click on **Next (5)**.
+1. In the **Select or create a destination table** pane, create a new table named **`stock` (1)**. Then in the **Configure the data source** pane, select your **workspace (2)** and the **stock-data (3)** eventstream and name the connection `stock-table` (4) and then click on **Next (5)**.
 
    ![Screenshot of configuration for loading a table from an eventstream.](./Images/mod3-p3t2p7.png)
 

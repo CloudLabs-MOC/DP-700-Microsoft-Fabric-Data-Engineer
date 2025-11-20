@@ -39,7 +39,7 @@ In this task, you will create a new lakehouse within your Microsoft Fabric works
 
    ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp66.png)
 
-1. Click on folder icon **(1)**, navigate to `C:\LabFiles\Files` **(2)** then select **products.csv (3)** and then **Open (4)**.
+1. Click on folder icon **(1)**, navigate to `C:\LabFiles\files` **(2)** then select **products.csv (3)** and then **Open (4)**.
 
    ![Screen picture of products.csv uploaded to the lakehouse.](Images/dpp67.png)
 
@@ -57,7 +57,7 @@ In this task, you will create a new lakehouse within your Microsoft Fabric works
 
 In this task, you'll begin working with a notebook in Microsoft Fabric to explore Delta Lake functionality using Apache Spark. You’ll first add explanatory markdown text to describe your notebook, then use PySpark to define a schema and read CSV data into a DataFrame. 
 
-1. We will create a **New notebook**. For that click on **Open notebook (1)** and then **New Notebook (2)**.
+1. We will create a **New notebook**. For that click on **Open notebook (1)** and then **New notebook (2)**.
 
    ![Screen picture of products.csv uploaded to the lakehouse.](./Images/notebook-p4.png)
 
@@ -145,7 +145,7 @@ The data files are created in the **Tables** folder.
 
 In this task, you'll create an external Delta table, where the data files are stored in a specified location (such as a folder in your lakehouse), while the table schema is maintained by Microsoft Fabric.
 
-1. In the Lakehouse explorer pane, in the **… (1)** menu for the **Files** folder, select **Copy ABFS path (2)**. The ABFS path is the fully qualified path to the lakehouse Files folder.
+1. In the Lakehouse explorer pane, in the **ellipsis (...) (1)** menu for the **Files** folder, select **Copy ABFS path (2)**. The ABFS path is the fully qualified path to the lakehouse Files folder.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-29.png)
 

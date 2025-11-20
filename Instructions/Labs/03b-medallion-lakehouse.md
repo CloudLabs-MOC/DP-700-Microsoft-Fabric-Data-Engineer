@@ -38,7 +38,7 @@ In this task, you’ll create a new lakehouse named Sales within your workspace 
 
    ![Screenshot of the workspace settings page in Fabric.](./Images/dpp82.png)
 
-1. Click on the folder icon **(1)**, navigate to `C:\LabFiles\Files\orders` **(2)**, select **2019.csv, 2020.csv, and 2021.csv (3)** files and then **Open (4)**.
+1. Click on the folder icon **(1)**, navigate to `C:\LabFiles\files\orders` **(2)**, select **2019.csv, 2020.csv, and 2021.csv (3)** files and then **Open (4)**.
 
    ![Screenshot of the workspace settings page in Fabric.](./Images/dpp83.png)
 

@@ -125,7 +125,7 @@ Your dashboard contains two visuals that are based on similar queries. To avoid 
 
 In this task, you will design a base query to retrieve and structure the data that will populate the visualizations on your dashboard.
 
-1. On the dashboard toolbar, select **Base queries**. Then select **+Add**.
+1. On the dashboard toolbar, select **Base queries (1)**. Then select **+ Add (2)**.
 
     ![](./Images/mod3-p6t2p1.png)
 
@@ -170,7 +170,7 @@ In this task, you will add a parameter to your base query to enable dynamic filt
 
 1. On the dashboard toolbar, on the **Manage (1)** tab, select **Parameters (2)**.
 
-    ![](./Images/mod3-p3t3p1.png)
+    ![](./Images/mod3-p6t3p1.png)
 
 1. Note any existing parameters that have been automatically created (for example a *Time range* parameter). Then **Delete** them.
 

@@ -1,4 +1,4 @@
-# Lab: prerequisite: Create a Fabric workspace
+# Lab: Prerequisite: Create a Fabric workspace
 
 ### Estimated Duration: 15 Minutes
 

@@ -57,7 +57,7 @@ In this task, you will upload a data file into your newly created lakehouse. Mic
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-4.png) 
 
-1. Click on the **Folder (1)** icon, navigate to `C:\LabFiles\Files` **(2)**, select **sales.csv (3)** and then click **Open (4)**.   
+1. Click on the **Folder (1)** icon, navigate to `C:\LabFiles\files` **(2)**, select **sales.csv (3)** and then click **Open (4)**.   
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/dpp58.png) 
 
@@ -185,7 +185,6 @@ In this lab, you have completed the following tasks:
 - Loaded file data into a table
 - Used SQL to query tables
 - Created a visual query
-- Created a report
 
 
 ### Now, click on Next >> from the lower right corner to move on to the next lab.
