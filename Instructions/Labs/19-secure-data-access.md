@@ -54,7 +54,7 @@ In this task, you will create a new Lakehouse, populate it with sample data, and
 
     ![](./Images/mod5-p4t2p2.png)
 
-1. Create a new Lakehouse with the name **lakehouse2 (1)** and then **Create (2)**.
+1. Create a new Lakehouse with the name **lakehouse2 (1)** and then click **Create (2)**.
 
     ![](./Images/mod5-p4t2p3.png)
 
@@ -92,7 +92,11 @@ In this task, you add a user to a workspace role, apply permissions and, see wha
 
     ![](./Images/dpm21.png)
 
-1. Enter `https://app.fabric.microsoft.com/home?experience=fabric-developer` and sign-in as the second user with the below credentials, click on **Try for free**:
+1. Navigate to `https://www.microsoft.com/en-in/microsoft-fabric/getting-started`and click on **Try for free**.
+
+   ![](./Images/mod4-p7t2p1(3).png)
+
+1. Sign-in as the test user with the below credentials:
 
     - Email : **<inject key="testuser" enableCopy="true"/>**
 
@@ -102,11 +106,11 @@ In this task, you add a user to a workspace role, apply permissions and, see wha
 
     ![](.\Images\mod5-p4t3p2.png)
 
-1. In the **Create your account**, fill in the required details and click on **Get started**.
+1. In the **Create your account**, fill in the required details and click on **Get Started**.
 
     ![](.\Images\mod5-p4t3p2(1).png)
 
-1. Under the **Confirmation details** section, click on **Get started**.
+1. Under the **Confirmation details** section, click on **Get Started**.
 
 1. On the bottom left corner of your screen, select **Microsoft Fabric (1)**. Next select **Workspaces (2)** (the icon looks similar to &#128455;).
 
@@ -178,7 +182,7 @@ In this task, you will configure item-level permissions by granting access to sp
 
     ![](./Images/lab5u177.png)
 
-1. Select **Add user**.
+1. Select **+ Add user**.
 
     ![](./Images/dpm30.png)
 

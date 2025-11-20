@@ -23,13 +23,13 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 
 1. Enter below Email and click on **Submit (2)**:
  
-   - **Email/Username:** **<inject key="AzureAdUserEmail"></inject> (1)**
-    
-     ![Enter Your Username](./Images/signin-1811.png)
+   - Email/Username: **<inject key="AzureAdUserEmail"></inject> (1)**
  
+     ![](./Images/signin-1811.png)
+
 1. Next, provide the password below and click on **Sign in (2)**
  
-   - **Password:** **<inject key="AzureAdUserPassword"></inject> (1)**
+   - Password: **<inject key="AzureAdUserPassword"></inject> (1)**
  
       ![Enter Your Username](./Images/siginin-pr.png)
 

@@ -110,7 +110,11 @@ In this task, you will configure dynamic data masking on specific table columns 
 
    - Password : <inject key="test user Password" enableCopy="true"/>
 
-1. On the **You've selected Microsoft Fabric free** page, in the **Create your account** and provide details about your Country or Region **(1)**, Job title **(2)** and Business phone number **(3)** and then click on Get Started **(4)**.
+1. On the **You've selected Microsoft Fabric free** page, click on **Sign in**.
+
+    ![](.\Images\mod5-p4t3p2.png)
+
+1. In the **Create your account** section, provide details about your Country or Region **(1)**, Job title **(2)** and Business phone number **(3)** and then click on Get Started **(4)**.
 
    ![](./Images/mod4-p7t2p1(1).png)
 
@@ -234,7 +238,7 @@ In this task, you will define and enforce row-level security (RLS) policies with
    SELECT USER_NAME();
     ```
 
-9. Query the **Sales** table to confirm that row-level security works as expected. You should only see data that meets the conditions in the security predicate defined for the user you're logged in as. Enter the following command **(2)**, click on **Run (3)** and then view the results **(4)**.
+9. Query the **Sales** table to confirm that row-level security works as expected. You should only see data that meets the conditions in the security predicate defined for the user **(1)** you're logged in as. Enter the following command **(2)**, click on **Run (3)** and then view the results **(4)**.
 
     ```T-SQL
    SELECT * FROM dbo.Sales;

@@ -50,7 +50,7 @@ In this task, you will create a new deployment pipeline that will manage the mov
 
     ![](./Images/mod5-p5t1p1(1).png)
 
-1. In the **Add a new deployment pipeline** window, click on **New pipeline** from bottom and enter **pipeline<inject key="DeploymentID" enableCopy="false"/> (1)** as the pipeline name, then click **Next (2)** to continue.
+1. In the **Add a new deployment pipeline** window, enter **pipeline<inject key="DeploymentID" enableCopy="false"/> (1)** as the pipeline name, then click **Next (2)** to continue.
 
    ![Screenshot of pipeline stages.](./Images/lab5u18.png)
    
@@ -64,7 +64,7 @@ In this task, you will create a new deployment pipeline that will manage the mov
 
 In this task, you will assign the previously created workspaces to their respective stages in the deployment pipeline.
 
-1. On the left menu bar, select the **pipeline** you created.
+1. From the top, select the **pipeline** you created.
    
 3. In the window that appears, select the **dropdown** under the **Add content to this stage** for each deployment stage and select the name of the **workspace** that matches the name of the stage and click on **correct** symbol next to the dropdown to assign the workspace.
 
@@ -154,4 +154,4 @@ In this lab, you learned how to:
 
 - Deployed content between stages
 
-### You have successfully completed the lab
+### You have successfully completed the lab.

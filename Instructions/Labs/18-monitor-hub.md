@@ -159,9 +159,9 @@ In this task, you will learn how to apply filters and adjust columns to customiz
 
       ![](./Images/dpm15.png)
 
-    With the filter applied, only successful runs of dataflows are listed.
+    - With the filter applied, only successful runs of dataflows are listed.
 
-    ![](./Images/mod5-p3t5p1.png)
+        ![](./Images/mod5-p3t5p1.png)
 
 1. Use the **Column Options (1)** button to include the following columns **(2)** in the view (use the **Apply (3)** button to apply the changes):
 

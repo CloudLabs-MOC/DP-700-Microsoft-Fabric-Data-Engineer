@@ -228,7 +228,7 @@ In this task, you will create a semantic model by organizing your fact and dimen
    - DimDate
    - Dimproduct
    - FactSalesOrder 
-   - Select **Confirm**.
+   - Select **Confirm (3)**.
 
       ![](./Images/mod4-p3t6p1(11).png)
 
@@ -258,7 +258,7 @@ In this task, you will create a semantic model by organizing your fact and dimen
     - **Cross filter direction**: Single **(6)**
     - **Make this relationship active**: Selected **(7)**
     - **Assume referential integrity**: Unselected **(8)**
-    - Click **OK (9)**
+    - Click **Save (9)**
 
       ![Screenshot of the data warehouse model page.](./Images/mod4-p3t6p1(4).png)
 

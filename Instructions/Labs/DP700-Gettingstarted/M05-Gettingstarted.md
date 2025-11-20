@@ -4,7 +4,7 @@ Welcome to your DP-700: Microsoft-Fabric-Data-Engineer Workshop! We've prepared 
 
 ### Overall Estimated Duration: 2 Hour 30 Minutes
 
-In this hands-on lab, you'll explore key administrative and operational features of Microsoft Fabric. You'll begin by monitoring activities across various Fabric artifacts—such as lakehouses, dataflows, and notebooks—using the centralized monitoring hub. Then, you'll learn how to secure data access at multiple levels using workspace permissions, item-level controls, and OneLake data access roles. Finally, you'll implement deployment pipelines to automate and manage content promotion across Development, Test, and Production environments. By the end, you'll gain practical experience in monitoring, securing, and operationalizing solutions in Microsoft Fabric.
+In this hands-on lab, you'll explore key administrative and operational features of Microsoft Fabric. You'll begin by monitoring activities across various Fabric artifacts such as lakehouses, dataflows, and notebooks, using the centralized monitoring hub. Then, you'll learn how to secure data access at multiple levels using workspace permissions, item-level controls, and OneLake data access roles. Finally, you'll implement deployment pipelines to automate and manage content promotion across Development, Test, and Production environments. By the end, you'll gain practical experience in monitoring, securing, and operationalizing solutions in Microsoft Fabric.
 
 
 ## Objectives

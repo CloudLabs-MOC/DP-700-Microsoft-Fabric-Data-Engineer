@@ -54,9 +54,9 @@ In this task, you will upload a CSV file to the lakehouse for use in the warehou
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-2.png)
 
-    - Create a subfolder named **data (3)** and then click **Create (4)**.   
+1. Create a subfolder named **data (3)** and then click **Create (4)**.   
 
-      ![Screenshot of uploaded files in a lakehouse.](./Images/md2-3.png)
+    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-3.png)
 
 1. In the **ellipsis (...) (1)** menu for the new **data** folder, select **Upload (2)** and **Upload files (3)**.
 
@@ -163,7 +163,7 @@ In this task, you will define fact tables, dimension tables, and a view to strea
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/dpp111.png) 
 
-1. Open a new **New SQL query** editor, then copy **(1)** and run the following query after Updating `<your lakehouse name>` with the lakehouse you created **lakehouse<inject key="DeploymentID" enableCopy="false"/>** **(2)**.
+1. Open a new **New SQL query** editor, then copy and run **(2)** the following query after Updating `<your lakehouse name>` with the lakehouse you created **lakehouse<inject key="DeploymentID" enableCopy="false"/>** **(1)**.
 
     ```sql
     CREATE VIEW Sales.Staging_Sales
