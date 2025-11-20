@@ -1,6 +1,6 @@
 # Lab 02: Secure data access in Microsoft Fabric
 
-## Estimated Duration : 45 minutes
+### Estimated Duration : 45 Minutes
 
 Microsoft Fabric has a multi-layer security model for managing data access. Security can be set for an entire workspace, for individual items, or through granular permissions in each Fabric engine. In this exercise, you secure data using workspace, and item access controls and OneLake data access roles
 
@@ -10,27 +10,27 @@ In this hands-on lab, you will learn how to secure data access within Microsoft 
 
 In this lab, you will complete the following tasks:
 
-- **Task 1**: Create a data warehouse
+- Task 1: Create a data warehouse
 
-- **Task 2**: Create a lakehouse
+- Task 2: Create a lakehouse
 
-- **Task 3**: Apply workspace access controls
+- Task 3: Apply workspace access controls
 
-- **Task 4**: Apply item access control
+- Task 4: Apply item access control
 
-- **Task 5**: Apply OneLake data access roles in a Lakehouse
+- Task 5: Apply OneLake data access roles in a Lakehouse
 
-### Task 1: Create a data warehouse
+## Task 1: Create a data warehouse
 
 In this task, you will create a sample data warehouse named sample-dw prepopulated with taxi ride analysis data
 
 1. On the menu bar on the left, select **Create**.
 
-    ![](./Images/sample-data-warehouse1.png)
+    ![](./Images/mod5-p4t1p1.png)
     
      >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
 
-1. In the *New* page, under the ***Data Warehouse (1)*** section, select **Sample warehouse (2)**. 
+1. In the *New* page, under the **Data Warehouse (1)** section, select **Sample warehouse (2)**. 
 
     ![](./Images/dpm16.png)
 
@@ -42,63 +42,77 @@ In this task, you will create a sample data warehouse named sample-dw prepopulat
    
     ![Screenshot of a new warehouse.](./Images/sample-data-warehouse.png)
 
-### Task 2: Create a lakehouse
+## Task 2: Create a lakehouse
 
 In this task, you will create a new Lakehouse, populate it with sample data, and prepare it for access control exercises.
 
-1. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇) you have created **(1)** and select the **+ New Item** button.
+1. In the menu bar on the left, select **Workspaces (1)** (the icon looks similar to 🗇) and select **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-    ![](./Images/dpm18.png)
+    ![](./Images/mod5-p4t2p1.png)
 
-1. Then select **Lakehouse** under **Store data**.
+1. Click on **+ New Item (1)** button and then select **Lakehouse (2)** under **Store data**.
+
+    ![](./Images/mod5-p4t2p2.png)
 
 1. Create a new Lakehouse with the name **lakehouse2 (1)** and then **Create (2)**.
 
-    ![](./Images/dpm19.png)
+    ![](./Images/mod5-p4t2p3.png)
 
 1. After a minute or so, a new Lakehouse will be created.
 
-1. Select the **Start with sample data** tile, then on the **Use a Sample** page. 
+1. Select the **Start with sample data** tile.
 
     ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u13.png)
 
-1. Choose the **Public holidays** tile to populate the workspace with sample data.    
+1. Then on the **Use a Sample** page, choose the **Public holidays** tile to populate the workspace with sample data.    
    
     ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u14.png)
 
     ![](./Images/dpm20.png)    
 
-### Task 3: Apply workspace access controls
+## Task 3: Apply workspace access controls
 
 Workspace roles are used to control access to workspaces and the content within them. Workspace roles can be assigned when users need to see all items in a workspace, when they need to manage workspace access, or create new Fabric items, or when they need specific permissions to view, modify or share content in the workspace.  
 
 In this task, you add a user to a workspace role, apply permissions and, see what is viewable when each set of permissions is applied. You open two browsers and sign-in as different users. In one browser, you'll be a **Workspace Admin** and in the other, you'll sign-in as a second, less privileged user. In one browser, the Workspace Admin changes permissions for the second user and in the second browser, you're able to see the effects of changing permissions.  
 
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
-1. Next select the workspace you created.
+
+1. Next select the **fabric-<inject key="DeploymentID" enableCopy="false"/>**, workspace you created .
+
 1. Select on **Manage access** on the top of the screen.
 
-    ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u15.png)
+    ![Screenshot of a new lakehouse in Fabric.](./Images/mod5-p4t3p1.png)
 
     ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u16.png)
 
     >**Note**: You'll see the user you're logged, who is a a member of the **Workspace Admin** role because you created the workspace. No other users are assigned access to the workspace yet.
 
-1. Next, you'll see what a user without permissions on the workspace can view. In the Microsoft Edge browser, click the ellipsis (three dots) in the top-right corner **(1)** and select **New InPrivate window**.
+1. Next, you'll see what a user without permissions on the workspace can view. In the Microsoft Edge browser, click the **ellipsis (...)** in the top-right corner **(1)** and select **New InPrivate window (2)**.
 
     ![](./Images/dpm21.png)
 
-1. Enter *https://app.fabric.microsoft.com/home?experience=fabric-developer* and sign-in as the second user with the below credentials, click on **try for free**:
+1. Enter `https://app.fabric.microsoft.com/home?experience=fabric-developer` and sign-in as the second user with the below credentials, click on **Try for free**:
 
-    - Email : <inject key="testuser" enableCopy="true"/>
+    - Email : **<inject key="testuser" enableCopy="true"/>**
 
-    - Password : <inject key="test user Password" enableCopy="true"/>  
-  
+    - Password : **<inject key="test user Password" enableCopy="true"/>** 
+
+1. On the **You've selected Microsoft Fabric free** page, click on **Sign in**.
+
+    ![](.\Images\mod5-p4t3p2.png)
+
+1. In the **Create your account**, fill in the required details and click on **Get started**.
+
+    ![](.\Images\mod5-p4t3p2(1).png)
+
+1. Under the **Confirmation details** section, click on **Get started**.
+
 1. On the bottom left corner of your screen, select **Microsoft Fabric (1)**. Next select **Workspaces (2)** (the icon looks similar to &#128455;).
 
     ![Screenshot of a new lakehouse in Fabric.](./Images/dpm22.png)
 
-     > **Note:** `The second user doesn't have access to the workspace, so it's not viewable.`
+     >**Note:** The second user doesn't have access to the workspace, so it's not viewable.
 
 1. Next, you assign the **Workspace Viewer** role to the second user and see that the role grants read access to the warehouse in the workspace.
   
@@ -108,7 +122,7 @@ In this task, you add a user to a workspace role, apply permissions and, see wha
 
 1. Select **Add people or groups**.
 
-1. Enter the email of the second user - <inject key="testuser" enableCopy="true"/>. **(1)**. Assign the user to the workspace **Viewer (2)** role and then select **Add (3)**.
+1. Enter the email of the second user - **<inject key="testuser" enableCopy="true"/>** **(1)**. Assign the user to the workspace **Viewer (2)** role and then select **Add (3)**.
 
     ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u17.png)
 
@@ -138,7 +152,7 @@ In this task, you add a user to a workspace role, apply permissions and, see wha
 
     ![](./Images/dpm27.png)
 
-### Task 4: Apply item access control
+## Task 4: Apply item access control
 
 Item permissions control access to individual Fabric items within a workspace, like warehouses, lakehouses and semantic models. In this exercise, you remove the **Workspace Viewer** permissions applied in the previous exercise and then apply item level permissions on the warehouse so a less privileged user can only view the warehouse data, not the lakehouse data.
 
@@ -156,11 +170,11 @@ In this task, you will configure item-level permissions by granting access to sp
 
 1. Close the **Manage access** section.
    
-1. In the workspace, hover over the name of your warehouse and an ellipse (**...**) will appear. 
+1. In the workspace, hover over the name of your warehouse and an **ellipsis (...)** will appear. 
 
     ![](./Images/dpm29.png)
 
-1. Select the ellipse and select **Manage permissions**
+1. Select the ellipsis and select **Manage permissions**
 
     ![](./Images/lab5u177.png)
 
@@ -168,7 +182,7 @@ In this task, you will configure item-level permissions by granting access to sp
 
     ![](./Images/dpm30.png)
 
-1. Enter the email of the second user - <inject key="testuser" enableCopy="true"/> **(1)**
+1. Enter the email of the second user - **<inject key="testuser" enableCopy="true"/>** **(1)**
  
     - In the box that appears, under **Additional permissions** check **Read all data using SQL (ReadData) (2)** and uncheck all other boxes.
 
@@ -190,33 +204,35 @@ In this task, you will configure item-level permissions by granting access to sp
 
     ![](./Images/dpm33.png)
 
-### Task 5: Apply OneLake data access roles in a Lakehouse
+## Task 5: Apply OneLake data access roles in a Lakehouse
 
 OneLake data access roles let you create custom roles within a Lakehouse and grant read permissions to folders you specify. OneLake data access roles is currently a Preview feature.
 
 In this task, you assign an item permission and create a OneLake data access role and experiment with how they work together to restrict access to data in a Lakehouse.  
 
-1. Stay in the browser where you're logged in as the second user - <inject key="testuser" enableCopy="true"/>.
+1. Stay in the browser where you're logged in as the second user - **<inject key="testuser" enableCopy="true"/>**
 
-1. Select **OneLake** on the left navigation bar. The second user doesn't see the lakehouse.
+1. Select **OneLake catalog** on the left navigation bar. The second user doesn't see the lakehouse.
+
+    ![](./Images/mod5-p4t5p1.png)
    
 1. Return to the browser where you're logged in as the **Workspace Admin**.
    
-1. Select **Workspaces** on the left menu and select your workspace. Hover over the name of the lakehouse **lakehouse2**.
+1. Select **Workspaces** on the left menu and select your workspace. Hover over the name of the **lakehouse2**.
    
-1. Select on the ellipse (**... (1)**) to the right of the ellipse and select **Manage permissions (2)**
+1. Select on the **ellipse (...) (1)** to the right of the ellipse and select **Manage permissions (2)**
 
    ![](./Images/dpm34.png)
    
-1. On the screen that appears, select **Add user**.
+1. On the screen that appears, select **+ Add user**.
     
-1. Assign the second user - <inject key="testuser" enableCopy="true"/> to the lakehouse **(1)**
+1. Assign the second user - **<inject key="testuser" enableCopy="true"/>** to the lakehouse **(1)**
 
     - Ensure none of the checkboxes on the **Grant People Access** window are checked **(2)**
     
     - Select **Grant (3)**. The second user now has read permissions on the lakehouse. Read permission only allows the user to see metadata for the lakehouse but not the underlying data. Next we'll validate this.
 
-      ![](./Images/dpm35.png)    
+      ![](./Images/mod5-p4t5p1(1).png)    
     
 1. Return to the browser where you're logged in as the second user. Refresh the browser.
     
@@ -234,36 +250,39 @@ In this task, you assign an item permission and create a OneLake data access rol
 
 1. Return to the browser where you're logged in as the workspace administrator.
     
-1. Select your **Workspaces** from the left navigation bar **(1)** and then select the **lakehouse2 (2)**.
+1. Select **Workspaces (1)** from the left navigation bar and then select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and then click the **lakehouse2 (3)**.
 
-   ![](./Images/dpm38.png) 
-    
-1. When the lakehouse opens, select **Manage OneLake data access (preview)** on the top menu bar and enable the feature by clicking the **Continue** button.
+   ![](./Images/mod5-p4t5p1(2).png) 
 
-   ![](./Images/dpm39.png) 
-   ![](./Images/dpm40.png)    
+   ![](./Images/mod5-p4t5p1(3).png) 
     
-1. Select **+ New** on the **OneLake security** screen that appears.
+1. When the lakehouse opens, select **Manage OneLake security (preview)** on the top menu bar and enable the feature by clicking the **Continue** button.
+
+   ![](./Images/mod5-p4t5p1(4).png)  
+
+   ![](./Images/mod5-p4t5p1(5).png)    
+    
+1. Select **+ New (1)** on the **OneLake security** screen that appears.
 
     ![](./Images/onelake2.png)
 
-1. Enter **publicholidays (1)** for the Role name and click on **Selected data (2)** under **Add data to your role** section. Select **Browse Lakehouse (3)**.
+1. Enter **publicholidays (1)** for the Role name and then select **Grant (2)**, click on **Selected data (3)** under **Add data to your role** section. Select **Browse Lakehouse (4)**.
 
-    ![](./Images/onelake4.png)
+    ![](./Images/mod5-p4t5p1(6).png)
 
-    - Select **publicholidays (4)** table and click on **Add data (5)**
+    - Select **publicholidays (5)** table and click on **Add data (6)**
 
-      ![](./Images/onelake3.png)
+      ![](./Images/mod5-p4t5p1(7).png)
 
-    - Add the second user - <inject key="testuser" enableCopy="true"/> (6)in the **Add members to your role** section.
+    - Add the second user - **<inject key="testuser" enableCopy="true"/> (7)** in the **Add members to your role** section and click the check icon **(8)**.
 
-    - Click on **Create role (7)**
-
-      ![](./Images/onelake4.png)
-        
+    - Click on **Create role (9)**.
+    
 1. Return to the browser where you're logged in as the second user. Ensure you're still on the page where the lakehouse is open. Refresh the browser.
     
 1. Select the **publicholidays** table and wait for the data to load. Only the data in the publicholidays table is accessible to the user because the user was assigned to the custom OneLake data access role. The role permits them to see only the data in the publicholidays table, not data in any of the other tables, files, or folders.
+
+    ![](./Images/mod5-p4t5p1(8).png)
 
 ## Review
 
@@ -279,4 +298,6 @@ In this lab, you learned how to:
 
 - Applied OneLake data access roles in a Lakehouse
 
-## Now, click on Next from the lower right corner to move on to the next lab.
+### Now, click on Next from the lower right corner to move on to the next lab.
+
+![](./Images/nextpage-mod5.png)
