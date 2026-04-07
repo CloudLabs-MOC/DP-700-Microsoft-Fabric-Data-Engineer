@@ -27,11 +27,13 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
    ![Screenshot of uploaded files in a lakehouse.](./Images2/t1-2.png)  
 
-1. Provide the following details to create a **Lakehouse** and then click on **Create (2)** to proceed.
+1. Provide the following details to create a **Lakehouse**, deselect **Lakehouse schemas (2)**  and then click on **Create (3)** to proceed.
 
    - **Name:** Enter **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**  
 
-     ![Screenshot of uploaded files in a lakehouse.](./Images/pd1.png)     
+     ![Screenshot of uploaded files in a lakehouse.](./Images/dp700-lab1-01.png)
+
+    > **Important:** Make sure the **Lakehouse schemas** option is disabled because you can't change this setting after creating the lakehouse. You will need to create a new lakehouse if this step is missed. 
 
 1. Once inside the **Lakehouse**, navigate to the **Files** folder in the **Explorer** pane. Click the **ellipses (1)** menu, select **Upload (2)**, and then choose **Upload folder (3)**.  
 
@@ -96,8 +98,7 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 
 In this task, you will create a DataFrame using PySpark to begin working with your uploaded data. DataFrames are a fundamental data structure in Spark, allowing you to efficiently load, process, and analyze large datasets in a distributed environment.
 
->[!NOTE]
-> Fabric notebooks support multiple programming languages including Scala, R, and Spark SQL.
+>**NOTE** : Fabric notebooks support multiple programming languages including Scala, R, and Spark SQL.
 
 
 1. Select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left bar and then click **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** again.
@@ -106,7 +107,7 @@ In this task, you will create a DataFrame using PySpark to begin working with yo
 
 1. You will see a list of items contained in the workspace including your lakehouse and notebook.
 
-   ![Enter Your Username](./Images2/t3-2.png)
+   ![Enter Your Username](./Images/dp700-lab1-02.png)
 
 1. Select the lakehouse to display the Explorer pane.
 
@@ -320,8 +321,7 @@ A common task for data engineers and data scientists is to transform data for fu
 
 You can use the Spark SQL library to transform the data by filtering rows, deriving, removing, renaming columns, and applying other data modifications.
 
->[!TIP]
-> See the [Apache Spark dataframe](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/dataframe.html) documentation to learn more about the DataFrame object.
+> **TIP** : See the [Apache Spark dataframe](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/dataframe.html) documentation to learn more about the DataFrame object.
 
 ### Save the transformed data
 
@@ -337,7 +337,11 @@ At this point you might want to save the transformed data so that it can be used
     print ("Transformed data saved!")
     ```
 
-2. Run the cell and wait for the message that the data has been saved. Then, in the Lakehouses pane on the left, in the **…** menu for the **Files** node, select **Refresh**. Select the **transformed_data (1)** folder to verify that it contains a new folder named **orders (2)**, which in turn contains one or more Parquet files.
+2. Run the cell and wait for the message that the data has been saved. Then, in the Lakehouses pane on the left, in the **…** menu for the **Files** node, select **Refresh**. 
+
+    ![](Images/dp700-lab1-03.png)
+
+1. Select the **transformed_data (1)** folder to verify that it contains a new folder named **orders (2)**, which in turn contains one or more Parquet files.
 
     ![Screen picture showing auto generated code and data.](Images/dpp16.png)
 
@@ -406,7 +410,7 @@ Tables in a Spark metastore are relational abstractions over files in the data l
 
 1. In the **Lakehouses** pane, in the … menu for the Tables folder, select **Refresh**. Then expand the **Tables** node and verify that the **salesorders** table has been created.
 
-    ![Screen picture showing that the salesorders table has been created.](./Images/md27.png)
+    ![Screen picture showing that the salesorders table has been created.](./Images/dp700-lab1-05.png)
 
 1. In the **… (1)** menu for the **salesorders** table, select **Load data (2)** > **Spark (3)**.
 
@@ -445,8 +449,7 @@ While it’s useful to be able to embed SQL statements into a cell containing Py
     * The SQL code references the *salesorders* table that you created previously.
     * The output from the SQL query is automatically displayed as the result under the cell.
 
->[!NOTE]
-> For more information about Spark SQL and dataframes, see the [Apache Spark SQL](https://spark.apache.org/sql/) documentation.
+> **NOTE:** For more information about Spark SQL and dataframes, see the [Apache Spark SQL](https://spark.apache.org/sql/) documentation.
 
 ## Task 8: Visualize data with Spark
 

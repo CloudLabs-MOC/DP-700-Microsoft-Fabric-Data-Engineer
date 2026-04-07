@@ -33,19 +33,19 @@ In this task, you will create subfolder in the existing lakehouse.
 
 In this task, you will create a pipeline in Microsoft Fabric to ingest data into your lakehouse. You will use the Copy Data activity to extract data from a source and copy it into a subfolder within the lakehouse, forming the foundation for an ETL or ELT process.
 
-1. On the **Home** page for your lakehouse, select **Get data (1)** and then select **New pipeline (2)**.
+1. On the **Home** page for your lakehouse, select **Get data (1)** and then select **New copy job (2)**.
 
-    ![Screen picture showing auto generated code and data.](./Images/pd5.png)
+    ![Screen picture showing auto generated code and data.](./Images/dp700-lab1-06.png)
 
-    - Create a new data pipeline named **Ingest Sales Data (3)** and then **Create (4)**.
+    - Create a new data copy job named **Ingest Sales Data (3)** and then **Create (4)**.
 
-      ![Screen picture showing auto generated code and data.](./Images/md34.png)
+      ![Screen picture showing auto generated code and data.](./Images/dp700-lab1-07.png)
 
-1. If the **Copy Data** wizard doesn't open automatically, select **Copy Data > Use copy assistant** in the pipeline editor page.
+1. If the **Copy job** wizard doesn't open automatically, select **Copy Data > Use copy assistant** in the pipeline editor page.
 
-1. In the **Copy Data** wizard, on the **Choose data source** page, enter **HTTP (1)** in the search bar and then select **HTTP (2)** in the **New sources** section.
+1. In the **Copy job** wizard, on the **Choose data source** page, enter **HTTP (1)** in the search bar and then select **HTTP (2)** in the **New sources** section.
 
-    ![Screenshot of the Choose data source page.](./Images/md35.png)
+    ![Screenshot of the Choose data source page.](./Images/dp700-lab1-10.png)
 
 1. In the **Connect to data source** pane, enter the following settings for the connection to your data source and then click on **Next (6)**:
 
@@ -68,7 +68,7 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
 
       ![Screenshot of the Choose data source page.](./Images2/4t2-5.png)
 
-1. Wait for the data to be sampled and then ensure that the following settings are selected:
+1. Wait for the data to be sampled and then ensure that the following settings are selected. Ensure following settings are select and then click on **Next (6)**:
 
     - **File format**: DelimitedText **(1)**
     - **Column delimiter**: Comma (,) **(2)**
@@ -76,52 +76,45 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
     - **First row as header**: Selected **(4)**
     - **Compression type**: No compression **(5)**
 
-      ![Screenshot of the Choose data source page.](./Images/dpp32.png)    
+      ![Screenshot of the Choose data source page.](./Images/dp700-lab1-08.png)    
 
 1. Select **Preview data** to see a sample of the data that will be ingested.
 
-    ![Screenshot of the Choose data source page.](./Images/dpp31.png)
+    ![Screenshot of the Choose data source page.](./Images/dp700-lab1-09.png)
 
 1. Then close the data preview and select **Next**.    
 
-1. On the **Connect to data destination** page, set the following data destination options, and then select **Next (5)**:
+1. In the settings page, select **Files** are destination root folder and click on **Next**.
 
-    - **Root folder**: Files **(1)**
-    - **Folder path**: new_data **(2)**
-    - **File name**: sales.csv **(3)**
-    - **Copy behavior**: None **(4)**
+    ![](Images/dp700-lab1-11.png)
+
+1. On the **Map to data destination** page, set the following data destination options, and then select **Next (5)**:
+
+    - **Folder folder**: new_data/ **(1)**
+    - **File name**: sales.csv **(2)**
+    - **Copy behavior**: None **(3)**
+    - **File format**: DelimitedText **(4)**    
 
       ![Screenshot of the Choose data source page.](./Images/dpp33.png)     
 
-1. Set the following file format options and then select **Next (6)**:
+1. On the **Review + Save** page, review the details of your copy operation and then select **Save + Run**.
 
-    - **File format**: DelimitedText **(1)**
-    - **Column delimiter**: Comma (,) **(2)**
-    - **Row delimiter**: Line feed (\n) **(3)**
-    - **Add header to file**: Selected **(4)**
-    - **Compression type**: No compression **(5)**
-
-      ![Screenshot of the Choose data source page.](./Images/dpp34.png) 
-
-1. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
-
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images2/4t2-11.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/dp700-lab1-13.png)
 
 1. A new pipeline containing a **Copy Data** activity is created, as shown here:
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/md36.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/dp700-lab1-14.png)
 
-1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon **(1)** to refresh the status, and wait until it has succeeeded **(2)**.
+1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has **succeeded**.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/dpp35.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/dp700-lab1-16.png)
 
 1. Select your lakehouse **lakehouse<inject key="DeploymentID" enableCopy="false"/>** from the top menu bar.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/pd6.png)
 
 1. On the **Home** page, in the **Lakehouse explorer** pane, expand **Files** and select the **new_data (1)** folder to verify that the **sales.csv (2)** file has been copied.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/pd7.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/dp700-lab1-15.png)
 
 ## Task 3: Create a notebook
 
@@ -172,7 +165,7 @@ In this task, you will create a notebook in Microsoft Fabric to begin processing
 
 1. Verify that your notebooks looks similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
-    ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/md38.png)
+    ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/dp700-lab1-17.png)
 
     > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take a minute or so to complete.
 
@@ -198,13 +191,21 @@ In this task, you will create a notebook in Microsoft Fabric to begin processing
 
 In this task, you will modify your existing pipeline to include the notebook you created for data transformation. By integrating the notebook into the pipeline, you’ll build a reusable and automated ETL process that extracts data, runs Spark-based transformations, and loads the results into a lakehouse table.
 
-1. In the hub menu bar on the left select the **Ingest Sales Data** pipeline you created previously.
+1. In the hub menu bar on the left select the **Ingest Sales Data** copy job you created previously.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/pd9.png)
 
+1. Click on **Add to pipeline**.
+
+    ![](Images/dp700-lab1-18.png)
+
+1. Provide the Name of New Pipeline as **Ingest Sales Data (1)** and click on **Create (2)**.
+
+    ![](Images/dp700-lab1-19.png)
+
 1. On the **Activities (1)** tab, click on the elipses **(...) (2)** list, select **Delete data (3)**. 
 
-    ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/md39.png)
+    ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/dp700-lab1-20.png)
 
 1. Then position the new **Delete data**  activity to the left of the **Copy data** activity and connect its **On completion** output to the **Copy data** activity, as shown here:    
 
@@ -256,9 +257,21 @@ In this task, you will modify your existing pipeline to include the notebook you
 
     The **table_name** parameter will be passed to the notebook and override the default value assigned to the **table_name** variable in the parameters cell.
 
+1. Select Copy Job activity, under **Settings (1)**, set the following properties:
+
+    - **Connection**: CopyJob odl_user_<inject key="DeploymentID" enableCopy="false"/> **(2)**
+    - **Workspace**: fabric-<inject key="DeploymentID" enableCopy="false"/> **(3)**
+    - **Copy job**: Ingest Sales Data **(4)**
+
+    ![](Images/dp700-lab1-21.png)
+
 1. On the **Home** tab, use the **&#128427; (1)** (*Save*) icon to save the pipeline. Then use the **&#9655; Run (2)** button to run the pipeline.
 
     ![Screenshot of a pipeline with a Dataflow activity.](./Images2/4t4-9.png)
+
+1. Click on **Save and run**.
+
+    ![](Images/dp700-lab1-22.png)
 
 1. Click on **Refresh (1)**, untill all of the activities are succeeded **(2)**.  
 
