@@ -671,7 +671,11 @@ While *matplotlib* enables you to create different chart types, it can require s
 
 6. Run the modified code to view the yearly revenue as a line chart.
 
-  >**Note**: To learn more about plotting with seaborn, see the [seaborn](https://seaborn.pydata.org/index.html) documentation.
+   >**Note**: To learn more about plotting with seaborn, see the [seaborn](https://seaborn.pydata.org/index.html) documentation.
+
+1. After completing the lab, on the notebook menu, select **Stop session** to end the Spark session.
+
+    ![](Images/stop-session.png)
 
 ### Review
 
