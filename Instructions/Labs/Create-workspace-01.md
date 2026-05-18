@@ -83,4 +83,4 @@ In this lab, you have completed:
 
 ### Now, click on Next >> from the lower right corner to move on to the next lab.
 
-![Start Your Azure Journey](./Images/dpg15.png)
+![Start Your Azure Journey](./Images/nextpage-02.png)
