@@ -20,13 +20,15 @@ In this lab, you will be able to complete the following tasks:
 
 In this task, you will create an eventhouse in your Fabric workspace to store real-time event data.
 
+1. In the left pane, navigate to your Workspace and click on **fabric-<inject key="DeploymentID" enableCopy="false"/>**
+
 1. In the workspace, select **+ New item (1)**. In the *New item* pane, select **Eventhouse (2)**.
 
-   ![Screenshot of alert settings.](./Images/md83.png)
+   ![Screenshot of alert settings.](./Images/l3-05-l24.png)
 
 1. Enter **BicycleEventhouse (1)** in the name field and select **Create (2)**.
 
-   ![Screenshot of alert settings.](./Images/md84.png)
+   ![Screenshot of alert settings.](./Images/l3-05-l25.png)
 
 1. Close any tips or prompts that are displayed until you see your new empty eventhouse.
 
@@ -34,7 +36,7 @@ In this task, you will create an eventhouse in your Fabric workspace to store re
 
 1. Select the KQL database to view it.
 
-   ![Screenshot of alert settings.](./Images/md85.png)
+   ![Screenshot of alert settings.](./Images/l3-05-l26.png)
 
     >**Note**: Currently, there are no tables in the database. In the rest of this exercise, you'll use an eventstream to load data from a real-time source into a table.
 
@@ -48,9 +50,9 @@ In this task, you will create a new Eventstream in Microsoft Fabric to start cap
 
    >**Note**: The creation of your new event stream in the workspace will be completed in just a few moments. Once established, you will be automatically redirected to the     primary editor, ready to begin integrating sources into your event stream.
 
-    ![Screenshot of alert settings.](./Images/md86.png)
+    ![Screenshot of alert settings.](./Images/l3-05-l27.png)
 
-    ![Screenshot of alert settings.](./Images/md87.png)
+    ![Screenshot of alert settings.](./Images/l3-05-l28.png)
 
 ## Task 3: Add a source
 
@@ -58,15 +60,15 @@ In this task, you will add a real-time data source to your Eventstream. You'll u
 
 1. In the Eventstream canvas, select **Use sample data**.
 
-   ![Screenshot of a new eventstream.](./Images/md88.png)
+   ![Screenshot of a new eventstream.](./Images/l3-05-l29.png)
 
 2. Name the source **`Bicycles` (1)**, and select the **Bicycles (2)** sample data and select **Add (3)**
 
-   ![Screenshot of a new eventstream.](./Images/dd2.png)
+   ![Screenshot of a new eventstream.](./Images/l3-05-l30.png)
 
    >**Note**: Your stream will be mapped and you will be automatically displayed on the **eventstream canvas**.
 
-    ![Review the eventstream canvas](./Images/md90.png)
+    ![Review the eventstream canvas](./Images/l3-05-l31.png)
 
 ## Task 4: Add a destination
 
@@ -90,19 +92,19 @@ In this task, you'll route the incoming bicycle stream data to an Eventhouse so 
 
    - Click Save **(10)**.
 
-     ![Eventstream destination settings.](./Images/md93.png)
+     ![Eventstream destination settings.](./Images/l3-05-l32.png)
 
-     ![Eventstream destination settings.](./Images/md94.png)
+     ![Eventstream destination settings.](./Images/l3-05-l33.png)
 
-     ![Eventstream destination settings.](./Images/md92.png)
+     ![Eventstream destination settings.](./Images/l3-05-l34.png)
 
 1. On the toolbar, select **Publish**.
 
-   ![Eventstream destination settings.](./Images/md95.png)
+   ![Eventstream destination settings.](./Images/l3-05-l35.png)
 
-1. Wait a minute or so for the data destination to become active. Then select the **bikes-table** node in the design canvas and view the **Data preview** pane underneath      to see the latest data that has been ingested:
+1. Wait a minute or so for the data destination to become active. Then select the **bikes-table** node in the design canvas and view the **Data preview** pane underneath to see the latest data that has been ingested:
 
-   ![Eventstream destination settings.](./Images/md96.png)
+   ![Eventstream destination settings.](./Images/l3-05-l36.png)
 
 1. Wait a few minutes and then use the **Refresh** button to refresh the **Data preview** pane. The stream is running perpetually, so new data may have been added to the table.
 
@@ -114,7 +116,7 @@ In this task, you will query the data stored in the eventhouse to analyze real-t
 
 1. From the top, select your **BicycleEventhouse** KQL database.
 
-   ![](./Images/mod3-p4t5p1.png)
+   ![](./Images/l3-05-l37.png)
 
 1. From the left pane, select your **BicycleEventhouse (1)** KQL database.
 
@@ -134,7 +136,7 @@ In this task, you will query the data stored in the eventhouse to analyze real-t
 
 1. Select the query code and run it to see 100 rows of data from the table.
 
-   ![Screenshot of a KQL query.](./Images/md98.png)
+   ![Screenshot of a KQL query.](./Images/l3-05-l38.png)
 
 ## Task 6: Transform event data
 
@@ -167,9 +169,9 @@ In this task, you will apply a transformation to the incoming event data within 
 
     > **Note**: This configuration will cause the eventstream to calculate the total number of bicycles in each street every 5 seconds.
 
-      ![Add group by to the transformation event.](./Images/md101.png)
+      ![Add group by to the transformation event.](./Images/l3-05-l39.png)
 
-      ![Add group by to the transformation event.](./Images/md102.png)
+      ![Add group by to the transformation event.](./Images/l3-05-l40.png)
       
 1. **Save (9)** the configuration and return to the eventstream canvas, where an error is indicated (because you need to store the output from the transformation somewhere!).
 
@@ -177,26 +179,30 @@ In this task, you will apply a transformation to the incoming event data within 
 
    ![Add group by to the transformation event.](./Images/mod3-p4t6p7.png)
 
-1. Click on the *pencil* icon to configure the new eventhouse node with the following options:
+1. Click on the **pencil** icon to configure the new eventhouse node with the following options:
 
    - **Data ingestion mode:**: Event processing before ingestion **(1)**
    - **Destination name:** `bikes-by-street-table` **(2)**
    - **Workspace:** *fabric-<inject key="DeploymentID" enableCopy="false"/>* **(3)**
    - **Eventhouse**: *BicycleEventhouse* **(4)**
    - **KQL database:** *BicycleEventhouse* **(5)**
-   - **Destination table:** Create a new table named `bikes-by-street` **(6)**
+   - **Destination table:** **Create a new** table named `bikes-by-street` **(6)**
    - **Input data format:** JSON **(7)**
    - In the **Eventhouse** pane, select **Save (8)**. 
 
-     ![Screenshot of a table for grouped data.](./Images/md103.png)
+     ![Screenshot of a table for grouped data.](./Images/l3-05-l42.png)
+
+     ![Screenshot of a table for grouped data.](./Images/l3-05-l41.png)
 
 1. On the toolbar, select **Publish**.
+
 1. Wait a minute or so for the changes to become active.
+
 1. In the design canvas, select the **bikes-by-street-table** node, and view the **data preview** pane beneath the canvas.
 
-   ![Screenshot of a table for grouped data.](./Images/md104.png)
+   ![Screenshot of a table for grouped data.](./Images/l3-05-l43.png)
 
-    **Note**: The transformed data includes the grouping field you specified (**Street**), the aggregation you specified (**SUM_no_Bikes**), and a timestamp field indicating the end of the 5-second tumbling window in which the event occurred (**Window_End_Time**).
+    > **Note**: The transformed data includes the grouping field you specified (**Street**), the aggregation you specified (**SUM_no_Bikes**), and a timestamp field indicating the end of the 5-second tumbling window in which the event occurred (**Window_End_Time**).
 
 ## Task 7: Query the transformed data
 
@@ -210,7 +216,7 @@ In this task, you'll query the transformed bicycle data that has been ingested i
 
 1. In the **ellipsis (...) (1)** menu for the **bikes-by-street** table, select **Query with code (2)** > **Show any 100 records (3)**.
 
-   ![Screenshot of a table for grouped data.](./Images/md105.png)
+   ![Screenshot of a table for grouped data.](./Images/l3-05-l44.png)
 
 1. In the query pane, note that the following query is generated and run:
 

@@ -33,25 +33,29 @@ In this task, you will create a real-time dashboard to visualize and monitor the
 
    >**Note**: A new empty dashboard is created.
 
-1. In the toolbar, select **New data source (1)** and select **KQL Database (2)** data source. Then select **BicycleEventhouse (3)** and click on **Connect (4)**.
+1. In the toolbar, select **Add data source (1)** and select **KQL Database (2)** data source. Then select **BicycleEventhouse (3)** and click on **Connect (4)**.
 
-   ![A screenshot of a new dashboard.](./Images/mod3-p6t1p1(3).png)
+   ![A screenshot of a new dashboard.](./Images/l3-05-l47.png)
 
    ![A screenshot of a new dashboard.](./Images/mod3-p6t1p1(4).png)
 
- 1. Create a new data source with the following settings and click on **Add (4)**.
+1. Under **Data sources**, select the **Settings** icon for **BicycleEventhouse**.
+
+    ![A screenshot of a new dashboard.](./Images/l3-05-l48.png)
+
+ 1. On **Data sources** Settings, configure the following settings and click on **Add (4)**.
 
     - **Display name**: `Bike Rental Data` **(1)**
     - **Database**: BicycleEventhose **(2)**.
     - **Passthrough identity**: *Selected* **(3)**
 
-      ![A screenshot of a new dashboard.](./Images/mod3-p6t1p1(5).png)
+      ![A screenshot of a new dashboard.](./Images/l3-05-l49.png)
 
 1. Close the **Data sources** pane, and then on the dashboard design canvas, select **+ Add tile**.
 
-    ![A screenshot of a new dashboard.](./Images/mod3-p6t1p1(6).png)
+    ![A screenshot of a new dashboard.](./Images/l3-05-l50.png)
 
-1. In the query editor, ensure that the **Bike Rental Data (2)** source is selected and enter the following KQL code:
+1. In the query editor, ensure that the **Bike Rental Data** source is selected and enter the following KQL code **(1)**:
 
     ```kql
     bikes
@@ -61,35 +65,36 @@ In this task, you will create a real-time dashboard to visualize and monitor the
         | order by Neighbourhood asc
     ```
 
-1. **Run (3)** the query, which shows the number of bikes and empty bike docks observed in each neighbourhood in the last 30 minutes under the **Results (4)** tab.
+1. **Run (2)** the query, which shows the number of bikes and empty bike docks observed in each neighbourhood in the last 30 minutes under the **Results (3)** tab.
 
-1. **Apply changes (5)** to see the data shown in a table in the tile on the dashboard.
+1. **Apply changes (4)** to see the data shown in a table in the tile on the dashboard.
 
-   ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-44.png)
+   ![A screenshot of a dashboard with a tile containing a table.](./Images/l3-05-l51.png)
 
 1. On the tile, select the **Edit** icon (which looks like a pencil). 
 
-    ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-45.png)
+    ![A screenshot of a dashboard with a tile containing a table.](./Images/l3-05-l52.png)
 
-1. Then in the **Visual Formatting** pane, set the following properties:
-    - **Tile name**: Bikes and Docks **(1)**
+1. Select the **Visual Formatting (1)** pane, set the following properties:
+
     - **Visual type**: Bar chart **(2)**
     - **Visual format**: Stacked bar chart **(3)**
-    - **Y columns**: No_Bikes, No-Empty_Docks **(4)**
-    - **X column**: Neighbourhood **(5)**
-    - **Series columns**: infer **(6)**
-    - **Legend location**: Bottom **(7)**
-    - Click Apply Changes **(8)**.
+    - **Tile name**: Bikes and Docks **(4)**
+    - **Y columns**: No_Bikes, No-Empty_Docks **(5)**
+    - **X column**: Neighbourhood **(6)**
+    - **Series columns**: infer **(7)**
+    - **Legend location**: Bottom **(8)**
+    - Click Apply Changes **(9)**.
 
-      ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-46.png)
+      ![A screenshot of a dashboard with a tile containing a table.](./Images/l3-05-l53.png)
 
-      ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-47.png)
+      ![A screenshot of a dashboard with a tile containing a table.](./Images/l3-05-l54.png)
 
 1. Resize the tile to take up the full height of the left side of the dashboard.
 
-   ![A screenshot of a dashboard with a tile containing a table.](./Images/md2-48.png)
+   ![A screenshot of a dashboard with a tile containing a table.](./Images/l3-05-l55.png)
 
-1. In the toolbar, select **New tile**.
+1. In the toolbar, select **Add visual**.
 
 1. In the query editor, ensure that the **Bike Rental Data** source is selected and enter the following KQL code:
 
@@ -103,11 +108,12 @@ In this task, you will create a real-time dashboard to visualize and monitor the
 
 1. Run the query, which shows the location and number of bikes observed in each neighbourhood in the last 30 minutes.
 
-1. Apply the changes to see the data shown in a table in the tile on the dashboard.
+1. **Apply the changes** to see the data shown in a table in the tile on the dashboard.
 
 1. On the tile, select the **Edit** icon (which looks like a pencil). Then in the **Visual Formatting** pane, set the following properties:
-    - **Tile name**: Bike Locations
+
     - **Visual type**: Map
+    - **Tile name**: Bike Locations
     - **Define location by**: Latitude and longitude
     - **Latitude column**: Latitude
     - **Longitude column**: Longitude
@@ -115,9 +121,9 @@ In this task, you will create a real-time dashboard to visualize and monitor the
     - **Size**: Show
     - **Size column**: No_Bikes
 
-1. Apply the changes, and then resize the map tile to fill the right side of the available space on the dashboard:
+1. **Apply the changes**, and then resize the map tile to fill the right side of the available space on the dashboard:
 
-   ![A screenshot of a dashboard with a chart and a map.](./Images/md2-49.png)
+   ![A screenshot of a dashboard with a chart and a map.](./Images/l3-05-l56.png)
 
 ## Task 2: Create a base query
 
@@ -125,9 +131,9 @@ Your dashboard contains two visuals that are based on similar queries. To avoid 
 
 In this task, you will design a base query to retrieve and structure the data that will populate the visualizations on your dashboard.
 
-1. On the dashboard toolbar, select **Base queries (1)**. Then select **+ Add (2)**.
+1. 1. On the dashboard toolbar, select the **Manage (1)** tab, and then choose **Base queries (2)**. In the **Base queries** pane, select **+ Add (3)**.
 
-    ![](./Images/mod3-p6t2p1.png)
+    ![](./Images/l3-05-l57.png)
 
 1. In the base query editor, set the **Variable name** to **`base_bike_data` (1)** and ensure that the **Bike Rental Data (2)** source is selected. Then enter the following query **(3)**:
 
@@ -138,7 +144,7 @@ In this task, you will design a base query to retrieve and structure the data th
     ```
 1. **Run (4)** the query and verify that it returns **(5)** all of the columns needed for both visuals in the dashboard (and some others).
 
-   ![A screenshot of a base query.](./Images/md2-50.png)
+   ![A screenshot of a base query.](./Images/l3-05-l58.png)
 
 1. Select **Done** and then close the **Base queries** pane.
 
@@ -170,7 +176,7 @@ In this task, you will add a parameter to your base query to enable dynamic filt
 
 1. On the dashboard toolbar, on the **Manage (1)** tab, select **Parameters (2)**.
 
-    ![](./Images/mod3-p6t3p1.png)
+    ![](./Images/l3-05-l59.png)
 
 1. Note any existing parameters that have been automatically created (for example a *Time range* parameter). Then **Delete** them.
 
@@ -255,7 +261,7 @@ In this task, you will configure the dashboard’s auto-refresh settings to ensu
 
 1. On the dashboard toolbar, on the **Manage (1)** tabe, select **Auto refresh (2)**.
 
-    ![](./Images/mod3-p6t5p1.png)
+    ![](./Images/l3-05-l60.png)
 
 1. In the **Auto refresh** pane, configure the following settings:
 
@@ -274,7 +280,7 @@ In this task, you will save your dashboard and configure sharing settings to col
 
 1. On the dashboard toolbar, select **Save**.
 
-    ![](./Images/mod3-p6t6p1.png)
+    ![](./Images/l3-05-l61.png)
 
 1. When the dashboard is saved, select **Share**.
 

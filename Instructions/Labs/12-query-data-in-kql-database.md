@@ -34,7 +34,7 @@ In this task, you will create an eventhouse in your Fabric workspace. The eventh
 
 In this task, you will use Kusto Query Language (KQL) to explore and analyze data stored in your eventhouse. KQL is a powerful query language optimized for time-series and event data, making it ideal for analyzing the real-time taxi ride data you've ingested.
 
-### Retrieve data from a table with KQL
+### Task 2.1: Retrieve data from a table with KQL
 
 1. In the left pane of the eventhouse window, under your KQL database, select the default **queryset** file. This file contains some sample KQL queries to get you started.
 1. Modify the first example query as follows.
@@ -49,7 +49,7 @@ In this task, you will use Kusto Query Language (KQL) to explore and analyze dat
 
 1. Select the query code **(1)** and run **(2)** it to return 100 rows from the table.
 
-   ![Screenshot of the KQL query editor.](./Images/md111.png)
+   ![Screenshot of the KQL query editor.](./Images/l3-05-l45.png)
 
     You can be more precise by adding specific attributes you want to query using the `project` keyword and then using the `take` keyword to tell the engine how many records to return.
 
@@ -74,7 +74,7 @@ In this task, you will use Kusto Query Language (KQL) to explore and analyze dat
     | take 10
     ```
 
-### Summarize data by using KQL
+### Task 2.2: Summarize data by using KQL
 
 You can use the *summarize* keyword with a function to aggregate and otherwise manipulate data.
 
@@ -108,7 +108,7 @@ You can use the *summarize* keyword with a function to aggregate and otherwise m
 
     >**Note**: As this sample dataset is well-maintained, you might not have an Unidentified field in the query result.
 
-### Sort data by using KQL
+### Task 2.3: Sort data by using KQL
 
 To make more sense of our data, we typically order it by a column, and this process is done in KQL with either a *sort by* or *order by* operator (they act the same way).
 
@@ -130,7 +130,7 @@ To make more sense of our data, we typically order it by a column, and this proc
     | order by Neighbourhood asc
     ```
 
-### Filter data by using KQL
+### Task 2.4: Filter data by using KQL
 
 In KQL, the *where* clause is used to filter data. You can combine conditions in a *where* clause by using *and* and *or* logical operators.
 
@@ -149,7 +149,7 @@ In KQL, the *where* clause is used to filter data. You can combine conditions in
 In this task, you used Transact-SQL (T-SQL) to query data stored in a KQL database through the provided T-SQL endpoint. While the support is limited compared to native SQL Server, it enables integration with tools and systems that rely on T-SQL, offering basic querying capabilities like aggregations and filtering. However, for full functionality and better performance, KQL remains the recommended language for working with eventhouse data.
 
 
-### Retrieve data from a table by using Transact-SQL
+### Task 3.1: Retrieve data from a table by using Transact-SQL
 
 1. In your queryset, add and run the following Transact-SQL query: 
 
@@ -171,7 +171,7 @@ In this task, you used Transact-SQL (T-SQL) to query data stored in a KQL databa
     from Bikestream
     ```
 
-### Summarize data by using Transact-SQL
+### Task 3.2: Summarize data by using Transact-SQL
 
 1. Run the following query to find the total number of bikes available:
 
@@ -203,7 +203,7 @@ In this task, you used Transact-SQL (T-SQL) to query data stored in a KQL databa
              END;
     ```
 
-### Sort data by using Transact-SQL
+### Task 3.3: Sort data by using Transact-SQL
 
 1. Run the following query to order the grouped results by neighbourhood:
  
@@ -221,7 +221,7 @@ In this task, you used Transact-SQL (T-SQL) to query data stored in a KQL databa
     ORDER BY Neighbourhood ASC;
     ```
 
-### Filter data by using Transact-SQL
+### Task 3.4: Filter data by using Transact-SQL
     
 1. Run the following query to filter the grouped data so that only rows having a neighbourhood of "Chelsea" are included in the results
 
