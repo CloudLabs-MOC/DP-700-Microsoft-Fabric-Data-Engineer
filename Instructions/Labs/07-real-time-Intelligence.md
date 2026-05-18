@@ -174,6 +174,8 @@ In this task, you will create a real-time dashboard to visualize the data flowin
 
    ![Screenshot of a dashboard tile being edited.](./Images/l3-05-l20.png)
 
+   > **Note:** If the **Copilot** pane opens automatically, close it to access the **Visual formatting** pane.
+
 1. At the top of the dashboard, select **Apply changes (3)** and view your modified dashboard:
 
    ![Screenshot of a dashboard with a chart tile.](./Images/md80.png)

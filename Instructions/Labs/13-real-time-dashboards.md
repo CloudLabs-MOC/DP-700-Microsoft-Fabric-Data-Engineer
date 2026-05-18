@@ -75,6 +75,8 @@ In this task, you will create a real-time dashboard to visualize and monitor the
 
     ![A screenshot of a dashboard with a tile containing a table.](./Images/l3-05-l52.png)
 
+    > **Note:** If the **Copilot** pane opens automatically, close it to access the **Visual formatting** pane.
+
 1. Select the **Visual Formatting (1)** pane, set the following properties:
 
     - **Visual type**: Bar chart **(2)**
@@ -131,7 +133,7 @@ Your dashboard contains two visuals that are based on similar queries. To avoid 
 
 In this task, you will design a base query to retrieve and structure the data that will populate the visualizations on your dashboard.
 
-1. 1. On the dashboard toolbar, select the **Manage (1)** tab, and then choose **Base queries (2)**. In the **Base queries** pane, select **+ Add (3)**.
+1. On the dashboard toolbar, select the **Manage (1)** tab, and then choose **Base queries (2)**. In the **Base queries** pane, select **+ Add (3)**.
 
     ![](./Images/l3-05-l57.png)
 

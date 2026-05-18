@@ -69,7 +69,7 @@ In this task, you will create a Fabric workspace. The workspace contains all the
 
 1. Under **License mode**, select the **Fabric Trial (1)** and click on **Apply (2)**.
 
-   ![New Workspace](./Images2/l3-05-l3.png)
+   ![New Workspace](./Images/l3-05-l3.png)
 
    >**Note:** If the **On the Introducing task flows** window opens, select **Got it**.
 

@@ -63,7 +63,7 @@ In this task, you will query dynamic management views such as `sys.dm_exec_conne
 
 1. Run the modified query and view the results, which show details of all running queries in the database (including this one).
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp122.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l26.png) 
 
 1. In the **New SQL query** drop-down list, select **New SQL query** to add a second query tab. Then in the new empty query tab, run the following code:
 
@@ -72,15 +72,18 @@ In this task, you will query dynamic management views such as `sys.dm_exec_conne
        SELECT * FROM Trip;
     ```
 
-    ![Screenshot of uploaded files in a lakehouse.](./Images/dpp123.png)     
+    ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l28.png)     
 
 1. Leave the query running, and return to the tab containing the code to query the DMVs **(1)** and re-run it **(2)**. This time, the results should include the second        query that is running in the other tab **(3)**. Note the elapsed time for that query.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp124.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l29.png) 
 
 1. Wait a few seconds and re-run the code to query the DMVs again. The elapsed time for the query in the other tab should have increased.
+
 1. Return to the second query tab where the query is still running and select **Cancel** to cancel it.
+
 1. Back on the tab with the code to query the DMVs, re-run the query to confirm that the second query is no longer running.
+
 1. Close all query tabs.
 
 > **Further Information**: See [Monitor connections, sessions, and requests using DMVs](https://learn.microsoft.com/fabric/data-warehouse/monitor-using-dmv) in the Microsoft Fabric documentation for more information about using DMVs.
