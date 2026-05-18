@@ -25,7 +25,7 @@ In this task, you will create a lakehouse in your Microsoft Fabric workspace.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/lakehouse-p3.png)  
 
-1. Provide the following details to create a **Lakehouse**, keep other values as default and then click on **Create (2)** to proceed.
+1. Provide the following details to create a **Lakehouse**, and ensure to **uncheck the box (2)** before creating the Lakehouse. Then click on **Create (3)** to proceed.
 
    - **Name:** Enter **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**  
 
