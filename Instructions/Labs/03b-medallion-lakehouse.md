@@ -22,7 +22,8 @@ In this task, you’ll create a new lakehouse named Sales within your workspace 
 
    ![Screenshot of the workspace settings page in Fabric.](./Images/dpp78.png)
 
-1. Create a new **Lakehouse** named **Sales (1)** and then click on **Create (2)**.
+1. Create a new **Lakehouse** named **Sales (1)** and ensure to **uncheck the box (2)** before creating the Lakehouse. Then click on **Create (3)** to proceed.
+ 
 
    ![Screenshot of the workspace settings page in Fabric.](./Images/saleslakehouse-p4.png)
 
@@ -278,7 +279,7 @@ In this task, you’ll take the cleaned and structured data from the silver laye
 
     ![](./Images/2notebook-p5.png)
 
-1. In the Explorer panel, under **Data items**, select **Add data items (1)**, and choose **Existing data sources (2)**.
+1. In the Explorer panel, under **Data items**, select **Add data items (1)**, and choose **From OneLake Catalog (2)**.
 
    ![10](./Images/2notebook1-p5.png)
 
