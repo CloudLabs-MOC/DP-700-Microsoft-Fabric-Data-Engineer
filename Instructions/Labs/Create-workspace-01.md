@@ -83,5 +83,6 @@ In this lab, you have completed:
  + Signed up for Microsoft Fabric Trial
  + Created a workspace
 
-### You have successfully completed the lab. Click on Next >> to proceed with next Lab.
+### Now, click on Next >> from the lower right corner to move on to the next lab.
 
+![Start Your Azure Journey](./Images/nextpage-02.png)

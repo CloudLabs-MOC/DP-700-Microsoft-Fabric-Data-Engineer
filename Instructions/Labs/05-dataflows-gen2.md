@@ -24,7 +24,7 @@ In this task, you will create a Dataflow (Gen2) in Microsoft Fabric to ingest da
 
    ![New dataflow.](./Images2/5t1-2.png)
 
-1. Verify the **Data Flow Name (1)** and ensure to **uncheck the box (2)** before creating the Data Flow. Then click on **Create (3)**.
+1. Verify the **Data Flow Name (1)**  and click on **Create (2)**.
 
    ![New dataflow.](./Images2/5t1-3.png)
 
@@ -90,7 +90,7 @@ In this task, you will configure the destination for your Dataflow (Gen2) so the
 
    ![Query with a lakehouse destination.](./Images/dpp55.png)
 
-6. Notice the **Lakehouse (1)** destination is indicated as an icon in the query in the Power Query editor. Select **Publish (2)** to publish the dataflow.
+6. Notice the **Lakehouse (1)** destination is indicated as an icon in the query in the Power Query editor. 
 
    ![Query with a lakehouse destination.](./Images/md54.png)
 

@@ -694,4 +694,4 @@ In this lab, you have completed the following tasks:
 
 ## Now, click on **Next >>** from the lower right corner to move on to the next lab.
 
-   ![](./Images2/next-page.png) 
+   ![](./Images/nextpage-03.png) 
