@@ -22,17 +22,23 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a data lakehouse in Microsoft Fabric for storing and managing your data files.
 
-1. Return to your workspace and click the **+ New item (1)** icon.  
+1. In the left pane, navigate to your **Workspace (1)** and click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+
+   ![](./Images/l4-05-l5.png)
+
+1. On the workspace and click the **+ New item (1)** icon.  
 
 1. On the **All items** page, scroll down to the **Store data** section and select **Lakehouse (2)**.  
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/md10.png)  
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l6.png)  
 
-1. Provide the following details to create a **Lakehouse** and then click on **Create (2)** to proceed.
+1. Provide the following details to create a **Lakehouse** and then click on **Create (3)** to proceed.
 
    - **Name:** Enter **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**  
 
-     ![Screenshot of uploaded files in a lakehouse.](./Images/mod4-p4t1p1.png)       
+   - Make sure the **Lakehouse schemas** option is **disabled (2)**. 
+
+     ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l7.png)       
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
 
@@ -40,7 +46,7 @@ In this task, you will create a data lakehouse in Microsoft Fabric for storing a
 
     - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create *shortcuts*         in this folder to reference data that is stored externally.
 
-      ![Screenshot of uploaded files in a lakehouse.](./Images/mod2-1.png)
+      ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l8.png)
 
         >**Note**: Currently, there are no tables or files in the lakehouse.
 
@@ -52,23 +58,31 @@ In this task, you will upload a CSV file to the lakehouse for use in the warehou
 
 1. Return to the web browser tab containing your lakehouse, and in the **ellipsis (...) (1)** menu for the **Files** folder in the **Lakehouse explorer** pane, select **New subfolder (2)**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/md2-2.png)
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l9.png)
 
-1. Create a subfolder named **data (3)** and then click **Create (4)**.   
+1. Create a subfolder named **data (1)** and then click **Create (2)**.   
 
-    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-3.png)
+    ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l10.png)
 
 1. In the **ellipsis (...) (1)** menu for the new **data** folder, select **Upload (2)** and **Upload files (3)**.
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/md2-4.png) 
 
-1. Then upload the **sales.csv (1)** file from `C:\LabFiles\files` and then click on **Upload (2)**.
+1. In the Upload folder dialog, click the folder icon to **browse**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/mod4-p4t1p1(1).png) 
+    ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l11.png)
+
+1. Navigate to **C:\LabFiles\files (1)** and select the **sales (2)** and click **Open (3)**.
+
+    ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l02.png)
+
+1. Again select **Upload**. Close the Upload files pane.
+
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l03.png) 
 
 1. After the file has been uploaded, select the **Files/data** folder and verify that the **sales.csv** file has been uploaded, as shown here:
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp106.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l12.png) 
 
 1. Select the **sales.csv** file to see a preview of its contents.
 
@@ -91,7 +105,7 @@ In this task, you will create a table in the lakehouse using the uploaded file.
 
     - Select **Load (4)**.
 
-      ![Screenshot of uploaded sales.csv file in a lakehouse.](./Images/mod613.png)
+      ![Screenshot of uploaded sales.csv file in a lakehouse.](./Images/l4-05-l13.png)
 
 ## Task 4: Create a warehouse
 
@@ -105,7 +119,7 @@ In this task, you will create a data warehouse where you will store the fact and
 
 1. Enter **Warehouse2 (1)** as the name, and then click **Create (2)**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp109.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l14.png) 
 
 1. After a minute or so, a new warehouse will be created:
 
@@ -161,7 +175,7 @@ In this task, you will define fact tables, dimension tables, and a view to strea
 
 1. In the **Explorer**, navigate to **Schemas >> Sales >> Tables**. Note the **Fact_Sales**, **Dim_Customer**, and **Dim_Item** tables you just created.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp111.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l15.png) 
 
 1. Open a new **New SQL query** editor, then copy and run **(2)** the following query after Updating `<your lakehouse name>` with the lakehouse you created **lakehouse<inject key="DeploymentID" enableCopy="false"/>** **(1)**.
 
@@ -175,7 +189,7 @@ In this task, you will define fact tables, dimension tables, and a view to strea
 
 1. In the **Explorer**, navigate to **Schemas >> Sales >> Views**. Note the **Staging_Sales** view you created.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp112.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l16.png) 
 
 ## Task 6: Load data to the warehouse
 

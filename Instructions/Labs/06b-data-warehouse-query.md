@@ -19,9 +19,12 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a new sample data warehouse named sample-dw within your Fabric workspace, which will be populated with sample taxi ride data.
 
-1. On the menu bar on the left, select **Create**. In the *New* page, under the **Data Warehouse** section. select **Sample warehouse**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp114.png) 
+1. On the menu bar on the left, click on **(...) (1)** and then select **Create (2)**. In the *New* page, under the **Data Warehouse** section. select **Sample warehouse**.
+
+    ![Screenshot of a new warehouse.](./Images/mod4-p3t1p1.png)
+
+    ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l18.png) 
 
     >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.   
 
@@ -31,7 +34,7 @@ In this task, you will create a new sample data warehouse named sample-dw within
 
 1. After a minute or so, a new warehouse will be created and populated with sample data for a taxi ride analysis scenario.
 
-   ![Screenshot of a new warehouse.](./Images/sample-data-warehouse.png)
+   ![Screenshot of a new warehouse.](./Images/l4-05-l19.png)
 
 ## Task 2: Query the data warehouse
 
@@ -39,7 +42,9 @@ The SQL query editor provides support for IntelliSense, code completion, syntax 
 
 In this task, you will write and run SQL queries to analyze trip trends based on month, day, and geography, gaining insights from the warehouse data.
 
-1. In the **sample-dw** data warehouse page, in the **New SQL query** drop-down list, select **New SQL query**.
+1. In the **sample-dw** data warehouse page, in the **New SQL query (1)** drop-down list, select **New SQL query (2)**.
+
+    ![Screenshot of a new warehouse.](./Images/l4-05-l20.png)
 
 1. In the new blank query pane, enter the following Transact-SQL code:
 
@@ -56,7 +61,7 @@ In this task, you will write and run SQL queries to analyze trip trends based on
 
 1. Use the **&#9655; Run** button to run the SQL script and view the results, which show the total number of trips and total revenue by month.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp116.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l21.png) 
 
 1. Enter the following Transact-SQL code:
 
@@ -73,7 +78,7 @@ In this task, you will write and run SQL queries to analyze trip trends based on
 
 1. Run the modified query and view the results, which show the average trip duration and distance by day of the week.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp117.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l22.png) 
 
 1. Enter the following Transact-SQL code:
 
@@ -175,15 +180,15 @@ Let's create a view based on the query we used earlier, and add a filter to it.
 
 1. Select the text of the SELECT statement in your query **(1)**. Then next to the **&#9655; Run** button, select **Save as view (2)**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp118.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l23.png) 
 
 1. Create a new view named **vw_JanTrip (1)** and then click on **OK (2)**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp119.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l24.png) 
 
 1. In the **Explorer**, navigate to **Schemas >> dbo >> Views**. Note the **vw_JanTrip** view you just created.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp121.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l25.png) 
 
 1. Close all query tabs.
 

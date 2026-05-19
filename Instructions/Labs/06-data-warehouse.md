@@ -88,8 +88,8 @@ In this task, you will create tables inside your data warehouse and populate the
 1. In the Edge browser on the lab VM, copy and paste this URL into the address bar:
   `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt` into the new query pane.
 1. Select all the text from the file (Ctrl+A, then Ctrl+C).
-1. Go back to the SQL query window and paste the copied text (Ctrl+V) 
 
+1. Go back to the SQL query window and paste the copied text (Ctrl+V) 
 
 1. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 
@@ -177,7 +177,7 @@ In this task, you will encapsulate your SQL logic into a view, simplifying futur
    ORDER BY CalendarYear, MonthOfYear, SalesRegion;
     ```
 
-    ![Screenshot of a new warehouse.](./Images/dpp97.png)    
+    ![Screenshot of a new warehouse.](./Images/l4-05-l1.png)    
 
 ## Task 5: Create a visual query
 
@@ -191,15 +191,15 @@ In this task, you will use the visual query designer to build queries graphicall
 
 1. Drag **FactSalesOrder** onto the **canvas**. Notice that a preview of the table is displayed in the **Preview** pane below.
 
-   ![Screenshot of a new warehouse.](./Images/dpp98.png)
+   ![Screenshot of a new warehouse.](./Images/l4-05-l2.png)
 
 1. Drag **DimProduct** onto the **canvas**. We now have two tables in our query.
 
-   ![Screenshot of a new warehouse.](./Images/dpp99.png)
+   ![Screenshot of a new warehouse.](./Images/l4-05-l3.png)
 
 1. Use the **(+) (1)** button on the **FactSalesOrder** table on the canvas to **Merge queries (2)**.
 
-   ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/mod514.png)
+   ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/l4-05-l47.png)
 
 1. In the **Merge queries** window, select **DimProduct** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** join type,     and click **OK**.
 
@@ -236,9 +236,9 @@ In this task, you will create a semantic model by organizing your fact and dimen
 
    ![](./Images/mod4-p3t6p1(1).png)
 
-1. From the tool bar, click on **Open semantic model**.
+1. From the tool bar, click on **Open**.
 
-   ![](./Images/mod4-p3t6p1(2).png)
+   ![](./Images/l4-05-l01.png)
 
 1. From the top right corner, click on **Viewing (1)** drop-down and select **Editing (2)**.
 
@@ -246,7 +246,7 @@ In this task, you will create a semantic model by organizing your fact and dimen
 
 1. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
 
-   ![](./Images/mod4-p3t6p1(4.1).png)
+   ![](./Images/l4-05-l4.png)
 
 1. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details:
 
