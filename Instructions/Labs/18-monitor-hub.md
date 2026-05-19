@@ -28,15 +28,17 @@ In this task, you will create a lakehouse in your Microsoft Fabric workspace.
 
 1. On the **All items** page, scroll down to the **Store data** section and select **Lakehouse (2)**.  
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/md10.png)  
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l6.png)  
 
 1. Provide the following details to create a **Lakehouse**:  
 
-   - **Name:** Enter **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**  
+    - **Name:** Enter **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**  
 
-    - Click **Create (2)** to proceed.
+    - Make sure the **Lakehouse schemas** option is **disabled (2)**. 
 
-      ![Screenshot of uploaded files in a lakehouse.](./Images/mod5-p3t1p1.png)  
+    - Click **Create (3)** to proceed.
+
+      ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l7.png)     
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
 
@@ -44,7 +46,7 @@ In this task, you will create a lakehouse in your Microsoft Fabric workspace.
 
     - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create *shortcuts* in this folder to reference data that is stored externally.
 
-      ![Screenshot of uploaded files in a lakehouse.](./Images/mod2-1.png)
+      ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l8.png)
 
       >**Note**: Currently, there are no tables or files in the lakehouse.
 
@@ -56,15 +58,15 @@ In this task, you will create a Dataflow Gen2 to ingest data from a CSV file int
 
 1. On the **Home** page for your lakehouse, in the **Get data in your lakehouse** menu, select **New Dataflow Gen2**.
 
-   ![](./Images/dpm7.png)
+   ![](./Images/l5-05-l1.png)
 
-1. Enter **Get Product Data** **(1)** in the **Name** field, and **uncheck** **(2)** the checkbox blow and then click **Create** **(3)**.
+1. Enter **Get Product Data** **(1)** in the **Name** field, and then click **Create** **(2)**.
 
-    ![Screenshot of a new dataflow.](./Images/mod5-p3t1p1(1).png)
+    ![Screenshot of a new dataflow.](./Images/l5-05-l2.png)
 
 1. In the dataflow designer, select **Import from a Text/CSV file**.
 
-   ![](./Images/dpm8.png)
+   ![](./Images/l5-05-l3.png)
 
 1. Then complete the Get Data wizard to create a data connection by linking to `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv` **(1)** using anonymous authentication and then click **Next (2)**.
 

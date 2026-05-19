@@ -46,7 +46,7 @@ In this task, you will create a new Eventstream in Microsoft Fabric to start cap
 
 1. In the main page of your **KQL database (1)**, select **Get data (2)**.
 
-2. For the data source, select **Eventstream (3)** > **New eventstream (4)**. Name the Eventstream **`Bicycle-data` (5)** and click on **Create (6)**.
+2. For the data source, select **Eventstream (3)** > **New eventstream (4)**. Name the Eventstream **`Bicycle-data` (1)** and click on **Create (2)**.
 
    >**Note**: The creation of your new event stream in the workspace will be completed in just a few moments. Once established, you will be automatically redirected to the     primary editor, ready to begin integrating sources into your event stream.
 

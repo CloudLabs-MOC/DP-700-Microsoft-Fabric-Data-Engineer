@@ -267,9 +267,9 @@ In this task, you will configure the dashboard’s auto-refresh settings to ensu
 
 1. In the **Auto refresh** pane, configure the following settings:
 
-    - **Enabled**: *Selected*
-    - **Minimum time interval**: Allow all refresh intervals
-    - **Default refresh rate**: 30 minutes
+    - **Enabled**: *Selected* **(1)**
+    - **Minimum time interval**: Allow all refresh intervals **(2)**
+    - **Default refresh rate**: 30 minutes **(3)**
     - Click **Apply (4)**.
 
         ![](./Images/mod3-p6t5p2.png)
