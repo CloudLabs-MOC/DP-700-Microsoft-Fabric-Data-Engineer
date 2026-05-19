@@ -39,7 +39,7 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 
 ### Activate the Microsoft Fabric Free Trial  
 
-1. In the Fabric portal, click on **Account Manager (1)** and then select **Free trial (2)**.
+1. In the Fabric portal, click on **Account Manager (1)** and then select **Start trial (2)**.
 
    ![Account-manager-start](./Images/l3-05-l1.png)  
 

@@ -81,18 +81,20 @@ In this task, you will create a lakehouse named LabLakehouse in the Development 
 1. Select the **Development<inject key="DeploymentID" enableCopy="false"/>** workspace.
    
 1. Select **+ New Item**.
+
+    ![.](./Images/dpmh8.png) 
    
 1. In the window that appears, Under the **Store data** select **Lakehouse** and if prompt to **Upgrade to a free Microsoft Fabric trial** click on **Upgrade**.
 
-1. In the **New Lakehouse** window, name the lakehouse as, **LabLakehouse<inject key="DeploymentID" enableCopy="false"/>**.
+    ![.](./Images/dpmh9.png) 
+
+1. In the **New Lakehouse** window, name the lakehouse as, **LabLakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**, then select **Create (2)**.
    
-1. Select **Create**.
+    ![.](./Images/dpmh10.png) 
     
 1. Select the **Start with sample data** tile.
 
-1. Then on the **Use a Sample** page, choose the **Public holidays** tile to populate the workspace with sample data.
-
-    ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u14.png)
+    ![.](./Images/dpmh11.png)
 
 1. From the top, select the **pipeline<inject key="DeploymentID" enableCopy="false"/> (1)** you created, then toggle off **New Deployment pipelines** to disable the feature **(2)**.
 
