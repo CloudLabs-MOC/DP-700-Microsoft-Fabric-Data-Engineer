@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 In this task, you will create a new sample data warehouse named sample-dw within your Fabric workspace, which will be populated with sample taxi ride data.
 
 
-1. On the menu bar on the left, click on **(...) (1)**and then select **Create**. In the *New* page, under the **Data Warehouse** section. select **Sample warehouse**.
+1. On the menu bar on the left, click on **(...) (1)** and then select **Create (2)**. In the *New* page, under the **Data Warehouse** section. select **Sample warehouse**.
 
     ![Screenshot of a new warehouse.](./Images/mod4-p3t1p1.png)
 

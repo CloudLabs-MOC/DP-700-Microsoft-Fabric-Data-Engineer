@@ -199,7 +199,7 @@ In this task, you will use the visual query designer to build queries graphicall
 
 1. Use the **(+) (1)** button on the **FactSalesOrder** table on the canvas to **Merge queries (2)**.
 
-   ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/mod514.png)
+   ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/l4-05-l47.png)
 
 1. In the **Merge queries** window, select **DimProduct** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** join type,     and click **OK**.
 
@@ -236,9 +236,9 @@ In this task, you will create a semantic model by organizing your fact and dimen
 
    ![](./Images/mod4-p3t6p1(1).png)
 
-1. From the tool bar, click on **Open semantic model**.
+1. From the tool bar, click on **Open**.
 
-   ![](./Images/mod4-p3t6p1(2).png)
+   ![](./Images/l4-05-l01.png)
 
 1. From the top right corner, click on **Viewing (1)** drop-down and select **Editing (2)**.
 

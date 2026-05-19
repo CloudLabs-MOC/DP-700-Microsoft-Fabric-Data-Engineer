@@ -24,7 +24,7 @@ In this task, you will create a data lakehouse in Microsoft Fabric for storing a
 
 1. In the left pane, navigate to your **Workspace (1)** and click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-   ![](./Images/l4-05-l4.png)
+   ![](./Images/l4-05-l5.png)
 
 1. On the workspace and click the **+ New item (1)** icon.  
 
@@ -60,7 +60,7 @@ In this task, you will upload a CSV file to the lakehouse for use in the warehou
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l9.png)
 
-1. Create a subfolder named **data (3)** and then click **Create (4)**.   
+1. Create a subfolder named **data (1)** and then click **Create (2)**.   
 
     ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l10.png)
 
@@ -74,11 +74,11 @@ In this task, you will upload a CSV file to the lakehouse for use in the warehou
 
 1. Navigate to **C:\LabFiles\files (1)** and select the **sales (2)** and click **Open (3)**.
 
-    ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l12.png)
+    ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l02.png)
 
 1. Again select **Upload**. Close the Upload files pane.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/mod4-p4t1p1(1).png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l03.png) 
 
 1. After the file has been uploaded, select the **Files/data** folder and verify that the **sales.csv** file has been uploaded, as shown here:
 

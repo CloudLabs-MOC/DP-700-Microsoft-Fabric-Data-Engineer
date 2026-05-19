@@ -26,21 +26,21 @@ In this task, you will add a user to the Viewer role within a Microsoft Fabric w
 
 1. Open the **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace you just created. From the top menu, select **Manage Access (2)**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp125.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l30.png) 
 
 1. Click on **Add people or groups**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp126.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l31.png) 
 
 1. Enter the name or email address of the second user you want to add from your environment.
 
-   - Email : **<inject key="testuser" enableCopy="true"/> (1)**
+   - Email: **<inject key="testuser" enableCopy="true"/> (1)**
 
     - In the role selection dropdown, choose **Viewer (2)**.
 
     - Click **Add (3)** to confirm the user assignment.
 
-      ![Screenshot of uploaded files in a lakehouse.](./Images/dpp127.png)     
+      ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l32.png)     
 
 > **Note**: When you create a workspace, you automatically become a member of the Workspace Admin role. 
 
@@ -50,13 +50,17 @@ Dynamic data masking rules are applied on individual columns at the table level,
 
 In this task, you will configure dynamic data masking on specific table columns in your data warehouse. Dynamic data masking helps protect sensitive information by obscuring it at query time, ensuring that users can access necessary data without exposing confidential details such as email addresses or credit card numbers.
 
-1. In the left-hand menu, select **Create**. On the New page, under the Data Warehouse section, choose **Warehouse**.
+1. On the menu bar on the left, click on **(...) (1)** and then select **Create (1)**. In the *New* page, under the *Data Warehouse* section, select **Warehouse (3)**.
+
+   ![Screenshot of a new warehouse.](./Images/mod4-p3t1p1.png)
+
+   ![Screenshot of a new warehouse.](./Images/mod4-p3t1p1(1).png)    
 
    >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
 
 1. Enter **Warehouse3 (1)** as the name, and then click **Create (2)**.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp128.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l33.png) 
 
 1. After a minute or so, a new warehouse will be created:
 
@@ -88,11 +92,11 @@ In this task, you will configure dynamic data masking on specific table columns 
 
 1. Use the **&#9655; Run** button to run the SQL script, which creates a new table named **Customers** in the **dbo** schema of the data warehouse.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp130.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l34.png) 
 
 1. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **Customers** table has been created. The `SELECT` statement returns unmasked data for you because as the workspace creator, you're a member of the Workspace Admin role which can see unmasked data.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp131.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l35.png) 
 
 1. Connect using the following credentials as a test user who is a member of the Viewer workspace role.
 
@@ -124,37 +128,39 @@ In this task, you will configure dynamic data masking on specific table columns 
 
 1. Navigate **Workspaces (1)** and then select **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** workspace .
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp133.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l37.png) 
 
 1. Select **warehouse3** from the list.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp134.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l38.png) 
 
-1. Open a **New SQL Query**.
+1. In the **warehouse3** data warehouse page, in the **New SQL query (1)** drop-down list, select **New SQL query (2)**.
+
+    ![Screenshot of a new warehouse.](./Images/l4-05-l20.png)
 
 1. Run the following statement
 
     ```T-SQL
     SELECT * FROM dbo.Customers;
     ```
-   ![Screenshot of uploaded files in a lakehouse.](./Images/modf569.png)  
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l39.png)  
     
    >**Note**: The test user hasn't been granted UNMASK permission so data returned for the FirstName, Phone, and Email columns is masked because those columns were defined with a mask in the `CREATE TABLE` statement.
 
-1. Switch back to the main browser window where you are logged in as the ODL user (Workspace Admin) **(1)**, and run the following T-SQL script to unmask data for the test user. Replace '<username>@<your_domain>.com' with this email address <inject key="testuser" enableCopy="true"/> **(2)**, who is assigned to the Viewer workspace role and click on **Run (3)**.
+1. Switch back to the main browser window where you are logged in as the **ODL user (Workspace Admin) (1)**, and run the following T-SQL script to unmask data for the test user. Replace '<username>@<your_domain>.com' with this email address **<inject key="testuser" enableCopy="true"/> (2)**, who is assigned to the Viewer workspace role and click on **Run (3)**.
 
     ```T-SQL
     GRANT UNMASK ON dbo.Customers TO [<username>@<your_domain>.com];
     ```
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/modf567.png)  
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l40.png)  
 
 1. Switch back to the Private browser window, where you are logged in as the test user **(1)**, and run the following T-SQL statement. Enter the following command **(2)** and then **Run (3)**
 
     ```T-SQL
     SELECT * FROM dbo.Customers;
     ```
-   ![Screenshot of uploaded files in a lakehouse.](./Images/modf568.png)  
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l41.png)  
 
     The data is returned unmasked because the test user has been granted the `UNMASK` permission.
 
@@ -191,11 +197,11 @@ In this task, you will define and enforce row-level security (RLS) policies with
 
 3. Use the **&#9655; Run** button to run the SQL script, which creates a new table named **Sales** in the **dbo** schema of the data warehouse.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/modf570.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l42.png) 
 
 4. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **Sales** table has been created.
 
-   ![Screenshot of uploaded files in a lakehouse.](./Images/dpp135.png) 
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l43.png) 
 
 5. Create a new schema, a security predicate defined as a function, and a security policy.  
 
@@ -232,7 +238,7 @@ In this task, you will define and enforce row-level security (RLS) policies with
 
    ![Screenshot of uploaded files in a lakehouse.](./Images/mod4-p7t3p7.png) 
 
-8. Navigate to the Private browser window, where you already logged in as the user you replaced `<username1>@<your_domain>.com` (testuser) with, in the Sales table `INSERT`statement. Confirm that you're logged in as that user by running the following T-SQL.
+8. Navigate to the **Private browser** window, where you already logged in as the user you replaced `<username1>@<your_domain>.com` (testuser) with, in the Sales table `INSERT`statement. Confirm that you're logged in as that user by running the following T-SQL.
 
     ```T-SQL
    SELECT USER_NAME();
@@ -243,7 +249,7 @@ In this task, you will define and enforce row-level security (RLS) policies with
     ```T-SQL
    SELECT * FROM dbo.Sales;
     ```
-   ![Screenshot of uploaded files in a lakehouse.](./Images/modf571.png)  
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l44.png)  
 
 ## Task 4: Implement column-level security
 
@@ -269,12 +275,12 @@ In this task, you will implement column-level security (CLS) by controlling acce
    SELECT * FROM dbo.Orders;
      ```
 
-3. Deny permission to view a column in the table. The T-SQL statement prevents `<username>@<your_domain>.com` from seeing the CreditCard column in the Orders table. In the `DENY` statement, replace `<username>@<your_domain>.com` with a <inject key="testuser" enableCopy="true"/> user name in your system who has **Viewer** permissions on the workspace.
+3. Deny permission to view a column in the table. The T-SQL statement prevents `<username>@<your_domain>.com` from seeing the CreditCard column in the Orders table. In the `DENY` statement, replace `<username>@<your_domain>.com` with a **<inject key="testuser" enableCopy="true"/>** user name in your system who has **Viewer** permissions on the workspace.
 
      ```T-SQL
    DENY SELECT ON dbo.Orders (CreditCard) TO [<username>@<your_domain>.com];
      ```
-   ![Screenshot of uploaded files in a lakehouse.](./Images/modf572.png)  
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l45.png)  
 
 4. Switch to the private browser window, test column-level security by logging in to Fabric as the user you denied select permissions to.
 
@@ -283,7 +289,7 @@ In this task, you will implement column-level security (CLS) by controlling acce
     ```T-SQL
    SELECT * FROM dbo.Orders;
     ```
-   ![Screenshot of uploaded files in a lakehouse.](./Images/modf573.png)  
+   ![Screenshot of uploaded files in a lakehouse.](./Images/l4-05-l46.png)  
    
    >**Note**: You'll receive an error because access to the CreditCard column has been restricted.  Try selecting only the OrderID and CustomerID fields and the query will succeed.
 
