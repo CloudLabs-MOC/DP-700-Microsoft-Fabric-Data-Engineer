@@ -124,7 +124,11 @@ In this task, you add a user to a workspace role, apply permissions and, see wha
 
 1. Select **Manage access** at the top right of the screen.
 
+    ![Screenshot of a new lakehouse in Fabric.](./Images/mod5-p4t3p1.png)
+
 1. Select **Add people or groups**.
+
+    ![Screenshot of a new lakehouse in Fabric.](./Images/dpmh2.png)
 
 1. Enter the email of the second user - **<inject key="testuser" enableCopy="true"/>** **(1)**. Assign the user to the workspace **Viewer (2)** role and then select **Add (3)**.
 
@@ -165,8 +169,13 @@ In this task, you will configure item-level permissions by granting access to sp
 1. Return to the browser window where you're logged in as the Workspace Admin. Select **Workspaces** from the left navigation pane.
    
 1. Select the workspace that you created to open it.
+
+    ![Screenshot of a new lakehouse in Fabric.](./Images/dpm22.png)
+
    
 1. Select **Manage access** from the top of the screen.
+
+    ![Screenshot of a new lakehouse in Fabric.](./Images/mod5-p4t3p1.png)
    
 1. Select the word **Viewer (1)** under the name of the second user. On the menu that appears, select **Remove (2)**.
 
@@ -229,6 +238,8 @@ In this task, you assign an item permission and create a OneLake data access rol
    ![](./Images/dpm34.png)
    
 1. On the screen that appears, select **+ Add user**.
+
+    ![](./Images/dpmh3.png) 
     
 1. Assign the second user - **<inject key="testuser" enableCopy="true"/>** to the lakehouse **(1)**
 
@@ -242,7 +253,7 @@ In this task, you assign an item permission and create a OneLake data access rol
     
 1. Select **OneLake (1)** in the left navigation pane.
     
-    - Select the **lakehouse (2)** and open it.
+    - Select the **lakehouse2 (2)** and open it.
     
     - Select **Open (3)** on the top menu bar.
 
@@ -270,18 +281,24 @@ In this task, you assign an item permission and create a OneLake data access rol
 
     ![](./Images/onelake2.png)
 
-1. Enter **publicholidays (1)** for the Role name and then select **Grant (2)**, click on **Selected data (3)** under **Add data to your role** section. Select **Browse Lakehouse (4)**.
+1. Enter **publicholidays (1)** for the Role name and then select **Grant (2)**, click on **Next (3)**.
 
     ![](./Images/mod5-p4t5p1(6).png)
 
-    - Select **publicholidays (5)** table and click on **Add data (6)**
+    - Select **Selected data (4)** under **Add data to your role** section. Click on **Edit (5)**
 
-      ![](./Images/mod5-p4t5p1(7).png)
+        ![](./Images/dpmh5.png)
 
-    - Add the second user - **<inject key="testuser" enableCopy="true"/> (7)** in the **Add members to your role** section and click the check icon **(8)**.
+    - Select **publicholidays (6)** table and click on **Add data (7)**
 
-    - Click on **Create role (9)**.
+        ![](./Images/mod5-p4t5p1(7).png)
+
+    - Add the second user - **<inject key="testuser" enableCopy="true"/> (8)** in the **Add members to your role** section and click the check icon **(9)**.
+
+    - Click on **Create role (10)**.
     
+        ![](./Images/dpmh7.png)
+
 1. Return to the browser where you're logged in as the second user. Ensure you're still on the page where the lakehouse is open. Refresh the browser.
     
 1. Select the **publicholidays** table and wait for the data to load. Only the data in the publicholidays table is accessible to the user because the user was assigned to the custom OneLake data access role. The role permits them to see only the data in the publicholidays table, not data in any of the other tables, files, or folders.

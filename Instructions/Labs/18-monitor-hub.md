@@ -76,7 +76,7 @@ In this task, you will create a Dataflow Gen2 to ingest data from a CSV file int
 
     ![Screenshot of a new dataflow.](./Images/mod5-p3t1p1(2).png)
 
-1. Select **Publish** the dataflow.
+1. Click on dorp-down arrow **(1)** then **Save and run (2)** option to save and run the dataflow, then close it.
 
     ![](./Images/dpm9.png)
 
@@ -104,9 +104,11 @@ In this task, you will use a Spark notebook to query the ingested data from the 
 
 1. A new notebook named **Notebook 1** is created and opened.
 
-1. From the toolbar ribbon, click on **settings (1)** icon, and change notebook name to **Query Products (2)**.
+1. From the toolbar ribbon, click on **Settings (1)** icon, and change notebook name to **Query Products (2)**.
 
-   ![](./Images/mod5-p3t1p3.png)
+    ![](./Images/dpmh1.png)
+    
+    ![](./Images/mod5-p3t1p3.png)
 
 1. In the notebook editor, in the **Explorer** pane, expand the **lakehouse<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -155,7 +157,7 @@ In this task, you will learn how to apply filters and adjust columns to customiz
 1. In the monitoring hub, use the **Filter (1)** button to apply the following filter:
 
     - **Status**: **Succeeeded (2)**
-    - **Item type**: **Dataflow Gen2 (3)**
+    - **Item type**: **Dataflow Gen2 (CI/CD) (3)**
 
       ![](./Images/dpm13.png)
 
