@@ -28,7 +28,7 @@ In this task, you will create three workspaces in Microsoft Fabric Development, 
 
     ![](./Images/mod5-p5t1p1.png)
    
-1.  Provide the name **Development<inject key="DeploymentID" enableCopy="false"/> (1)**, and under **License mode**, select the **Trial (2)** and click on **Apply (3)**.
+1.  Provide the name **Development<inject key="DeploymentID" enableCopy="false"/> (1)**, and under **License mode**, select the **Fabric Trial (2)** and click on **Apply (3)**.
 
     ![](./Images/dpm41.png)
    
