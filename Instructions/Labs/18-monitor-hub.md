@@ -144,7 +144,7 @@ In this task, you will rerun the dataflow and view the historical run history in
 
     ![Screenshot of the monitoring hub historical runs view.](./Images/lab5u12.png)
 
-1. In the ... menu for any of the historical runs select **View detail** to see details of the run.
+1. In the **(...)** menu for any of the historical runs select **View detail** to see details of the run.
 
     ![Screenshot of the monitoring hub with a notebook activity.](./Images/mod5-p3t4p1(2).png)
 

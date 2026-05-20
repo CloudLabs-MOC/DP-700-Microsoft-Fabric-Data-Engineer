@@ -24,7 +24,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a sample data warehouse named sample-dw prepopulated with taxi ride analysis data
 
-1. On the menu bar on the left, select **Create**.
+1. On the menu bar on the left click on **ellipsis (...) (1)**, select **Create (2)**.
 
     ![](./Images/mod5-p4t1p1.png)
     
@@ -54,7 +54,7 @@ In this task, you will create a new Lakehouse, populate it with sample data, and
 
     ![](./Images/mod5-p4t2p2.png)
 
-1. Create a new Lakehouse with the name **lakehouse2 (1)** and then click **Create (2)**.
+1. Create a new Lakehouse with the name **lakehouse2 (1)**, make sure the **Lakehouse schemas option is uncheck (2)** and then click **Create (3)**.
 
     ![](./Images/mod5-p4t2p3.png)
 
@@ -64,9 +64,7 @@ In this task, you will create a new Lakehouse, populate it with sample data, and
 
     ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u13.png)
 
-1. Then on the **Use a Sample** page, choose the **Public holidays** tile to populate the workspace with sample data.    
-   
-    ![Screenshot of a new lakehouse in Fabric.](./Images/lab5u14.png)
+1. Choose the **Public holidays** tile to populate the workspace with sample data.    
 
     ![](./Images/dpm20.png)    
 
@@ -136,7 +134,7 @@ In this task, you add a user to a workspace role, apply permissions and, see wha
 
 1. Return to the **InPrivate browser window** where you're logged in as the **second user** and select **refresh** button on the browser to refresh session permissions assigned to the second user.
 
-1. Select the **Workspaces** icon on the left menu bar (the icon looks similar to &#128455;) and select on the workspace name you created as the Workspace Admin user. The second user can now see all of the items in the workspace because they were assigned the **Workspace Viewer** role.
+1. Select the **Workspaces (1)** icon on the left menu bar (the icon looks similar to &#128455;) and **select on the workspace (2)** name you created as the Workspace Admin user. The second user can now see all of the items in the workspace because they were assigned the **Workspace Viewer** role.
 
     ![](./Images/dpm23.png)
 
@@ -166,11 +164,11 @@ Item permissions control access to individual Fabric items within a workspace, l
 
 In this task, you will configure item-level permissions by granting access to specific Fabric items like warehouses, limiting user visibility to only assigned resources.
 
-1. Return to the browser window where you're logged in as the Workspace Admin. Select **Workspaces** from the left navigation pane.
+1. Return to the browser window where you're logged in as the Workspace Admin. Select **Workspaces (1)** from the left navigation pane.
    
-1. Select the workspace that you created to open it.
+1. Select the workspace that you created to open it **(2)**.
 
-    ![Screenshot of a new lakehouse in Fabric.](./Images/dpm22.png)
+    ![Screenshot of a new lakehouse in Fabric.](./Images/dpm23.png)
 
    
 1. Select **Manage access** from the top of the screen.
@@ -271,13 +269,13 @@ In this task, you assign an item permission and create a OneLake data access rol
 
    ![](./Images/mod5-p4t5p1(3).png) 
     
-1. When the lakehouse opens, select **Manage OneLake security (preview)** on the top menu bar and enable the feature by clicking the **Continue** button.
+1. When the lakehouse opens, select **Manage OneLake security** on the top menu bar and enable the feature by clicking the **Continue** button.
 
    ![](./Images/mod5-p4t5p1(4).png)  
 
    ![](./Images/mod5-p4t5p1(5).png)    
     
-1. Select **+ New (1)** on the **OneLake security** screen that appears.
+1. Select **+ New** on the **OneLake security** screen that appears.
 
     ![](./Images/onelake2.png)
 
