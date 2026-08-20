@@ -4,23 +4,23 @@
     "Language": "English",
     "Files": [
        {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/DP700-Gettingstarted/M05-Gettingstarted.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/DP700-Gettingstarted/M05-Gettingstarted.md",
          "Order": 1
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/Create-workspace-01.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/Create-workspace-01.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/18-monitor-hub.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/18-monitor-hub.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/19-secure-data-access.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/19-secure-data-access.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/21-implement-cicd.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/21-implement-cicd.md",
         "Order": 5
       }
     ]
