@@ -4,23 +4,23 @@
     "Language": "English",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/DP700-Gettingstarted/M02-Gettingstarted.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/DP700-Gettingstarted/M02-Gettingstarted.md",
         "Order": 1
       },      
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/Create-workspace-01.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/Create-workspace-01.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/01-lakehouse.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/01-lakehouse.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/03-delta-lake.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/03-delta-lake.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/03b-medallion-lakehouse.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/Margarita-2025/Instructions/Labs/03b-medallion-lakehouse.md",
         "Order": 5
       }
     ]
