@@ -4,15 +4,15 @@
       "Language": "English",
       "Files": [
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/guidedlabs/Instructions/Labs/DP700-Gettingstarted/combined-gettingstarted.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/guidedlabs/Instructions/Labs/DP700-Gettingstarted/combined-gettingstarted.md",
           "Order": 1
         },      
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/guidedlabs/Instructions/Labs/Create-workspace-01.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/guidedlabs/Instructions/Labs/Create-workspace-01.md",
           "Order": 2
         },
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/guidedlabs/Instructions/Labs/06a-data-warehouse-load.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-700-Microsoft-Fabric-Data-Engineer/refs/heads/guidedlabs/Instructions/Labs/06a-data-warehouse-load.md",
           "Order": 3
         }
       ]
